@@ -6,86 +6,76 @@
     <title>Дерматологія лікаря Солодовник | Чернігів</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; }
+        :root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; --light-gray: #f8f9fa; }
         body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); }
         
-        /* Навігація як у MinMax */
         header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .logo-box img { height: 60px; width: auto; vertical-align: middle; }
+        .logo-box img { height: 60px; width: auto; }
         
-        nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 25px; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--main-gold); }
+        nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; }
 
-        /* Головний екран */
-        .hero { display: flex; align-items: center; padding: 80px 8%; background: #fafafa; gap: 50px; flex-wrap: wrap; }
+        .hero { display: flex; align-items: center; padding: 60px 8%; background: var(--light-gray); gap: 40px; flex-wrap: wrap; }
         .hero-content { flex: 1; min-width: 300px; }
-        .hero-content h1 { font-size: 42px; margin-bottom: 20px; line-height: 1.1; }
-        .hero-content p { font-size: 18px; color: #666; margin-bottom: 30px; }
-        .hero-img { flex: 1; min-width: 300px; position: relative; }
-        .hero-img img { width: 100%; max-width: 450px; border-radius: 2px; border: 1px solid #eee; }
+        .hero-img img { width: 100%; max-width: 400px; border-radius: 5px; box-shadow: 15px 15px 0 var(--main-gold); }
 
-        /* Кнопки */
-        .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border-radius: 0; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.4s; }
+        .section { padding: 60px 8%; text-align: center; }
+        .btn-gold { background: var(--main-gold); color: white; padding: 15px 30px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; }
         .btn-gold:hover { background: var(--dark); }
 
-        /* Блок послуг */
-        .services { padding: 80px 8%; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
-        .card { padding: 40px; border: 1px solid #f0f0f0; transition: 0.3s; text-align: left; }
-        .card:hover { border-color: var(--main-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .card h3 { border-bottom: 2px solid var(--main-gold); padding-bottom: 10px; width: fit-content; }
+        /* Стиль для карти */
+        .map-container { margin-top: 30px; border: 1px solid #ddd; line-height: 0; }
+        iframe { width: 100%; height: 400px; border: 0; }
 
-        @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; padding: 40px 5%; } }
+        .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: left; margin-top: 40px; }
+        
+        @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } .hero-img { order: -1; } }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo-box">
-        <img src="logo.jpg" alt="Солодовник Марія">
+        <img src="logo.jpg" alt="Солодовник Марія" onerror="this.src='https://ui-avatars.com/api/?name=MS&background=c5a059&color=fff'">
     </div>
     <nav>
         <a href="#about">Про лікаря</a>
-        <a href="#services">Послуги</a>
-        <a href="https://www.instagram.com/solodovnykdermatology">Instagram</a>
-        <a href="tel:+380931157302" style="color: var(--main-gold);">📞 093 115 7302</a>
+        <a href="#location">Контакти</a>
+        <a href="tel:+380931157302" style="color: var(--main-gold);">093 115 7302</a>
     </nav>
 </header>
 
 <section class="hero" id="about">
     <div class="hero-content">
-        <span style="color: var(--main-gold); font-weight: 700; letter-spacing: 2px;">ЧЕРНІГІВ</span>
-        <h1>Професійна дерматологія для дорослих та дітей</h1>
-        <p>Марія Іванівна Солодовник — ваш провідник у світі здорової шкіри. Лікування за міжнародними протоколами доказової медицини.</p>
-        <a href="https://t.me/solodovnik_dr" class="btn-gold">ЗАПИСАТИСЯ НА ПРИЙОМ</a>
+        <h1>Приватна дерматологія<br>Марії Солодовник</h1>
+        <p>Експертна допомога у лікуванні шкірних захворювань для дорослих та дітей у Чернігові.</p>
+        <a href="https://t.me/solodovnik_dr" class="btn-gold">ЗАПИСАТИСЯ В TELEGRAM</a>
     </div>
     <div class="hero-img">
-        <img src="photo.jpg" alt="Лікар Солодовник">
+        <img src="photo.jpg" alt="Марія Солодовник">
     </div>
 </section>
 
-<section class="services" id="services">
-    <h2>Напрямки діяльності</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Дерматологія</h3>
-            <p>Діагностика та лікування псоріазу, дерматитів, екземи та інших захворювань шкіри.</p>
+<section class="section" id="location">
+    <h2>Як нас знайти</h2>
+    <p>📍 м. Чернігів, пр-т Михайла Грушевського 119-А</p>
+    
+    <div class="contact-info">
+        <div>
+            <h3>Контакти</h3>
+            <p>📞 +380 93 115 7302</p>
+            <p>📧 dcsol@ukr.net</p>
+            <p>📱 @solodovnykdermatology</p>
+            <br>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=51.5222,31.2721" target="_blank" class="btn-gold" style="background: #1a1a1a;">ПОБУДУВАТИ МАРШРУТ</a>
         </div>
-        <div class="card">
-            <h3>Дерматоскопія</h3>
-            <p>Обстеження родимок та новоутворень за допомогою професійного обладнання.</p>
-        </div>
-        <div class="card">
-            <h3>Педіатрія</h3>
-            <p>Спеціалізований прийом для найменших пацієнтів у комфортній атмосфері.</p>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.586687002014!2d31.26954267685601!3d51.52084997181604!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!4b1!4m6!3m5!1s0x41d706cc6823904d:0xf9579304e2874136!8m2!3d51.520849!4d31.2721175!16s%2Fg%2F11f061y39d?entry=ttu" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 </section>
 
-<footer style="background: var(--dark); color: white; padding: 50px 8%; text-align: center;">
-    <img src="logo.jpg" style="filter: brightness(0) invert(1); height: 50px; margin-bottom: 20px;">
-    <p>м. Чернігів, пр-т Михайла Грушевського 119-А</p>
-    <p style="font-size: 12px; opacity: 0.5;">© 2026 Дерматологія лікаря Солодовник</p>
+<footer style="background: var(--dark); color: white; padding: 40px 5%; text-align: center;">
+    <p>© 2026 Дерматологія лікаря Солодовник. Чернігів.</p>
 </footer>
 
 </body>
