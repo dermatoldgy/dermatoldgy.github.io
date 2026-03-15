@@ -9,7 +9,7 @@
         :root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; --light: #fafafa; }
         body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); scroll-behavior: smooth; }
         
-        header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15 (0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .logo-box img { height: 65px; width: auto; }
         nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; }
 
@@ -21,16 +21,12 @@
         .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; text-transform: uppercase; font-size: 14px; }
         .btn-gold:hover { background: var(--dark); transform: translateY(-2px); }
 
-        /* Новини / Статті */
         .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
         .news-card { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; text-align: left; transition: 0.3s; }
         .news-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         .news-content { padding: 25px; }
         .news-tag { color: var(--main-gold); font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; }
-        .news-card h3 { margin: 0 0 15px 0; font-size: 20px; color: var(--dark); }
-        .news-card p { font-size: 14px; color: #666; margin-bottom: 20px; }
 
-        .about-item { padding: 30px; background: white; border: 1px solid #eee; text-align: left; }
         .feature-list { list-style: none; padding: 0; text-align: left; display: inline-block; margin-top: 20px; }
         .feature-list li { margin-bottom: 10px; padding-left: 25px; position: relative; }
         .feature-list li::before { content: '✓'; position: absolute; left: 0; color: var(--main-gold); font-weight: bold; }
@@ -73,23 +69,20 @@
 
 <section class="section" id="news" style="background: var(--light);">
     <h2>Новини та корисні статті</h2>
-    <p>Актуальна інформація про здоров'я шкіри від фахівця</p>
-    
     <div class="news-grid">
         <div class="news-card">
             <div class="news-content">
                 <span class="news-tag">Доросла дерматовенерологія</span>
                 <h3>Чому важливий щорічний огляд шкіри?</h3>
-                <p>Більшість захворювань шкіри на ранніх етапах проходять безсимптомно. Регулярна дерматоскопія у дорослого дерматолога дозволяє вчасно виявити зміни у новоутвореннях та запобігти розвитку серйозних патологій. Здоров'я дорослої людини починається з профілактики.</p>
+                <p>Більшість захворювань шкіри на ранніх етапах проходять безсимптомно. Регулярна дерматоскопія дозволяє вчасно виявити зміни та запобігти патологіям. Здоров'я дорослої людини починається з профілактики.</p>
                 <a href="https://t.me/solodovnik_dr" style="color: var(--main-gold); font-weight: 700; text-decoration: none;">Дізнатися більше →</a>
             </div>
         </div>
-        
         <div class="news-card">
             <div class="news-content">
                 <span class="news-tag">Дитяча дерматологія</span>
                 <h3>Особливості догляду за дитячою шкірою</h3>
-                <p>Шкіра дитини набагато тонша та чутливіша до зовнішніх факторів, ніж у дорослих. Від атопічного дерматиту до сезонних висипань — дитячий дерматолог допоможе підібрати правильний догляд без агресивних препаратів, базуючись виключно на принципах доказової медицини.</p>
+                <p>Шкіра дитини чутливіша до зовнішніх факторів. Ми допоможемо підібрати правильний догляд та лікування, базуючись виключно на принципах доказової медицини та безпеки для малюка.</p>
                 <a href="https://t.me/solodovnik_dr" style="color: var(--main-gold); font-weight: 700; text-decoration: none;">Дізнатися більше →</a>
             </div>
         </div>
@@ -102,8 +95,8 @@
         <ul class="feature-list">
             <li><strong>Досвід роботи:</strong> Багаторічна практика та професійний підхід.</li>
             <li><strong>Сучасна діагностика:</strong> Використання новітніх методів обстеження.</li>
-            <li><strong>Правильні діагнози:</strong> Тільки обґрунтовані рішення.</li>
-            <li><strong>Чесне лікування:</strong> Без зайвих препаратів та "фуфломіцинів".</li>
+            <li><strong>Правильні діагнози:</strong> Тільки обґрунтовані медичні рішення.</li>
+            <li><strong>Ефективне лікування:</strong> Відсутність надлишкових призначень та препаратів без доведеної ефективності.</li>
         </ul>
     </div>
 </section>
@@ -118,10 +111,10 @@
                 <li><span class="day">Сб-Нд:</span> 12:00 – 15:00</li>
             </ul>
             <p><strong>📞 093 115 7302</strong></p>
-            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.586687002014!2d31.26954267685601!3d51.52084997181604!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!4b1!4m6!3m5!1s0x41d706cc6823904d:0xf9579304e2874136!8m2!3d51.520849!4d31.2721175!16s%2Fg%2F11f061y39d?entry=ttu8" target="_blank" class="btn-gold">Маршрут</a>
+            <a href="https://www.google.com/maps/dir//%D0%A4%D0%9E%D0%9F+%D0%A1%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA+%D0%9C%D0%B0%D1%80%D1%96%D1%8F+%D0%86%D0%B2%D0%B0%D0%BD%D1%96%D0%B2%D0%BD%D0%B0,+%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82+%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%B0+%D0%93%D1%80%D1%83%D1%88%D0%B5%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE,+119-%D0%90,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B3%D1%96%D0%B2,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B3%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+14034/@51.522237,31.272101,17z" target="_blank" class="btn-gold">Маршрут</a>
         </div>
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.586687002014!2d31.26954267685601!3d51.52084997181604!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!4b1!4m6!3m5!1s0x41d706cc6823904d:0xf9579304e2874136!8m2!3d51.520849!4d31.2721175!16s%2Fg%2F11f061y39d?entry=ttu9" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2402.768652414163!2d31.2699123770335!3d51.52223697181656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d549f3e2435d5f%3A0x1e03eb18f0756192!2z0KTQntCfINCh0L7Qu9C-0LTQvtCy0L3QuNC6INCc0LDRgNGW0Y8g0IbQstCw0L3RltCy0L3QsA!5e1!3m2!1suk!2sua!4v1710534200000!5m2!1suk!2sua" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 </section>
