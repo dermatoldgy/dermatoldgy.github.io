@@ -6,28 +6,29 @@
     <title>Дерматологія лікаря Солодовник | Чернігів</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; --light-gray: #f8f9fa; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); }
+        :root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); scroll-behavior: smooth; }
         
         header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .logo-box img { height: 60px; width: auto; }
         
         nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; }
 
-        .hero { display: flex; align-items: center; padding: 60px 8%; background: var(--light-gray); gap: 40px; flex-wrap: wrap; }
+        .hero { display: flex; align-items: center; padding: 60px 8%; background: #fafafa; gap: 40px; flex-wrap: wrap; }
         .hero-content { flex: 1; min-width: 300px; }
         .hero-img img { width: 100%; max-width: 400px; border-radius: 5px; box-shadow: 15px 15px 0 var(--main-gold); }
 
         .section { padding: 60px 8%; text-align: center; }
-        .btn-gold { background: var(--main-gold); color: white; padding: 15px 30px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; }
+        .btn-gold { background: var(--main-gold); color: white; padding: 15px 30px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; }
         .btn-gold:hover { background: var(--dark); }
 
-        /* Стиль для карти */
-        .map-container { margin-top: 30px; border: 1px solid #ddd; line-height: 0; }
-        iframe { width: 100%; height: 400px; border: 0; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; text-align: left; margin-top: 40px; }
+        .map-container { border: 1px solid #eee; box-shadow: 0 10px 30px rgba(0,0,0,0.05); line-height: 0; }
+        iframe { width: 100%; height: 450px; border: 0; }
 
-        .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: left; margin-top: 40px; }
-        
+        footer { background: var(--dark); color: white; padding: 40px 5%; text-align: center; }
+        .footer-logo { height: 50px; filter: brightness(0) invert(1); margin-bottom: 20px; }
+
         @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } .hero-img { order: -1; } }
     </style>
 </head>
@@ -35,7 +36,7 @@
 
 <header>
     <div class="logo-box">
-        <img src="logo.jpg" alt="Солодовник Марія" onerror="this.src='https://ui-avatars.com/api/?name=MS&background=c5a059&color=fff'">
+        <img src="logo.jpg" alt="Солодовник Марія" onerror="this.src='https://ui-avatars.com/api/?name=МС&background=c5a059&color=fff'">
     </div>
     <nav>
         <a href="#about">Про лікаря</a>
@@ -46,35 +47,36 @@
 
 <section class="hero" id="about">
     <div class="hero-content">
-        <h1>Приватна дерматологія<br>Марії Солодовник</h1>
-        <p>Експертна допомога у лікуванні шкірних захворювань для дорослих та дітей у Чернігові.</p>
+        <h1 style="font-size: 38px; line-height: 1.2;">Приватна дерматологія<br>Марії Солодовник</h1>
+        <p>Професійна допомога у Чернігові. Діагностика та лікування захворювань шкіри у дітей та дорослих.</p>
         <a href="https://t.me/solodovnik_dr" class="btn-gold">ЗАПИСАТИСЯ В TELEGRAM</a>
     </div>
     <div class="hero-img">
-        <img src="photo.jpg" alt="Марія Солодовник">
+        <img src="photo.jpg" alt="Лікар Солодовник">
     </div>
 </section>
 
 <section class="section" id="location">
-    <h2>Як нас знайти</h2>
-    <p>📍 м. Чернігів, пр-т Михайла Грушевського 119-А</p>
+    <h2>Місце прийому</h2>
+    <p>📍 м. Чернігів, проспект Миру, 194</p>
     
-    <div class="contact-info">
+    <div class="contact-grid">
         <div>
-            <h3>Контакти</h3>
+            <h3>Наші контакти</h3>
             <p>📞 +380 93 115 7302</p>
-            <p>📧 dcsol@ukr.net</p>
             <p>📱 @solodovnykdermatology</p>
+            <p>⏰ Пн-Сб: 09:00 - 19:00</p>
             <br>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=51.5222,31.2721" target="_blank" class="btn-gold" style="background: #1a1a1a;">ПОБУДУВАТИ МАРШРУТ</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=51.522037,31.272101" target="_blank" class="btn-gold" style="background: var(--dark);">ВІДКРИТИ МАРШРУТ У НАВІГАТОРІ</a>
         </div>
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.586687002014!2d31.26954267685601!3d51.52084997181604!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!4b1!4m6!3m5!1s0x41d706cc6823904d:0xf9579304e2874136!8m2!3d51.520849!4d31.2721175!16s%2Fg%2F11f061y39d?entry=ttu" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.586618520247!2d31.2699123768467!3d51.52203707181534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41d6be3503299719%3A0x647614d643862214!2z0L_RgNC-0YHQvy4g0JzQuNGA0LAsIDE5NCwg0KfQtdGA0L3QuNCz0L7Qsiwg0KfQtdGA0L3QuNCz0L7QstGB0LrQsNGPINGB0LHQuy4sIDE0MDMz!5e0!3m2!1sru!2sua!4v1710534567890!5m2!1sru!2sua" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 </section>
 
-<footer style="background: var(--dark); color: white; padding: 40px 5%; text-align: center;">
+<footer>
+    <img src="logo.jpg" class="footer-logo" alt="Logo">
     <p>© 2026 Дерматологія лікаря Солодовник. Чернігів.</p>
 </footer>
 
