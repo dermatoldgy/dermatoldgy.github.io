@@ -10,7 +10,7 @@
         body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); scroll-behavior: smooth; }
         
         header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .logo-box img { height: 60px; width: auto; }
+        .logo-box img { height: 65px; width: auto; }
         
         nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; }
 
@@ -19,17 +19,17 @@
         .hero-img img { width: 100%; max-width: 400px; border-radius: 5px; box-shadow: 15px 15px 0 var(--main-gold); }
 
         .section { padding: 60px 8%; text-align: center; }
-        .btn-gold { background: var(--main-gold); color: white; padding: 15px 30px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; }
+        .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; }
         .btn-gold:hover { background: var(--dark); }
 
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; text-align: left; margin-top: 40px; }
         .map-container { border: 1px solid #eee; box-shadow: 0 10px 30px rgba(0,0,0,0.05); line-height: 0; }
         iframe { width: 100%; height: 450px; border: 0; }
 
-        footer { background: var(--dark); color: white; padding: 40px 5%; text-align: center; }
-        .footer-logo { height: 50px; filter: brightness(0) invert(1); margin-bottom: 20px; }
+        footer { background: var(--dark); color: white; padding: 50px 8%; text-align: center; }
+        .footer-logo { height: 60px; filter: brightness(0) invert(1); margin-bottom: 25px; }
 
-        @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } .hero-img { order: -1; } }
+        @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } .hero-img { order: -1; } .hero-content h1 { font-size: 30px; } }
     </style>
 </head>
 <body>
@@ -47,32 +47,31 @@
 
 <section class="hero" id="about">
     <div class="hero-content">
+        <div style="color: var(--main-gold); font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">ПРИВАТНА ПРАКТИКА</div>
         <h1 style="font-size: 38px; line-height: 1.2;">Дерматологія<br>Марії Солодовник</h1>
-        <p>Ваш лікар у Чернігові. Допомога дорослим та дітям за адресою проспект Михайла Грушевського, 119-А.</p>
-        <a href="https://t.me/solodovnik_dr" class="btn-gold">ЗАПИСАТИСЯ ЧЕРЕЗ TELEGRAM</a>
+        <p>Кваліфікована медична допомога для дітей та дорослих у Чернігові. Використовуємо лише методи з доведеною ефективністю.</p>
+        <a href="https://t.me/solodovnik_dr" class="btn-gold">ЗАПИСАТИСЯ В TELEGRAM</a>
     </div>
     <div class="hero-img">
-        <img src="photo.jpg" alt="Лікар Солодовник">
+        <img src="photo.jpg" alt="Лікар Солодовник" onerror="this.src='https://via.placeholder.com/400x500?text=Doctor'">
     </div>
 </section>
 
 <section class="section" id="location">
-    <h2>Як нас знайти</h2>
+    <h2>Місце прийому</h2>
     <p>📍 м. Чернігів, проспект Михайла Грушевського, 119-А</p>
     
     <div class="contact-grid">
-        <div>
-            <h3 style="color: var(--main-gold);">Контактна інформація</h3>
-            <p><strong>Телефон:</strong><br><a href="tel:+380931157302" style="color: inherit; text-decoration: none;">+380 93 115 7302</a></p>
-            <p><strong>Робочі години:</strong><br>
-                Вт-Чт: 17:00 – 20:00<br>
-                Сб-Нд: 12:00 – 15:00
-            </p>
+        <div class="info-block">
+            <h3 style="color: var(--main-gold);">Контакти для зв'язку</h3>
+            <p><strong>Телефон:</strong><br><a href="tel:+380931157302" style="text-decoration: none; color: inherit;">+380 93 115 7302</a></p>
+            <p><strong>Instagram:</strong><br><a href="https://www.instagram.com/solodovnykdermatology" target="_blank" style="color: inherit;">@solodovnykdermatology</a></p>
+            <p><strong>Електронна пошта:</strong><br>dcsol@ukr.net</p>
             <br>
-            <a href="https://maps.google.com/?cid=2162831082011320722&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNl" target="_blank" class="btn-gold" style="background: var(--dark);">ПРОКЛАСТИ МАРШРУТ</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=51.520442,31.272036" target="_blank" class="btn-gold" style="background: var(--dark);">ПОБУДУВАТИ МАРШРУТ</a>
         </div>
         <div class="map-container">
-            <iframe src="http://googleusercontent.com/maps.google.com/8" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2398.5441113063533!2d31.269847377045936!3d51.520442071815594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d549f3e2435d5f%3A0x1e03eb68f0756192!2z0KTQntCfINCh0L7Qu9C-0LTQvtCy0L3QuNC6INCc0LDRgNGW0Y8g0IbQstCw0L3RltCy0L3QsA!5e0!3m2!1suk!2sua!4v1710000000000!5m2!1suk!2sua" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 </section>
@@ -80,6 +79,7 @@
 <footer>
     <img src="logo.jpg" class="footer-logo" alt="Logo">
     <p>© 2026 Дерматологія лікаря Солодовник. Чернігів.</p>
+    <p style="font-size: 11px; opacity: 0.6; margin-top: 10px;">Турбота про вашу шкіру — наш пріоритет.</p>
 </footer>
 
 </body>
