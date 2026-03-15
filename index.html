@@ -1,3 +1,55 @@
-<div class="profile-img">
-    <img src="photo.jpg?v=1" alt="Лікар Солодовник" onerror="this.src='https://ui-avatars.com/api/?name=DS&background=random'">
-</div>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дерматологія лікаря Солодовник | Чернігів</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; background: #f4f7f9; color: #2c3e50; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 60px 0; }
+        .card { background: white; max-width: 460px; width: 90%; padding: 40px; border-radius: 40px; box-shadow: 0 25px 50px rgba(0,0,0,0.1); text-align: center; }
+        .profile-img { width: 160px; height: 160px; margin: -100px auto 20px; border: 6px solid white; border-radius: 50%; box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden; background: #fff; }
+        .profile-img img { width: 100%; height: 100%; object-fit: cover; }
+        .subtitle { color: #4a90e2; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 24px; margin: 0 0 5px 0; color: #1a2a3a; line-height: 1.2; }
+        .doctor-name { font-size: 18px; font-weight: 600; color: #34495e; margin-bottom: 20px; }
+        .info-box { text-align: left; background: #f9fbfc; padding: 20px; border-radius: 20px; margin-bottom: 25px; border: 1px solid #edf2f7; }
+        .info-item { margin-bottom: 12px; display: flex; align-items: flex-start; font-size: 14px; line-height: 1.4; }
+        .info-item span { margin-right: 10px; font-size: 16px; }
+        .cta-buttons { display: flex; flex-direction: column; gap: 10px; }
+        .btn { display: block; padding: 16px; border-radius: 16px; text-decoration: none; font-weight: 700; transition: 0.3s; font-size: 15px; }
+        .btn-primary { background: #1a2a3a; color: white; }
+        .btn-instagram { background: transparent; border: 2px solid #e1306c; color: #e1306c; }
+        .btn-secondary { background: transparent; border: 2px solid #1a2a3a; color: #1a2a3a; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); opacity: 0.9; }
+        .footer-text { font-size: 11px; color: #95a5a6; margin-top: 25px; line-height: 1.5; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="profile-img">
+            <img src="photo.jpg" alt="Марія Солодовник" onerror="this.src='https://ui-avatars.com/api/?name=Марія+Солодовник&background=4a90e2&color=fff'">
+        </div>
+        <div class="subtitle">Приватна практика</div>
+        <h1>Дерматологія</h1>
+        <div class="doctor-name">Марія Іванівна Солодовник</div>
+        
+        <div class="info-box">
+            <div class="info-item"><span>📍</span> м. Чернігів, пр-т Михайла Грушевського 119-А</div>
+            <div class="info-item"><span>👩‍⚕️</span> Дерматовенеролог, дитячий дерматолог</div>
+            <div class="info-item"><span>📧</span> dcsol@ukr.net</div>
+            <div class="info-item"><span>⏰</span> Пн-Сб: за попереднім записом</div>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="https://t.me/solodovnik_dr" class="btn btn-primary">Записатися через Telegram</a>
+            <a href="https://www.instagram.com/solodovnykdermatology" target="_blank" class="btn btn-instagram">Мій Instagram</a>
+            <a href="tel:+380931157302" class="btn btn-secondary">Зателефонувати: +380 93 115 7302</a>
+        </div>
+        
+        <div class="footer-text">
+            © 2026 Дерматологія лікаря Солодовник.<br>Турбота про здоров'я вашої шкіри.
+        </div>
+    </div>
+</body>
+</html>
