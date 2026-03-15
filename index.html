@@ -17,23 +17,23 @@
         .hero-content { flex: 1; min-width: 300px; }
         .hero-img img { width: 100%; max-width: 400px; border-radius: 5px; box-shadow: 15px 15px 0 var(--main-gold); }
 
-        .section { padding: 80px 8%; text-align: center; }
+        .section { padding: 70px 8%; text-align: center; }
         .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; text-transform: uppercase; font-size: 14px; }
         .btn-gold:hover { background: var(--dark); transform: translateY(-2px); }
 
-        /* Блок Про нас */
-        .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
-        .about-item { padding: 30px; background: white; border: 1px solid #eee; transition: 0.3s; text-align: left; }
-        .about-item:hover { border-color: var(--main-gold); }
-        .about-item h3 { color: var(--main-gold); margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        
+        /* Новини / Статті */
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .news-card { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; text-align: left; transition: 0.3s; }
+        .news-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .news-content { padding: 25px; }
+        .news-tag { color: var(--main-gold); font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        .news-card h3 { margin: 0 0 15px 0; font-size: 20px; color: var(--dark); }
+        .news-card p { font-size: 14px; color: #666; margin-bottom: 20px; }
+
+        .about-item { padding: 30px; background: white; border: 1px solid #eee; text-align: left; }
         .feature-list { list-style: none; padding: 0; text-align: left; display: inline-block; margin-top: 20px; }
         .feature-list li { margin-bottom: 10px; padding-left: 25px; position: relative; }
         .feature-list li::before { content: '✓'; position: absolute; left: 0; color: var(--main-gold); font-weight: bold; }
-
-        /* Відгуки */
-        .reviews-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px; }
-        .review-card { background: var(--light); padding: 30px; border-radius: 5px; text-align: left; border-top: 3px solid var(--main-gold); }
 
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; text-align: left; margin-top: 40px; }
         .schedule { list-style: none; padding: 0; margin: 20px 0; border-left: 3px solid var(--main-gold); padding-left: 15px; }
@@ -53,7 +53,7 @@
     </div>
     <nav>
         <a href="#about">Про нас</a>
-        <a href="#reviews">Відгуки</a>
+        <a href="#news">Новини</a>
         <a href="#location">Контакти</a>
         <a href="tel:+380931157302" style="color: var(--main-gold);">093 115 7302</a>
     </nav>
@@ -61,59 +61,51 @@
 
 <section class="hero">
     <div class="hero-content">
-        <div style="color: var(--main-gold); font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">ПРИВАТНА МЕДИЧНА ПРАКТИКА</div>
+        <div style="color: var(--main-gold); font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">ПРИВАТНА ПРАКТИКА</div>
         <h1 style="font-size: 36px; line-height: 1.2;">Дерматологія<br>Марії Солодовник</h1>
-        <p>Медичний заклад для всієї сім’ї, що працює за принципами доказової медицини у Чернігові.</p>
-        <a href="https://t.me/solodovnik_dr" class="btn-gold">ЗАПИСАТИСЯ НА КОНСУЛЬТАЦІЮ</a>
+        <p>Медичний заклад для всієї сім’ї у Чернігові. Доказовий підхід до здоров'я вашої шкіри.</p>
+        <a href="https://t.me/solodovnik_dr" class="btn-gold">Записатися на прийом</a>
     </div>
     <div class="hero-img">
         <img src="photo.jpg" alt="Лікар Солодовник">
     </div>
 </section>
 
-<section class="section" id="about">
-    <h2>Про нас</h2>
-    <div style="max-width: 800px; margin: 0 auto;">
-        <p>Ми спеціалізуємося на <strong>дорослій та дитячій дерматовенерології</strong>. Наша мета — не просто усунути симптоми, а знайти причину та надати допомогу, що базується на світових стандартах.</p>
+<section class="section" id="news" style="background: var(--light);">
+    <h2>Новини та корисні статті</h2>
+    <p>Актуальна інформація про здоров'я шкіри від фахівця</p>
+    
+    <div class="news-grid">
+        <div class="news-card">
+            <div class="news-content">
+                <span class="news-tag">Доросла дерматовенерологія</span>
+                <h3>Чому важливий щорічний огляд шкіри?</h3>
+                <p>Більшість захворювань шкіри на ранніх етапах проходять безсимптомно. Регулярна дерматоскопія у дорослого дерматолога дозволяє вчасно виявити зміни у новоутвореннях та запобігти розвитку серйозних патологій. Здоров'я дорослої людини починається з профілактики.</p>
+                <a href="https://t.me/solodovnik_dr" style="color: var(--main-gold); font-weight: 700; text-decoration: none;">Дізнатися більше →</a>
+            </div>
+        </div>
         
-        <ul class="feature-list">
-            <li><strong>Досвід роботи:</strong> Багаторічна практика та постійне навчання.</li>
-            <li><strong>Сучасна діагностика:</strong> Використання професійного обладнання для дерматоскопії.</li>
-            <li><strong>Правильні діагнози:</strong> Працюємо за протоколами доказової медицини.</li>
-            <li><strong>Чесне лікування:</strong> Без зайвих препаратів та непотрібних обстежень.</li>
-        </ul>
-    </div>
-
-    <div class="about-grid">
-        <div class="about-item">
-            <h3>👶 Дитяча дерматологія</h3>
-            <p>Дбайливий підхід до найменших: лікування атопічного дерматиту, алергій та інфекційних захворювань шкіри.</p>
-        </div>
-        <div class="about-item">
-            <h3>👨 Росла дерматологія</h3>
-            <p>Діагностика та лікування акне, псоріазу, екземи та видалення новоутворень.</p>
-        </div>
-        <div class="about-item">
-            <h3>🔍 Дерматовенерологія</h3>
-            <p>Конфіденційна допомога та сучасні методи терапії інфекцій, що передаються статевим шляхом.</p>
+        <div class="news-card">
+            <div class="news-content">
+                <span class="news-tag">Дитяча дерматологія</span>
+                <h3>Особливості догляду за дитячою шкірою</h3>
+                <p>Шкіра дитини набагато тонша та чутливіша до зовнішніх факторів, ніж у дорослих. Від атопічного дерматиту до сезонних висипань — дитячий дерматолог допоможе підібрати правильний догляд без агресивних препаратів, базуючись виключно на принципах доказової медицини.</p>
+                <a href="https://t.me/solodovnik_dr" style="color: var(--main-gold); font-weight: 700; text-decoration: none;">Дізнатися більше →</a>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="section" id="reviews" style="background: var(--light);">
-    <h2>Відгуки пацієнтів</h2>
-    <div class="reviews-container">
-        <div class="review-card">
-            <p>"Сучасний підхід і ніяких зайвих аналізів. Тільки те, що дійсно потрібно."</p>
-            <strong>— Марина</strong>
-        </div>
-        <div class="review-card">
-            <p>"Були на прийомі з дитиною. Марія Іванівна легко знайшла спільну мову з малюком."</p>
-            <strong>— Олександр</strong>
-        </div>
+<section class="section" id="about">
+    <h2>Про нашу практику</h2>
+    <div style="max-width: 800px; margin: 0 auto;">
+        <ul class="feature-list">
+            <li><strong>Досвід роботи:</strong> Багаторічна практика та професійний підхід.</li>
+            <li><strong>Сучасна діагностика:</strong> Використання новітніх методів обстеження.</li>
+            <li><strong>Правильні діагнози:</strong> Тільки обґрунтовані рішення.</li>
+            <li><strong>Чесне лікування:</strong> Без зайвих препаратів та "фуфломіцинів".</li>
+        </ul>
     </div>
-    <br><br>
-    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.586687002014!2d31.26954267685601!3d51.52084997181604!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!4b1!4m6!3m5!1s0x41d706cc6823904d:0xf9579304e2874136!8m2!3d51.520849!4d31.2721175!16s%2Fg%2F11f061y39d?entry=ttu5" target="_blank" class="btn-gold" style="background: var(--dark);">Всі відгуки в Google</a>
 </section>
 
 <section class="section" id="location">
@@ -122,16 +114,14 @@
     <div class="contact-grid">
         <div class="info-block">
             <ul class="schedule">
-                <li><span class="day">Пн:</span> зачинено</li>
                 <li><span class="day">Вт-Чт:</span> 17:00 – 20:00</li>
-                <li><span class="day">Пт:</span> зачинено</li>
                 <li><span class="day">Сб-Нд:</span> 12:00 – 15:00</li>
             </ul>
             <p><strong>📞 093 115 7302</strong></p>
-            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.586687002014!2d31.26954267685601!3d51.52084997181604!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!4b1!4m6!3m5!1s0x41d706cc6823904d:0xf9579304e2874136!8m2!3d51.520849!4d31.2721175!16s%2Fg%2F11f061y39d?entry=ttu6" target="_blank" class="btn-gold">МАРШРУТ</a>
+            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.586687002014!2d31.26954267685601!3d51.52084997181604!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!4b1!4m6!3m5!1s0x41d706cc6823904d:0xf9579304e2874136!8m2!3d51.520849!4d31.2721175!16s%2Fg%2F11f061y39d?entry=ttu8" target="_blank" class="btn-gold">Маршрут</a>
         </div>
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.586687002014!2d31.26954267685601!3d51.52084997181604!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!4b1!4m6!3m5!1s0x41d706cc6823904d:0xf9579304e2874136!8m2!3d51.520849!4d31.2721175!16s%2Fg%2F11f061y39d?entry=ttu7" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.586687002014!2d31.26954267685601!3d51.52084997181604!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!4b1!4m6!3m5!1s0x41d706cc6823904d:0xf9579304e2874136!8m2!3d51.520849!4d31.2721175!16s%2Fg%2F11f061y39d?entry=ttu9" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 </section>
