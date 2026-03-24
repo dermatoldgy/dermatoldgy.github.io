@@ -41,6 +41,13 @@
         .social-links a { color: white; margin: 0 10px; text-decoration: none; border-bottom: 1px solid var(--main-gold); }
 
         @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } .hero-img { order: -1; } }
+   .price-table { width: 100%; max-width: 900px; margin: 30px auto; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .price-table th, .price-table td { padding: 15px 20px; border-bottom: 1px solid #eee; }
+        .price-table th { background: var(--light); color: var(--main-gold); text-transform: uppercase; font-size: 13px; letter-spacing: 1px; }
+        .price-table tr:hover { background: #fafafa; }
+        .price-value { font-weight: 700; color: var(--dark); white-space: nowrap; }
+        .price-note { font-size: 12px; color: #777; margin-top: 20px; max-width: 900px; margin-left: auto; margin-right: auto; text-align: left; }
+        .discount-info { background: #fff5e6; padding: 15px; border-radius: 5px; margin-top: 20px; font-size: 14px; border-left: 4px solid var(--main-gold); }
     </style>
 </head>
 <body>
@@ -48,7 +55,63 @@
 <header>
     <div class="logo-box"><img src="logo.png" alt="Логотип"></div>
     <nav>
+    <a href="#about">Про нас</a>
+    <a href="#prices">Ціни</a> <a href="#location">Контакти</a>
+    <a href="tel:+380931157302" style="color: var(--main-gold);">093 115 7302</a>
+</nav>
         <a href="#about">Про нас</a>
+        <section class="section" id="prices">
+    <h2>Вартість послуг</h2>
+    <p>Прозорі ціни на медичну допомогу (діють з 01.03.2026 р.)</p>
+    
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>Найменування послуги</th>
+                <th>Вартість</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Консультація лікаря-дерматовенеролога (первинна)</td>
+                <td class="price-value">700,00 грн</td>
+            </tr>
+            <tr>
+                <td>Консультація лікаря-дерматовенеролога (повторна)*</td>
+                <td class="price-value">600,00 грн</td>
+            </tr>
+            <tr>
+                <td>Онлайн-консультація (первинна)**</td>
+                <td class="price-value">550,00 грн</td>
+            </tr>
+            <tr>
+                <td>Онлайн-консультація (повторна)**</td>
+                <td class="price-value">500,00 грн</td>
+            </tr>
+            <tr>
+                <td>Дерматоскопія / Трихоскопія</td>
+                <td class="price-value">300,00 грн</td>
+            </tr>
+            <tr>
+                <td>Огляд з видачею медичної довідки</td>
+                <td class="price-value">300,00 грн</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="max-width: 900px; margin: 0 auto; text-align: left;">
+        <div class="discount-info">
+            <strong>Пільгова вартість (550 грн первинна / 500 грн повторна):</strong><br>
+            Надається для учасників бойових дій, осіб з інвалідністю (1-2 груп, діти) та пенсіонерів за наявності посвідчення.
+        </div>
+        
+        <div class="price-note">
+            <p>* Повторна консультація — протягом 1 місяця з дня первинної[cite: 41].</p>
+            <p>** Онлайн-консультація має рекомендаційний характер[cite: 42].</p>
+            <p>Тривалість прийому — до 20 хвилин[cite: 40]. Запис за номером: <a href="tel:+380931157302" style="color: var(--main-gold); text-decoration: none; font-weight: 600;">093 115 7302</a>[cite: 34].</p>
+        </div>
+    </div>
+</section>
         <a href="#location">Контакти</a>
         <a href="tel:+380931157302" style="color: var(--main-gold);">093 115 7302</a>
     </nav>
