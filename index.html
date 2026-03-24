@@ -5,77 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Дерматолог Солодовник Марія | Чернігів | Дитячий та дорослий лікар</title>
-    <meta name="description" content="Приватний дерматолог Солодовник Марія Іванівна у Чернігові. Доросла та дитяча дерматовенерологія, доказова медицина, лікування шкірних захворювань.">
-    <meta name="keywords" content="дерматолог Чернігів, Солодовник Марія, дитячий дерматолог Чернігів, дерматовенеролог, лікування шкіри">
-
+    <meta name="description" content="Приватний дерматолог Солодовник Марія Іванівна у Чернігові. Доросла та дитяча дерматовенерологія, доказова медицина.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; --light: #fafafa; }
         body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); scroll-behavior: smooth; }
         
         header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .logo-box img { height: 65px; width: auto; }
-        nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--main-gold); }
+        nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; }
 
         .hero { display: flex; align-items: center; padding: 60px 8%; background: var(--light); gap: 40px; flex-wrap: wrap; }
         .hero-content { flex: 1; min-width: 300px; }
-        .hero-img { flex: 1; display: flex; justify-content: center; }
         .hero-img img { width: 100%; max-width: 400px; border-radius: 5px; box-shadow: 15px 15px 0 var(--main-gold); }
 
         .section { padding: 70px 8%; text-align: center; }
         .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; text-transform: uppercase; font-size: 14px; }
-        .btn-gold:hover { background: var(--dark); transform: translateY(-2px); }
-
-        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .news-card { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; text-align: left; transition: 0.3s; }
-        .news-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .news-content { padding: 25px; }
-        .news-tag { color: var(--main-gold); font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; }
-
+        
         .feature-list { list-style: none; padding: 0; text-align: left; display: inline-block; margin-top: 20px; }
-        .feature-list li { margin-bottom: 10px; padding-left: 30px; position: relative; font-size: 1.05rem; }
-        .feature-list li::before { content: '✔'; position: absolute; left: 0; color: var(--main-gold); font-weight: bold; }
+        .feature-list li { margin-bottom: 10px; padding-left: 25px; position: relative; }
+        .feature-list li::before { content: '✓'; position: absolute; left: 0; color: var(--main-gold); font-weight: bold; }
 
-        /* Стилі для блоку ліцензії */
-        .license-box { margin-top: 50px; background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 30px; text-align: left; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
-        .license-title { color: var(--main-gold); font-weight: 700; text-transform: uppercase; font-size: 15px; margin-bottom: 15px; border-bottom: 2px solid var(--main-gold); display: inline-block; padding-bottom: 5px; }
-        .license-content p { margin: 5px 0; font-size: 14px; color: #444; }
-        .license-link { display: inline-block; margin-right: 15px; margin-top: 10px; font-size: 13px; color: var(--main-gold); text-decoration: none; font-weight: 600; border-bottom: 1px dashed var(--main-gold); }
+        /* Блок ліцензії в Про нас */
+        .license-box { margin-top: 40px; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 25px; text-align: left; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
+        .license-title { color: var(--main-gold); font-weight: 700; text-transform: uppercase; font-size: 14px; margin-bottom: 15px; border-bottom: 2px solid var(--main-gold); display: inline-block; }
+        .license-link { color: var(--main-gold); text-decoration: none; font-weight: 600; font-size: 13px; border-bottom: 1px dashed; margin-right: 15px; }
 
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; text-align: left; margin-top: 40px; }
         .schedule { list-style: none; padding: 0; margin: 20px 0; border-left: 3px solid var(--main-gold); padding-left: 15px; }
         .day { font-weight: 700; min-width: 100px; display: inline-block; }
 
-        .map-container { width: 100%; height: 300px; border-radius: 8px; overflow: hidden; }
-        .map-container iframe { width: 100%; height: 100%; border: 0; }
-
         footer { background: var(--dark); color: white; padding: 50px 8%; text-align: center; }
-        .footer-logo { height: 60px; filter: brightness(0) invert(1); margin-bottom: 20px; }
-        .social-links { margin-bottom: 20px; }
-        .social-links a { color: white; text-decoration: none; margin: 0 10px; font-size: 14px; border-bottom: 1px solid var(--main-gold); }
+        .license-footer { font-size: 12px; color: #aaa; margin: 20px 0; line-height: 1.6; }
+        .social-links a { color: white; margin: 0 10px; text-decoration: none; border-bottom: 1px solid var(--main-gold); }
 
-        @media (max-width: 768px) { 
-            header { flex-direction: column; padding: 20px; }
-            nav { margin-top: 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-            nav a { margin: 0 10px; font-size: 11px; }
-            .hero { text-align: center; padding: 40px 5%; } 
-            .hero-img { order: -1; } 
-        }
-    </style>.license-box { margin-top: 50px; background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 30px; text-align: left; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
-        .license-title { color: var(--main-gold); font-weight: 700; text-transform: uppercase; font-size: 15px; margin-bottom: 15px; border-bottom: 2px solid var(--main-gold); display: inline-block; padding-bottom: 5px; }
-        .license-content p { margin: 5px 0; font-size: 14px; color: #444; }
-        .license-link { display: inline-block; margin-right: 15px; margin-top: 10px; font-size: 13px; color: var(--main-gold); text-decoration: none; font-weight: 600; border-bottom: 1px dashed var(--main-gold); }
+        @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } .hero-img { order: -1; } }
+    </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-box">
-        <img src="logo.jpg" alt="Дерматолог Солодовник Марія">
-    </div>
+    <div class="logo-box"><img src="logo.jpg" alt="Логотип"></div>
     <nav>
         <a href="#about">Про нас</a>
-        <a href="#news">Статті</a>
         <a href="#location">Контакти</a>
         <a href="tel:+380931157302" style="color: var(--main-gold);">093 115 7302</a>
     </nav>
@@ -83,109 +56,63 @@
 
 <section class="hero">
     <div class="hero-content">
-        <div style="color: var(--main-gold); font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">ЧЕРНІГІВ</div>
+        <div style="color: var(--main-gold); font-weight: 700; letter-spacing: 2px;">ЧЕРНІГІВ</div>
         <h1>Дерматолог Солодовник Марія Іванівна</h1>
-        <p>Медична допомога для всієї сім’ї. Доросла та дитяча дерматовенерологія за принципами доказової медицини.</p>
-        <a href="https://t.me/solodovnik_dr" class="btn-gold">Записатися на прийом</a>
+        <p>Доросла та дитяча дерматовенерологія за принципами доказової медицини.</p>
+        <a href="https://t.me/solodovnik_dr" class="btn-gold">Записатися</a>
     </div>
-    <div class="hero-img">
-        <img src="photo.jpg" alt="Лікар дерматовенеролог Солодовник">
-    </div>
+    <div class="hero-img"><img src="photo.jpg" alt="Лікар Солодовник"></div>
 </section>
 
 <section class="section" id="about">
     <h2>Про нашу практику</h2>
-    <div style="max-width: 900px; margin: 0 auto;">
+    <div style="max-width: 800px; margin: 0 auto;">
         <ul class="feature-list">
-            <li><strong>Досвід та кваліфікація:</strong> Професійний підхід до кожного клінічного випадку.</li>
-            <li><strong>Сучасна діагностика:</strong> Використання дерматоскопії та новітніх методик.</li>
-            <li><strong>Доказова медицина:</strong> Тільки перевірені методи лікування без зайвих призначень.</li>
-            <li><strong>Сімейний лікар:</strong> Прийом пацієнтів будь-якого віку — від немовлят до дорослих.</li>
+            <li><strong>Доказова медицина:</strong> Тільки перевірені методи лікування.</li>
+            <li><strong>Дитячий прийом:</strong> Дбайливий огляд малюків з народження.</li>
+            <li><strong>Сучасна діагностика:</strong> Використання професійного обладнання.</li>
         </ul>
 
         <div class="license-box">
-            <div class="license-title">Офіційна інформація та ліцензія</div>
-            <div class="license-content">
-                <p><strong>Суб'єкт:</strong> ФОП Солодовник Марія Іванівна</p>
-                <p><strong>Спеціалізація:</strong> Дерматовенерологія, дитяча дерматовенерологія</p>
-                <p><strong>Ліцензія:</strong> Наказ МОЗ України № 258 від 26.02.2026 р.</p>
-                <div style="margin-top: 10px;">
-                    <a href="https://moz.gov.ua/storage/uploads/d7eeb25b-1e2d-4dc5-9798-e91d7d918cce/dn_258_26022026.pdf" target="_blank" class="license-link">Наказ про ліцензування</a>
-                    <a href="https://moz.gov.ua/storage/uploads/d7eeb25b-1e2d-4dc5-9798-e91d7d918cce/dn_258_26022026_dod.pdf" target="_blank" class="license-link">Додаток (перелік)</a>
-                </div>
+            <div class="license-title">Офіційна ліцензія</div>
+            <p style="font-size: 14px; margin: 5px 0;"><strong>ФОП Солодовник Марія Іванівна</strong></p>
+            <p style="font-size: 13px; color: #666;">Наказ МОЗ України № 258 від 26.02.2026 р. про ліцензування медичної практики.</p>
+            <div style="margin-top: 10px;">
+                <a href="https://moz.gov.ua/storage/uploads/d7eeb25b-1e2d-4dc5-9798-e91d7d918cce/dn_258_26022026.pdf" class="license-link" target="_blank">Наказ МОЗ</a>
+                <a href="https://moz.gov.ua/storage/uploads/d7eeb25b-1e2d-4dc5-9798-e91d7d918cce/dn_258_26022026_dod.pdf" class="license-link" target="_blank">Додаток</a>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section" id="news" style="background: var(--light);">
-    <h2>Послуги та консультації</h2>
-    <div class="news-grid">
-        <div class="news-card">
-            <div class="news-content">
-                <span class="news-tag">Дорослим</span>
-                <h3>Дерматовенерологія</h3>
-                <p>Діагностика та лікування захворювань шкіри, волосся та нігтів. Конфіденційність та професіоналізм.</p>
-                <a href="https://t.me/solodovnik_dr" style="color: var(--main-gold); font-weight: 700; text-decoration: none;">Записатись →</a>
-            </div>
-        </div>
-        <div class="news-card">
-            <div class="news-content">
-                <span class="news-tag">Дітям</span>
-                <h3>Дитяча дерматологія</h3>
-                <p>Дбайливий огляд та лікування дерматитів, висипань та інших проблем шкіри у дітей з народження.</p>
-                <a href="https://t.me/solodovnik_dr" style="color: var(--main-gold); font-weight: 700; text-decoration: none;">Записатись →</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section" id="location">
+<section class="section" id="location" style="background: var(--light);">
     <h2>Контакти та графік</h2>
     <p>📍 м. Чернігів, проспект Михайла Грушевського, 119-А</p>
     <div class="contact-grid">
         <div class="info-block">
             <ul class="schedule">
-                <li><span class="day">Вт, Ср, Чт:</span> 17:00 – 20:00</li>
-                <li><span class="day">Сб, Нд:</span> 12:00 – 15:00</li>
-                <li><span class="day">Пн, Пт:</span> Вихідний</li>
+                <li><span class="day">Вт-Чт:</span> 17:00 – 20:00</li>
+                <li><span class="day">Сб-Нд:</span> 12:00 – 15:00</li>
             </ul>
-            <p><strong>📞 Телефон: 093 115 7302</strong></p>
-            <a href="https://www.google.com/maps/dir//51.5173,31.3121" target="_blank" class="btn-gold">Маршрут у Google Maps</a>
-        </div>
-        <div class="map-container">
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.288282367839!2d31.3095!3d51.5173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTEuNTE3MywgMzEuMzA5NQ!5e0!3m2!1suk!2sua!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+            <p><strong>📞 093 115 7302</strong></p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=51.5034,31.3323" class="btn-gold" target="_blank">Маршрут</a>
         </div>
     </div>
 </section>
 
-<footer>.license-footer { max-width: 600px; margin: 0 auto 30px; padding: 20px; border-top: 1px solid rgba(197, 160, 89, 0.3); font-size: 13px; line-height: 1.8; color: #cccccc; }
-        .license-footer p { margin: 5px 0; }
-        .license-footer strong { color: var(--main-gold); text-transform: uppercase; letter-spacing: 1px; }
-    <img src="logo.jpg" class="footer-logo" alt="Logo">
-    <div class="social-links">
-        <a href="https://www.instagram.com/solodovnykdermatology" target="_blank">Instagram</a>
-        <a href="https://t.me/solodovnik_dr" target="_blank">Telegram</a>
-    </div>
-    <p>© 2026 Дерматолог Солодовник Марія Іванівна</p>
-</footer><footer>
-    <img src="logo.jpg" class="footer-logo" alt="Logo">
-    
+<footer>
+    <img src="logo.jpg" style="height: 50px; filter: brightness(0) invert(1);" alt="Logo">
     <div class="license-footer">
-        <p><strong>Медична практика</strong></p>
-        <p>Ліцензія МОЗ України (Наказ від 26.02.2026 № 258)</p>
-        <p>Спеціальність: дерматовенерологія, дитяча дерматовенерологія</p>
-        <p>ФОП Солодовник Марія Іванівна (ІПН: 3229815845)</p>
+        МЕДИЧНА ПРАКТИКА [cite: 5]<br>
+        Ліцензія: Наказ МОЗ № 258 від 26.02.2026 р. [cite: 13]<br>
+        Спеціальність: дерматовенерологія, дитяча дерматовенерологія [cite: 24]<br>
+        ФОП Солодовник М. І., ІПН 3229815845 [cite: 6, 8]
     </div>
-
     <div class="social-links">
         <a href="https://www.instagram.com/solodovnykdermatology" target="_blank">Instagram</a>
         <a href="https://t.me/solodovnik_dr" target="_blank">Telegram</a>
     </div>
-
-    <p style="opacity: 0.7; font-size: 12px; margin-top: 20px;">
-        © 2026 Дерматолог Солодовник Марія Іванівна. Всі права захищені.
-    </p>
+    <p style="font-size: 11px; margin-top: 20px; opacity: 0.5;">© 2026 Солодовник Марія Іванівна</p>
 </footer>
 
 </body>
