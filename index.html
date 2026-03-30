@@ -32,11 +32,16 @@
         .license-title { color: var(--main-gold); font-weight: 700; text-transform: uppercase; font-size: 14px; margin-bottom: 15px; border-bottom: 2px solid var(--main-gold); display: inline-block; }
         .license-link { color: var(--main-gold); text-decoration: none; font-weight: 600; font-size: 13px; border-bottom: 1px dashed; margin-right: 15px; }
 
-        .price-table { width: 100%; max-width: 900px; margin: 30px auto; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .price-table { width: 100%; max-width: 900px; margin: 30px auto 10px; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .price-table th, .price-table td { padding: 15px 20px; border-bottom: 1px solid #eee; }
         .price-table th { background: var(--light); color: var(--main-gold); text-transform: uppercase; font-size: 13px; letter-spacing: 1px; }
         .price-value { font-weight: 700; color: var(--dark); white-space: nowrap; }
+        
         .discount-info { background: #fff5e6; padding: 15px; border-radius: 5px; margin-top: 20px; font-size: 14px; border-left: 4px solid var(--main-gold); text-align: left; max-width: 900px; margin-left: auto; margin-right: auto; }
+        
+        /* Нові стилі для юридичних приміток */
+        .price-notes { max-width: 900px; margin: 20px auto 0; text-align: left; font-size: 13px; color: #666; line-height: 1.6; border-top: 1px solid #eee; padding-top: 20px; }
+        .price-notes p { margin: 10px 0; }
 
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; text-align: left; margin-top: 40px; }
         .schedule { list-style: none; padding: 0; margin: 20px 0; border-left: 3px solid var(--main-gold); padding-left: 15px; }
@@ -117,6 +122,11 @@
         <strong>Пільгова вартість (550 грн первинна / 500 грн повторна):</strong><br>
         Надається для учасників бойових дій, осіб з інвалідністю (1-2 груп, діти) та пенсіонерів за наявності посвідчення.
     </div>
+
+    <div class="price-notes">
+        <p>• <strong>Повторна консультація</strong> проводиться протягом 1 місяця з дня отримання первинної консультації, якщо інший строк не вказаний лікарем у консультативному висновку.</p>
+        <p>• <strong>Онлайн-консультація</strong> має рекомендаційний характер. Остаточний діагноз та призначення лікування потребують очного огляду лікаря та, за необхідності, проведення додаткових інструментальних, лабораторних чи інших обстежень.</p>
+    </div>
 </section>
 
 <section class="section" id="location" style="background: var(--light);">
@@ -129,7 +139,7 @@
                 <li><span class="day">Сб-Нд:</span> 12:00 – 15:00</li>
             </ul>
             <p><strong>📞 093 115 7302</strong></p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Чернігів+Грушевського+119-А" class="btn-gold" target="_blank">Маршрут у Maps</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Чернігів+Михайла+Грушевського+119-А" class="btn-gold" target="_blank">Маршрут у Maps</a>
         </div>
     </div>
 </section>
