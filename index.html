@@ -20,17 +20,13 @@
         .section { padding: 70px 8%; text-align: center; }
         .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; border-radius: 2px; text-transform: uppercase; font-size: 14px; }
         .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; max-width: 1100px; margin: 40px auto 0; }
-        .cert-item { background: #fff; padding: 10px; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: 0.3s; text-align: center; }
-        .cert-item:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(197, 160, 89, 0.2); }
-        .cert-item img { width: 100%; height: auto; border-radius: 2px; border: 1px solid #eee; min-height: 200px; background: #eee; }
+        .cert-item { background: #fff; padding: 10px; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; }
+        .cert-item img { width: 100%; height: auto; border-radius: 2px; border: 1px solid #eee; }
         .cert-item p { font-size: 11px; margin-top: 10px; font-weight: 600; text-transform: uppercase; color: var(--dark); line-height: 1.2; }
         .price-table { width: 100%; max-width: 900px; margin: 30px auto; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .price-table th, .price-table td { padding: 15px 20px; border-bottom: 1px solid #eee; }
-        .price-table th { background: var(--light); color: var(--main-gold); text-transform: uppercase; font-size: 13px; }
-        .price-value { font-weight: 700; color: var(--dark); }
-        .discount-info { background: #fff5e6; padding: 15px; border-radius: 5px; margin-top: 20px; font-size: 14px; border-left: 4px solid var(--main-gold); text-align: left; max-width: 900px; margin: 20px auto; }
         footer { background: var(--dark); color: white; padding: 50px 8%; text-align: center; }
-        @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } .hero-img { order: -1; } }
+        @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } }
     </style>
 </head>
 <body>
@@ -48,16 +44,15 @@
 
 <section class="hero">
     <div class="hero-content">
-        <div style="color: var(--main-gold); font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">ЧЕРНІГІВ</div>
         <h1>Солодовник Марія Іванівна</h1>
-        <p style="font-weight: 600; color: var(--main-gold); margin-bottom: 5px;">Лікар-дерматовенеролог, трихолог</p>
-        <p>Допомога за принципами доказової медицини.</p>
-        <a href="https://t.me/solodovnik_dr" class="btn-gold" target="_blank">Записатися на прийом</a>
+        <p style="font-weight: 600; color: var(--main-gold);">Лікар-дерматовенеролог, трихолог</p>
+        <p>Приватна практика в Чернігові. Допомога за принципами доказової медицини.</p>
+        <a href="https://t.me/solodovnik_dr" class="btn-gold" target="_blank">Записатися</a>
     </div>
     <div class="hero-img"><img src="photo.jpg" alt="Лікар Солодовник"></div>
 </section>
 
-<section class="section" id="certificates" style="background: var(--light); border-top: 1px solid #eee;">
+<section class="section" id="certificates" style="background: var(--light);">
     <h2>Кваліфікація та сертифікати</h2>
     <div class="cert-grid">
         <script>
@@ -72,32 +67,14 @@
                 15: "Сучасні методи в трихології", 16: "Кваліфікаційний сертифікат спеціаліста"
             };
 
-            function tryLoadImage(imgElement, id, variantIndex) {
-                // Список можливих варіантів назв файлів
-                const variants = [
-                    `c${id}.jpg`, `с${id}.jpg`, 
-                    `c${id}.JPG`, `с${id}.JPG`,
-                    `c${id}.jpeg`, `с${id}.jpeg`
-                ];
-                
-                if (variantIndex < variants.length) {
-                    const nextSrc = variants[variantIndex];
-                    imgElement.src = nextSrc;
-                    // Оновлюємо і посилання, щоб при кліку відкривався правильний файл
-                    imgElement.parentElement.href = nextSrc;
-                    imgElement.onerror = () => tryLoadImage(imgElement, id, variantIndex + 1);
-                } else {
-                    imgElement.onerror = null;
-                    imgElement.src = 'https://via.placeholder.com/200x280?text=Помилка+файлу';
-                }
-            }
-
             for (let i = 1; i <= 16; i++) {
                 const title = titles[i] || `Сертифікат №${i}`;
+                // Використовуємо i === 16 ? 'c17.jpg' : `c${i}.jpg`, бо твій 16-й файл називається c17.jpg
+                const fileName = (i === 16) ? 'c17.jpg' : `c${i}.jpg`;
                 document.write(`
                     <div class="cert-item">
-                        <a href="c${i}.jpg" target="_blank">
-                            <img src="c${i}.jpg" alt="${title}" onload="this.style.background='white'" onerror="tryLoadImage(this, ${i}, 1)">
+                        <a href="${fileName}" target="_blank">
+                            <img src="${fileName}" alt="${title}" onerror="this.src='https://via.placeholder.com/200x280?text=c${i}.jpg'">
                         </a>
                         <p>${title}</p>
                     </div>
@@ -110,26 +87,14 @@
 <section class="section" id="prices">
     <h2>Вартість послуг</h2>
     <table class="price-table">
-        <thead><tr><th>Послуга</th><th>Вартість</th></tr></thead>
-        <tbody>
-            <tr><td>Первинна консультація</td><td class="price-value">700 грн</td></tr>
-            <tr><td>Повторна консультація</td><td class="price-value">600 грн</td></tr>
-            <tr><td>Дерматоскопія</td><td class="price-value">300 грн</td></tr>
-        </tbody>
+        <tr><td>Первинна консультація</td><td><strong>700 грн</strong></td></tr>
+        <tr><td>Повторна консультація</td><td><strong>600 грн</strong></td></tr>
+        <tr><td>Дерматоскопія</td><td><strong>300 грн</strong></td></tr>
     </table>
-    <div class="discount-info">
-        Для учасників бойових дій та пенсіонерів діє пільгова вартість.
-    </div>
-</section>
-
-<section class="section" id="location" style="background: var(--light);">
-    <h2>Контакти</h2>
-    <p>📍 м. Чернігів, проспект Михайла Грушевського, 119-А</p>
-    <p>📞 093 115 7302</p>
 </section>
 
 <footer>
-    <p>© 2026 Солодовник Марія Іванівна. Всі права захищені.</p>
+    <p>ФОП Солодовник М. І. | 2026</p>
 </footer>
 
 </body>
