@@ -14,6 +14,7 @@
         
         header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .logo-box img { height: 65px; width: auto; }
+        nav { display: flex; align-items: center; }
         nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
         nav a:hover { color: var(--main-gold); }
 
@@ -44,7 +45,6 @@
         .price-value { font-weight: 700; color: var(--dark); white-space: nowrap; }
         
         .discount-info { background: #fff5e6; padding: 15px; border-radius: 5px; margin-top: 20px; font-size: 14px; border-left: 4px solid var(--main-gold); text-align: left; max-width: 900px; margin-left: auto; margin-right: auto; }
-        .price-notes { max-width: 900px; margin: 20px auto 0; text-align: left; font-size: 13px; color: #666; line-height: 1.6; border-top: 1px solid #eee; padding-top: 20px; }
 
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; text-align: left; margin-top: 40px; }
         .schedule { list-style: none; padding: 0; margin: 20px 0; border-left: 3px solid var(--main-gold); padding-left: 15px; }
@@ -52,7 +52,6 @@
 
         footer { background: var(--dark); color: white; padding: 50px 8%; text-align: center; }
         .license-footer { font-size: 12px; color: #aaa; margin: 20px 0; line-height: 1.6; }
-        .social-links a { color: white; margin: 0 10px; text-decoration: none; border-bottom: 1px solid var(--main-gold); }
 
         @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } .hero-img { order: -1; } }
     </style>
@@ -77,7 +76,7 @@
         <p style="font-weight: 600; color: var(--main-gold); margin-bottom: 5px;">Лікар-дерматовенеролог (дорослий та дитячий), трихолог</p>
         <p style="font-size: 14px; margin-top: 0; opacity: 0.8;">Друга кваліфікаційна категорія • 13 років професійного досвіду</p>
         <p>Допомога всій сім’ї за принципами доказової медицини. Спеціалізоване лікування шкіри та волосся.</p>
-        <a href="https://t.me/solodovnik_dr" class="btn-gold">Записатися на прийом</a>
+        <a href="https://t.me/solodovnik_dr" class="btn-gold" target="_blank">Записатися на прийом</a>
     </div>
     <div class="hero-img"><img src="photo.jpg" alt="Лікар Солодовник"></div>
 </section>
@@ -128,11 +127,10 @@
                 13: "Школа діагностики пухлин шкіри",
                 14: "Актуальні питання дерматовенерології",
                 15: "Сучасні методи в трихології",
-                16: "Кваліфікаційний сертифікат спеціаліста",
-                17: "Дерматоскопія: поглиблений курс"
+                16: "Кваліфікаційний сертифікат спеціаліста"
             };
 
-            for (let i = 1; i <= 17; i++) {
+            for (let i = 1; i <= 16; i++) {
                 const title = titles[i] || `Сертифікат №${i}`;
                 document.write(`
                     <div class="cert-item">
@@ -149,15 +147,15 @@
 
 <section class="section" id="prices" style="background: #fff;">
     <h2>Вартість послуг</h2>
-    <p style="font-weight: 600; color: var(--main-gold);">Ціни діють з 01.03.2026 р. по 31.12.2026 р.</p>
+    <p style="font-weight: 600; color: var(--main-gold);">Ціни діють з 01.03.2026 р.</p>
     
     <table class="price-table">
         <thead>
             <tr><th>Найменування послуги</th><th>Вартість</th></tr>
         </thead>
         <tbody>
-            <tr><td>Консультація лікаря-дерматовенеролога (первинна)</td><td class="price-value">700,00 грн</td></tr>
-            <tr><td>Консультація лікаря-дерматовенеролога (повторна)</td><td class="price-value">600,00 грн</td></tr>
+            <tr><td>Консультація дерматовенеролога (первинна)</td><td class="price-value">700,00 грн</td></tr>
+            <tr><td>Консультація дерматовенеролога (повторна)</td><td class="price-value">600,00 грн</td></tr>
             <tr><td>Онлайн-консультація (первинна)</td><td class="price-value">550,00 грн</td></tr>
             <tr><td>Онлайн-консультація (повторна)</td><td class="price-value">500,00 грн</td></tr>
             <tr><td>Дерматоскопія / Трихоскопія</td><td class="price-value">300,00 грн</td></tr>
@@ -167,12 +165,7 @@
 
     <div class="discount-info">
         <strong>Пільгова вартість (550 грн первинна / 500 грн повторна):</strong><br>
-        Надається для учасників бойових дій, осіб з інвалідністю (1-2 груп, діти) та пенсіонерів за наявності посвідчення.
-    </div>
-
-    <div class="price-notes">
-        <p>• <strong>Повторна консультація</strong> проводиться протягом 1 місяця з дня отримання первинної консультації.</p>
-        <p>• <strong>Онлайн-консультація</strong> має рекомендаційний характер.</p>
+        Для учасників бойових дій, осіб з інвалідністю та пенсіонерів (за наявності посвідчення).
     </div>
 </section>
 
@@ -180,13 +173,13 @@
     <h2>Контакти та графік</h2>
     <p>📍 м. Чернігів, проспект Михайла Грушевського, 119-А</p>
     <div class="contact-grid">
-        <div class="info-block">
+        <div style="margin: 0 auto; max-width: 400px;">
             <ul class="schedule">
                 <li><span class="day">Вт-Чт:</span> 17:00 – 20:00</li>
                 <li><span class="day">Сб-Нд:</span> 12:00 – 15:00</li>
             </ul>
             <p><strong>📞 093 115 7302</strong></p>
-            <a href="https://maps.google.com/?q=Чернігів,Грушевського,119-А" class="btn-gold" target="_blank">Маршрут у Maps</a>
+            <a href="https://t.me/solodovnik_dr" class="btn-gold" target="_blank">Написати у Telegram</a>
         </div>
     </div>
 </section>
@@ -195,12 +188,8 @@
     <img src="logo.png" style="height: 60px; width: auto; display: block; margin: 0 auto 20px;" alt="Logo">
     <div class="license-footer">
         <strong>Солодовник Марія Іванівна</strong><br>
-        Ліцензія: Наказ МОЗ № 258 від 26.02.2026 р.<br>
-        ФОП Солодовник М. І., ІПН 3229815845
-    </div>
-    <div class="social-links">
-        <a href="https://www.instagram.com/solodovnykdermatology" target="_blank">Instagram</a>
-        <a href="https://t.me/solodovnik_dr" target="_blank">Telegram</a>
+        Ліцензія МОЗ № 258 від 26.02.2026 р.<br>
+        ФОП Солодовник М. І.
     </div>
     <p style="font-size: 11px; margin-top: 20px; opacity: 0.5;">© 2026 Солодовник Марія Іванівна</p>
 </footer>
