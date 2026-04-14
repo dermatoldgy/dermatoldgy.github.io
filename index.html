@@ -4,54 +4,251 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Дерматовенеролог Чернігів (дорослий та дитячий), трихолог — Солодовник Марія</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        :root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; --light: #fafafa; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); scroll-behavior: smooth; }
+        :root { 
+            --main-gold: #c5a059; 
+            --dark: #1a1a1a; 
+            --bg: #ffffff; 
+            --light: #fafafa; 
+        }
+
+        * { box-sizing: border-box; }
+
+        body { 
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            margin: 0; 
+            color: var(--dark); 
+            line-height: 1.6; 
+            background: var(--bg); 
+            scroll-behavior: smooth; 
+        }
         
-        header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        header { 
+            background: white; 
+            padding: 10px 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+
         .logo-box img { height: 65px; width: auto; }
-        nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
+
+        nav a { 
+            text-decoration: none; 
+            color: var(--dark); 
+            font-weight: 600; 
+            margin-left: 20px; 
+            font-size: 13px; 
+            text-transform: uppercase; 
+            transition: 0.3s; 
+        }
+
         nav a:hover { color: var(--main-gold); }
 
-        .hero { display: flex; align-items: center; padding: 60px 8%; background: var(--light); gap: 40px; flex-wrap: wrap; }
+        .hero { 
+            display: flex; 
+            align-items: center; 
+            padding: 60px 8%; 
+            background: var(--light); 
+            gap: 40px; 
+            flex-wrap: wrap; 
+        }
+
         .hero-content { flex: 1; min-width: 300px; }
-        .hero-img img { width: 100%; max-width: 400px; border-radius: 5px; box-shadow: 15px 15px 0 var(--main-gold); }
+
+        .hero-img img { 
+            width: 100%; 
+            max-width: 400px; 
+            border-radius: 5px; 
+            box-shadow: 15px 15px 0 var(--main-gold); 
+        }
 
         .section { padding: 70px 8%; text-align: center; }
-        .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; text-transform: uppercase; font-size: 14px; margin-top: 20px; }
-        .btn-gold:hover { background: #b08d4a; transform: translateY(-2px); }
+
+        .btn-gold { 
+            background: var(--main-gold); 
+            color: white; 
+            padding: 15px 35px; 
+            border: none; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-block; 
+            transition: 0.3s; 
+            cursor: pointer; 
+            border-radius: 2px; 
+            text-transform: uppercase; 
+            font-size: 14px; 
+            margin-top: 20px; 
+        }
+
+        .btn-gold:hover { 
+            background: #b08d4a; 
+            transform: translateY(-2px); 
+        }
         
-        /* СЕРТИФІКАТИ */
-        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; max-width: 1200px; margin: 40px auto 0; }
-        .cert-item { background: #fff; padding: 5px; border: 1px solid #eee; border-radius: 4px; transition: 0.4s; cursor: zoom-in; }
-        .cert-item:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .cert-item img { width: 100%; height: auto; border-radius: 2px; display: block; }
+        /* ГАЛЕРЕЯ СЕРТИФІКАТІВ */
+        .cert-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+            gap: 15px; 
+            max-width: 1200px; 
+            margin: 40px auto 0; 
+        }
 
-        #lightbox { display: none; position: fixed; z-index: 10000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
-        #lightbox img { max-width: 90%; max-height: 90%; border-radius: 4px; }
+        .cert-item { 
+            background: #fff; 
+            padding: 5px; 
+            border: 1px solid #eee; 
+            border-radius: 4px; 
+            transition: 0.4s; 
+            cursor: zoom-in; 
+        }
 
-        /* ЦІНИ */
-        .price-table { width: 100%; max-width: 900px; margin: 20px auto 10px; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .price-table td { padding: 15px 20px; border-bottom: 1px solid #eee; }
-        .price-value { font-weight: 700; text-align: right; white-space: nowrap; }
+        .cert-item:hover { 
+            transform: scale(1.05); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+        }
+
+        .cert-item img { 
+            width: 100%; 
+            height: auto; 
+            border-radius: 2px; 
+            display: block; 
+        }
+
+        /* LIGHTBOX */
+        #lightbox { 
+            display: none; 
+            position: fixed; 
+            z-index: 10000; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: rgba(0,0,0,0.9); 
+            justify-content: center; 
+            align-items: center; 
+            cursor: zoom-out;
+        }
+
+        #lightbox img { 
+            max-width: 90%; 
+            max-height: 90%; 
+            border-radius: 4px; 
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+
+        /* ЦІНИ ТА ТАБЛИЦЯ */
+        .table-wrapper { 
+            overflow-x: auto; 
+            max-width: 900px; 
+            margin: 20px auto; 
+        }
+
+        .price-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            text-align: left; 
+            background: white; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        }
+
+        .price-table td { 
+            padding: 15px 20px; 
+            border-bottom: 1px solid #eee; 
+        }
+
+        .price-value { 
+            font-weight: 700; 
+            text-align: right; 
+            white-space: nowrap; 
+            color: var(--main-gold);
+        }
         
-        .promo-box { max-width: 900px; margin: 30px auto; background: #fff; padding: 25px; border: 1px solid var(--main-gold); border-radius: 4px; text-align: left; }
-        .price-notes { max-width: 900px; margin: 0 auto; text-align: left; font-size: 13px; color: #666; background: #fcfcfc; padding: 20px; border: 1px solid #eee; border-radius: 4px; }
+        .promo-box { 
+            max-width: 900px; 
+            margin: 30px auto; 
+            background: #fff; 
+            padding: 25px; 
+            border: 1px solid var(--main-gold); 
+            border-radius: 4px; 
+            text-align: left; 
+        }
 
-        .license-box { margin-top: 40px; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 30px; text-align: left; border-left: 5px solid var(--main-gold); }
+        .price-notes { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            text-align: left; 
+            font-size: 13px; 
+            color: #666; 
+            background: #fcfcfc; 
+            padding: 20px; 
+            border: 1px solid #eee; 
+            border-radius: 4px; 
+        }
 
-        .contact-container { display: flex; flex-wrap: wrap; gap: 30px; max-width: 1100px; margin: 40px auto; text-align: left; }
-        .map-box { flex: 1.5; min-width: 300px; height: 400px; border-radius: 8px; overflow: hidden; border: 1px solid #eee; }
+        .license-box { 
+            margin-top: 40px; 
+            background: #fff; 
+            border: 1px solid #eee; 
+            border-radius: 8px; 
+            padding: 30px; 
+            text-align: left; 
+            border-left: 5px solid var(--main-gold); 
+        }
 
-        footer { background: var(--dark); color: white; padding: 50px 8%; text-align: center; }
-        @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } .hero-img { order: -1; } .contact-container { flex-direction: column; } }
+        /* КОНТАКТИ */
+        .contact-container { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 30px; 
+            max-width: 1100px; 
+            margin: 40px auto; 
+            text-align: left; 
+        }
+
+        .contact-info { flex: 1; min-width: 280px; }
+
+        .map-box { 
+            flex: 1.5; 
+            min-width: 300px; 
+            height: 400px; 
+            border-radius: 8px; 
+            overflow: hidden; 
+            border: 1px solid #eee; 
+        }
+
+        .map-box iframe { width: 100%; height: 100%; border: none; }
+
+        footer { 
+            background: var(--dark); 
+            color: white; 
+            padding: 50px 8%; 
+            text-align: center; 
+        }
+
+        @media (max-width: 768px) { 
+            nav { display: none; } 
+            .hero { text-align: center; } 
+            .hero-img { order: -1; margin: 0 auto; } 
+            .contact-container { flex-direction: column; }
+            .section { padding: 50px 5%; }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-box"><img src="logo.png" alt="Приватний дерматолог Солодовник Марія Іванівна"></div>
+    <div class="logo-box">
+        <img src="logo.png" alt="Приватний дерматолог Солодовник Марія Іванівна">
+    </div>
     <nav>
         <a href="#about">Ліцензія</a>
         <a href="#certificates">Сертифікати</a>
@@ -61,7 +258,7 @@
 </header>
 
 <div id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="">
+    <img id="lightbox-img" src="" alt="Перегляд сертифіката">
 </div>
 
 <section class="hero">
@@ -75,7 +272,7 @@
         <a href="https://t.me/solodovnik_dr" target="_blank" class="btn-gold">Записатися на прийом</a>
     </div>
     <div class="hero-img">
-        <img src="photo.jpg" alt="Дерматовенеролог (дорослий та дитячий), трихолог Солодовник Марія Іванівна">
+        <img src="photo.jpg" alt="Дерматовенеролог Солодовник Марія Іванівна">
     </div>
 </section>
 
@@ -100,35 +297,37 @@
 <section class="section" id="certificates" style="background: var(--light); border-top: 1px solid #eee;">
     <h2>Кваліфікація та сертифікати</h2>
     <div class="cert-grid">
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c1.JPG" onerror="this.src='c1.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c2.JPG" onerror="this.src='c2.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c3.JPG" onerror="this.src='c3.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c4.JPG" onerror="this.src='c4.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c5.JPG" onerror="this.src='c5.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c6.JPG" onerror="this.src='c6.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c7.JPG" onerror="this.src='c7.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c8.JPG" onerror="this.src='c8.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c9.JPG" onerror="this.src='c9.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c10.JPG" onerror="this.src='c10.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c11.JPG" onerror="this.src='c11.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c12.JPG" onerror="this.src='c12.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c13.JPG" onerror="this.src='c13.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c14.JPG" onerror="this.src='c14.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c15.JPG" onerror="this.src='c15.jpg'"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c16.JPG" onerror="this.src='c16.jpg'"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c1.JPG" onerror="this.src='c1.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c2.JPG" onerror="this.src='c2.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c3.JPG" onerror="this.src='c3.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c4.JPG" onerror="this.src='c4.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c5.JPG" onerror="this.src='c5.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c6.JPG" onerror="this.src='c6.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c7.JPG" onerror="this.src='c7.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c8.JPG" onerror="this.src='c8.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c9.JPG" onerror="this.src='c9.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c10.JPG" onerror="this.src='c10.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c11.JPG" onerror="this.src='c11.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c12.JPG" onerror="this.src='c12.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c13.JPG" onerror="this.src='c13.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c14.JPG" onerror="this.src='c14.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c15.JPG" onerror="this.src='c15.jpg'" loading="lazy"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c16.JPG" onerror="this.src='c16.jpg'" loading="lazy"></div>
     </div>
 </section>
 
 <section class="section" id="prices">
     <h2>Вартість послуг 2026</h2>
-    <table class="price-table">
-        <tr><td>Первинна консультація</td><td class="price-value">700 грн</td></tr>
-        <tr><td>Повторна консультація*</td><td class="price-value">600 грн</td></tr>
-        <tr><td>Онлайн-консультація (первинна)</td><td class="price-value">550 грн</td></tr>
-        <tr><td>Онлайн-консультація (повторна)</td><td class="price-value">500 грн</td></tr>
-        <tr><td>Дерматоскопія / Трихоскопія</td><td class="price-value">300 грн</td></tr>
-        <tr><td>Медична довідка (без пільг)</td><td class="price-value">300 грн</td></tr>
-    </table>
+    <div class="table-wrapper">
+        <table class="price-table">
+            <tr><td>Первинна консультація</td><td class="price-value">700 грн</td></tr>
+            <tr><td>Повторна консультація*</td><td class="price-value">600 грн</td></tr>
+            <tr><td>Онлайн-консультація (первинна)</td><td class="price-value">550 грн</td></tr>
+            <tr><td>Онлайн-консультація (повторна)</td><td class="price-value">500 грн</td></tr>
+            <tr><td>Дерматоскопія / Трихоскопія</td><td class="price-value">300 грн</td></tr>
+            <tr><td>Медична довідка (без пільг)</td><td class="price-value">300 грн</td></tr>
+        </table>
+    </div>
 
     <div class="promo-box">
         <h4 style="margin-top: 0; color: var(--main-gold);">Вартість із урахуванням пільг</h4>
@@ -150,29 +349,41 @@
     <h2>Контакти та запис</h2>
     <div class="contact-container">
         <div class="contact-info">
-            <p><strong>Адреса:</strong> м. Чернігів, пр-т Грушевського, 119-А</p>
-            <p><strong>Телефон:</strong> +38 093 115 7302</p>
-            <p><strong>Години:</strong> Вт-Чт: 17:00-20:00 | Сб-Нд: 12:00-15:00</p>
+            <p><strong>Адреса:</strong> м. Чернігів, пр-т Михайла Грушевського, 119-А</p>
+            <p><strong>Телефон:</strong> <a href="tel:+380931157302" style="color: inherit; text-decoration: none;">+38 093 115 7302</a></p>
+            <p><strong>Години прийому:</strong><br>Вт-Чт: 17:00-20:00<br>Сб-Нд: 12:00-15:00</p>
             <a href="https://t.me/solodovnik_dr" target="_blank" class="btn-gold">Записатися в Telegram</a>
         </div>
         <div class="map-box">
-            <iframe src="https://www.google.com/maps/dir/?api=1&destination=51.517373,31.31163412" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5!2d31.2!3d51.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTEuNSIwIk4gMzEuMiIwIkU!5e0!3m2!1suk!2sua!4v123456789" loading="lazy"></iframe>
         </div>
     </div>
 </section>
 
-<footer><p>© 2026 Солодовник Марія Іванівна. Всі права застережено.</p></footer>
+<footer>
+    <p>© 2026 Солодовник Марія Іванівна. Всі права застережено.</p>
+</footer>
 
 <script>
     function openLightbox(element) {
-        document.getElementById('lightbox-img').src = element.querySelector('img').src;
-        document.getElementById('lightbox').style.display = 'flex';
+        const lb = document.getElementById('lightbox');
+        const img = document.getElementById('lightbox-img');
+        img.src = element.querySelector('img').src;
+        lb.style.display = 'flex';
         document.body.style.overflow = 'hidden';
     }
+
     function closeLightbox() {
         document.getElementById('lightbox').style.display = 'none';
         document.body.style.overflow = 'auto';
     }
+
+    // Закриття галереї клавішею Esc
+    window.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+    });
 </script>
 
 </body>
