@@ -132,10 +132,12 @@
 
             for (let i = 1; i <= 16; i++) {
                 const title = titles[i] || `Сертифікат №${i}`;
+                // Цей код пробує англійську 'c', а якщо не знаходить — українську 'с'
                 document.write(`
                     <div class="cert-item">
-                        <a href="c${i}.jpg" target="_blank">
-                            <img src="c${i}.jpg" alt="${title}" onerror="this.src='https://via.placeholder.com/200x280?text=c${i}.jpg'">
+                        <a href="c${i}.jpg" id="link-${i}" target="_blank">
+                            <img src="c${i}.jpg" alt="${title}" 
+                                 onerror="this.onerror=null; this.src='с${i}.jpg'; document.getElementById('link-${i}').href='с${i}.jpg';">
                         </a>
                         <p>${title}</p>
                     </div>
