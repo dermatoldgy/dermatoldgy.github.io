@@ -1,262 +1,162 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Дерматолог Солодовник Марія | Чернігів</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дерматолог Солодовник Марія | Чернігів</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; --light: #fafafa; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); scroll-behavior: smooth; }
+        
+        header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo-box img { height: 65px; width: auto; }
+        nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: var(--main-gold); }
 
-<meta name="description" content="Дерматолог у Чернігові. Солодовник Марія Іванівна. Консультації, трихологія, лікування шкіри.">
+        .hero { display: flex; align-items: center; padding: 60px 8%; background: var(--light); gap: 40px; flex-wrap: wrap; }
+        .hero-content { flex: 1; min-width: 300px; }
+        .hero-img img { width: 100%; max-width: 400px; border-radius: 5px; box-shadow: 15px 15px 0 var(--main-gold); }
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        .section { padding: 70px 8%; text-align: center; }
+        .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; text-transform: uppercase; font-size: 14px; margin-top: 20px; }
+        .btn-gold:hover { background: #b08d4a; }
+        
+        /* ГАЛЕРЕЯ СЕРТИФІКАТІВ БЕЗ ТЕКСТУ */
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1200px; margin: 40px auto 0; }
+        .cert-item { background: #fff; padding: 5px; border: 1px solid #eee; border-radius: 4px; transition: 0.4s; overflow: hidden; }
+        .cert-item:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 2; }
+        .cert-item img { width: 100%; height: auto; border-radius: 2px; display: block; filter: grayscale(20%); transition: 0.4s; }
+        .cert-item:hover img { filter: grayscale(0%); }
 
-<style>
-:root {
-    --gold:#c5a059;
-    --dark:#1a1a1a;
-    --light:#fafafa;
-}
+        /* ЦІНИ */
+        .price-table { width: 100%; max-width: 900px; margin: 20px auto 10px; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .price-table td { padding: 15px 20px; border-bottom: 1px solid #eee; }
+        .price-value { font-weight: 700; color: var(--dark); white-space: nowrap; text-align: right; }
+        
+        .promo-box { max-width: 900px; margin: 30px auto; background: #fff; padding: 25px; border: 1px solid var(--main-gold); border-radius: 4px; text-align: left; }
+        .price-notes { max-width: 900px; margin: 0 auto; text-align: left; font-size: 13px; color: #666; background: #fcfcfc; padding: 20px; border: 1px solid #eee; border-radius: 4px; }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin:0;
-    color:var(--dark);
-    line-height:1.6;
-    scroll-behavior:smooth;
-    padding-bottom:90px;
-}
+        .license-box { margin-top: 40px; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 30px; text-align: left; border-left: 5px solid var(--main-gold); box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
 
-/* HEADER */
-header {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 5%;
-    background:#fff;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
+        .contact-container { display: flex; flex-wrap: wrap; gap: 30px; max-width: 1100px; margin: 40px auto; text-align: left; }
+        .contact-info { flex: 1; min-width: 300px; padding: 20px; }
+        .map-box { flex: 1.5; min-width: 300px; height: 400px; border-radius: 8px; overflow: hidden; border: 1px solid #eee; }
+        .map-box iframe { width: 100%; height: 100%; border: 0; }
 
-nav a {
-    margin-left:15px;
-    text-decoration:none;
-    font-size:13px;
-    font-weight:600;
-    color:var(--dark);
-}
-
-/* HERO */
-.hero {
-    display:flex;
-    flex-wrap:wrap;
-    gap:30px;
-    padding:60px 8%;
-    background:var(--light);
-    align-items:center;
-}
-
-.hero-img img {
-    max-width:350px;
-    width:100%;
-    border-radius:6px;
-}
-
-/* SECTION */
-.section {
-    padding:60px 8%;
-    text-align:center;
-}
-
-/* BUTTON */
-.btn {
-    background:var(--gold);
-    color:#fff;
-    padding:12px 25px;
-    border-radius:4px;
-    text-decoration:none;
-    font-weight:700;
-}
-
-/* CERTS */
-.cert-grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:10px;
-}
-
-.cert-item img {
-    width:100%;
-    cursor:zoom-in;
-}
-
-/* LIGHTBOX */
-#lightbox {
-    display:none;
-    position:fixed;
-    top:0;left:0;
-    width:100%;height:100%;
-    background:rgba(0,0,0,0.9);
-    justify-content:center;
-    align-items:center;
-}
-
-#lightbox img {
-    max-width:90%;
-    max-height:90%;
-}
-
-/* TABLE */
-.price-table {
-    max-width:700px;
-    margin:auto;
-    border-collapse:collapse;
-    width:100%;
-}
-
-.price-table td {
-    padding:12px;
-    border-bottom:1px solid #eee;
-}
-
-.price-value {
-    text-align:right;
-    font-weight:bold;
-}
-
-/* LEGAL BLOCK */
-.legal {
-    max-width:900px;
-    margin:30px auto 0;
-    padding:20px;
-    background:#fcfcfc;
-    border-left:4px solid var(--gold);
-    font-size:13px;
-    text-align:left;
-}
-
-/* MAP */
-.map iframe {
-    width:100%;
-    height:350px;
-    border:0;
-}
-
-/* MOBILE BAR */
-.mobile-bar {
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
-    background:#fff;
-    display:flex;
-    justify-content:space-between;
-    padding:10px 15px;
-    box-shadow:0 -2px 10px rgba(0,0,0,0.1);
-}
-
-/* FOOTER */
-footer {
-    background:var(--dark);
-    color:#fff;
-    text-align:center;
-    padding:30px;
-}
-
-@media(max-width:768px){
-    nav{display:none;}
-}
-</style>
+        footer { background: var(--dark); color: white; padding: 50px 8%; text-align: center; }
+        @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } .hero-img { order: -1; } .contact-container { flex-direction: column; } }
+    </style>
 </head>
-
 <body>
 
 <header>
-<img src="logo.png" alt="Логотип" height="60">
-<nav>
-<a href="#about">Ліцензія</a>
-<a href="#prices">Ціни</a>
-<a href="#location">Контакти</a>
-</nav>
+    <div class="logo-box"><img src="logo.png" alt="Логотип"></div>
+    <nav>
+        <a href="#about">Ліцензія</a>
+        <a href="#certificates">Сертифікати</a>
+        <a href="#prices">Ціни</a> 
+        <a href="#location">Контакти</a>
+    </nav>
 </header>
 
 <section class="hero">
-<div>
-<h1>Солодовник Марія Іванівна</h1>
-<p>Лікар-дерматолог, трихолог</p>
-<a href="https://t.me/solodovnik_dr" target="_blank" rel="noopener noreferrer" class="btn">Записатися</a>
-</div>
-
-<div class="hero-img">
-<img src="photo.jpg" alt="Солодовник Марія дерматолог" loading="lazy">
-</div>
+    <div class="hero-content">
+        <div style="color: var(--main-gold); font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">ЧЕРНІГІВ</div>
+        <h1>Солодовник Марія Іванівна</h1>
+        <p style="font-weight: 600; color: var(--main-gold); margin-bottom: 5px;">Лікар-дерматовенеролог, трихолог</p>
+        <p>Допомога всій сім’ї за принципами доказової медицини. 13 років досвіду.</p>
+        <a href="https://t.me/solodovnik_dr" class="btn-gold">Записатися на прийом</a>
+    </div>
+    <div class="hero-img"><img src="photo.jpg" alt="Лікар"></div>
 </section>
 
 <section class="section" id="about">
-<h2>Ліцензія</h2>
-<a href="vytyag-moz.pdf" target="_blank">Переглянути PDF</a>
+    <h2>Офіційна ліцензія</h2>
+    <div style="max-width: 900px; margin: 0 auto;">
+        <div class="license-box">
+            <p style="margin: 0; font-size: 15px; line-height: 1.8;">
+                <strong>ФОП Солодовник Марія Іванівна</strong><br>
+                <strong>Ідентифікаційний номер:</strong> 3229815845<br>
+                <strong>Вид діяльності:</strong> Медична практика (дерматовенерологія, дитяча дерматовенерологія)<br>
+                <strong>Підстава:</strong> Наказ МОЗ України від 26.02.2026 р. № 258<br>
+                <strong>Місце провадження:</strong> м. Чернігів, проспект Михайла Грушевського, буд. 119-А<br><br>
+                
+                <a href="Витяг МОЗ.pdf" target="_blank" style="color: var(--main-gold); font-weight: 700; text-decoration: underline; display: inline-flex; align-items: center; gap: 8px;">
+                    📄 Переглянути офіційний витяг (PDF)
+                </a>
+            </p>
+        </div>
+    </div>
 </section>
 
-<section class="section" id="certificates">
-<h2>Сертифікати</h2>
-<div class="cert-grid">
-<div class="cert-item" onclick="openImg(this)">
-<img src="c1.JPG" alt="сертифікат" loading="lazy" onerror="this.src='c1.jpg'">
-</div>
-<div class="cert-item" onclick="openImg(this)">
-<img src="c2.JPG" alt="сертифікат" loading="lazy" onerror="this.src='c2.jpg'">
-</div>
-</div>
+<section class="section" id="certificates" style="background: var(--light); border-top: 1px solid #eee;">
+    <h2>Кваліфікація та сертифікати</h2>
+    <div class="cert-grid">
+        <div class="cert-item"><img src="c1.JPG"></div>
+        <div class="cert-item"><img src="c2.JPG"></div>
+        <div class="cert-item"><img src="c3.JPG"></div>
+        <div class="cert-item"><img src="c4.JPG"></div>
+        <div class="cert-item"><img src="c5.JPG"></div>
+        <div class="cert-item"><img src="c6.JPG"></div>
+        <div class="cert-item"><img src="c7.JPG"></div>
+        <div class="cert-item"><img src="c8.JPG"></div>
+        <div class="cert-item"><img src="c9.JPG"></div>
+        <div class="cert-item"><img src="c10.JPG"></div>
+        <div class="cert-item"><img src="c11.JPG"></div>
+        <div class="cert-item"><img src="c12.JPG"></div>
+        <div class="cert-item"><img src="c13.JPG"></div>
+        <div class="cert-item"><img src="c14.JPG"></div>
+        <div class="cert-item"><img src="c15.JPG"></div>
+        <div class="cert-item"><img src="c16.JPG"></div>
+    </div>
 </section>
 
 <section class="section" id="prices">
-<h2>Ціни</h2>
+    <h2>Вартість послуг 2026</h2>
+    <p style="font-size: 14px; color: #888; margin-bottom: 25px;">Ціни діють з 01.03.2026 р. по 31.12.2026 р.</p>
+    <table class="price-table">
+        <tr><td>Первинна консультація</td><td class="price-value">700 грн</td></tr>
+        <tr><td>Повторна консультація*</td><td class="price-value">600 грн</td></tr>
+        <tr><td>Онлайн-консультація (первинна)</td><td class="price-value">550 грн</td></tr>
+        <tr><td>Онлайн-консультація (повторна)</td><td class="price-value">500 грн</td></tr>
+        <tr><td>Дерматоскопія / Трихоскопія</td><td class="price-value">300 грн</td></tr>
+        <tr><td>Медична довідка (без пільг)</td><td class="price-value">300 грн</td></tr>
+    </table>
 
-<table class="price-table">
-<tr><td>Первинна консультація</td><td class="price-value">700 грн</td></tr>
-<tr><td>Повторна консультація</td><td class="price-value">600 грн</td></tr>
-</table>
+    <div class="promo-box">
+        <h4 style="margin-top: 0; color: var(--main-gold);">Вартість із урахуванням пільг</h4>
+        <p style="font-size: 14px; margin-bottom: 10px;">Для УБД, пенсіонерів, осіб та дітей з інвалідністю (1-2 груп):</p>
+        <p style="font-size: 16px; font-weight: 700; margin: 0;">Первинна: 550,00 грн | Повторна: 500,00 грн</p>
+    </div>
 
-<div class="legal">
-<p><strong>Примітки:</strong></p>
-<ul>
-<li>Тривалість консультації — до 20 хвилин.</li>
-<li>*Повторна консультація надається протягом 1 (одного) місяця з дати проведення первинної консультації, якщо інше не визначено лікарем у консультативному висновку.</li>
-<li>**Онлайн-консультація має інформаційно-консультативний характер та не є підставою для встановлення остаточного діагнозу. Встановлення діагнозу та призначення лікування здійснюється лікарем виключно за результатами очного огляду пацієнта та, за необхідності, проведення додаткових інструментальних, лабораторних та інших методів обстеження.</li>
-</ul>
-</div>
-
+    <div class="price-notes">
+        <p><strong>Примітки:</strong></p>
+        <ul style="padding-left: 20px; text-align: left;">
+            <li>Тривалість прийому — до 20 хв.</li>
+            <li>*Повторна — протягом 1 місяця з дня первинної.</li>
+            <li>**Онлайн-консультація має рекомендаційний характер.</li>
+            <li>Пільги надаються при пред’явленні посвідчення.</li>
+        </ul>
+    </div>
 </section>
 
-<section class="section" id="location">
-<h2>Контакти</h2>
-
-<p><a href="tel:+380931157302">+38 093 115 7302</a></p>
-
-<div class="map">
-<iframe src="https://www.google.com/maps?q=51.517315,31.282563&output=embed" loading="lazy"></iframe>
-</div>
+<section class="section" id="location" style="background: var(--light);">
+    <h2>Контакти та запис</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <p><strong>Адреса:</strong> м. Чернігів, пр-т Грушевського, 119-А</p>
+            <p><strong>Телефон:</strong> +38 093 115 7302</p>
+            <p><strong>Години:</strong> Пн-Пт 9:00-18:00, Сб 10:00-15:00</p>
+            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.743141154!2d31.2858123!3d51.4994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d548f072719a9b%3A0x77d853b0e2586a5!2z0L_RgNC-0YHQvy4g0JzQuNGF0LDQuNC70LAg0JPRgNGD0YjQtdCy0YHQutC-0LPQviwgMTE50JAsINCn0LXRgNC90ZbQs9GW0LIsINCn0LXRgNC90ZbQs9GW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMTQwMDA!5e0!3m2!1suk!2sua!4v1710000000000!5m2!1suk!2sua4" target="_blank" class="btn-gold">Прокласти маршрут</a>
+        </div>
+        <div class="map-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.743141154!2d31.2858123!3d51.4994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d548f072719a9b%3A0x77d853b0e2586a5!2z0L_RgNC-0YHQvy4g0JzQuNGF0LDQuNC70LAg0JPRgNGD0YjQtdCy0YHQutC-0LPQviwgMTE50JAsINCn0LXRgNC90ZbQs9GW0LIsINCn0LXRgNC90ZbQs9GW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMTQwMDA!5e0!3m2!1suk!2sua!4v1710000000000!5m2!1suk!2sua5" loading="lazy"></iframe>
+        </div>
+    </div>
 </section>
 
-<footer>
-<p>© 2026 Солодовник Марія</p>
-</footer>
-
-<div class="mobile-bar">
-<a href="tel:+380931157302">📞 Дзвонити</a>
-<a href="https://t.me/solodovnik_dr" target="_blank" class="btn">Запис</a>
-</div>
-
-<div id="lightbox" onclick="this.style.display='none'">
-<img id="lightbox-img">
-</div>
-
-<script>
-function openImg(el){
-    document.getElementById('lightbox-img').src = el.querySelector('img').src;
-    document.getElementById('lightbox').style.display='flex';
-}
-</script>
+<footer><p>© 2026 Солодовник Марія Іванівна. Всі права захищені.</p></footer>
 
 </body>
 </html>
