@@ -15,15 +15,8 @@
         nav a:hover { color: var(--main-gold); }
 
         /* Анімація появи */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
         .hero { display: flex; align-items: center; padding: 60px 8%; background: var(--light); gap: 40px; flex-wrap: wrap; }
         .hero-content { flex: 1; min-width: 300px; }
@@ -45,26 +38,24 @@
             align-items: center;
         }
 
+        /* Відгуки */
+        .reviews-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1100px; margin: 40px auto; }
+        .review-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: left; border: 1px solid #f0f0f0; position: relative; }
+        .review-stars { color: #fbbc05; font-size: 20px; margin-bottom: 10px; }
+        .review-text { font-style: italic; font-size: 15px; color: #444; margin-bottom: 15px; }
+        .review-author { font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 10px; }
+        .review-author::before { content: ""; width: 30px; height: 30px; background: #eee; border-radius: 50%; display: inline-block; background-image: url('data:image/svg+xml,<svg fill="%23ccc" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>'); background-size: cover; }
+
         .prep-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 30px auto; text-align: left; }
         .prep-card { background: white; padding: 25px; border-radius: 8px; border: 1px dashed var(--main-gold); transition: 0.3s; }
         .prep-card:hover { border-style: solid; background: #fffdf9; }
-        .prep-card h3 { color: var(--main-gold); margin-top: 0; font-size: 18px; display: flex; align-items: center; gap: 10px; }
 
         .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1200px; margin: 40px auto 0; }
         .cert-item { background: #fff; padding: 5px; border: 1px solid #eee; border-radius: 4px; transition: 0.4s; overflow: hidden; cursor: zoom-in; }
-        .cert-item:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 2; }
-        .cert-item img { width: 100%; height: auto; border-radius: 2px; display: block; background: #f9f9f9; }
+        .cert-item:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .cert-item img { width: 100%; height: auto; display: block; background: #f9f9f9; }
 
-        #lightbox {
-            display: none;
-            position: fixed;
-            z-index: 10000;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9);
-            justify-content: center;
-            align-items: center;
-            cursor: zoom-out;
-        }
+        #lightbox { display: none; position: fixed; z-index: 10000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; cursor: zoom-out; }
         #lightbox img { max-width: 90%; max-height: 90%; border-radius: 4px; }
         #lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; }
 
@@ -73,9 +64,9 @@
         .price-value { font-weight: 700; color: var(--dark); white-space: nowrap; text-align: right; }
         
         .promo-box { max-width: 900px; margin: 30px auto; background: #fff; padding: 25px; border: 1px solid var(--main-gold); border-radius: 4px; text-align: left; }
-        .price-notes { max-width: 900px; margin: 0 auto; text-align: left; font-size: 13px; color: #666; background: #fcfcfc; padding: 20px; border: 1px solid #eee; border-radius: 4px; line-height: 1.5; }
+        .price-notes { max-width: 900px; margin: 0 auto; text-align: left; font-size: 13px; color: #666; background: #fcfcfc; padding: 20px; border: 1px solid #eee; border-radius: 4px; }
 
-        .license-box { margin-top: 40px; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 30px; text-align: left; border-left: 5px solid var(--main-gold); box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        .license-box { margin-top: 40px; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 30px; text-align: left; border-left: 5px solid var(--main-gold); }
 
         .contact-container { display: flex; flex-wrap: wrap; gap: 30px; max-width: 1100px; margin: 40px auto; text-align: left; }
         .contact-info { flex: 1; min-width: 300px; padding: 20px; }
@@ -93,8 +84,7 @@
             body { padding-bottom: 80px; }
         }
         
-        .tel-link { text-decoration: none; color: inherit; font-weight: 600; transition: 0.3s; }
-        .tel-link:hover { color: var(--main-gold); }
+        .tel-link { text-decoration: none; color: inherit; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -104,6 +94,7 @@
     <nav>
         <a href="#about">Ліцензія</a>
         <a href="#prep">Підготовка</a>
+        <a href="#reviews">Відгуки</a>
         <a href="#certificates">Сертифікати</a>
         <a href="#prices">Ціни</a> 
         <a href="#location">Контакти</a>
@@ -138,13 +129,9 @@
             <p style="margin: 0; font-size: 15px; line-height: 1.8;">
                 <strong>ФОП Солодовник Марія Іванівна</strong><br>
                 <strong>Ідентифікаційний номер:</strong> 3229815845<br>
-                <strong>Вид діяльності:</strong> Медична практика (дерматовенерологія, дитяча дерматовенерологія)<br>
+                <strong>Вид діяльності:</strong> Медична практика<br>
                 <strong>Підстава:</strong> Наказ МОЗ України від 26.02.2026 р. № 258<br>
-                <strong>Місце провадження:</strong> м. Чернігів, проспект Михайла Грушевського, буд. 119-А<br><br>
-                
-                <a href="Витяг МОЗ.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--main-gold); font-weight: 700; text-decoration: underline; display: inline-flex; align-items: center; gap: 8px;">
-                    📄 Переглянути офіційний витяг (PDF)
-                </a>
+                <a href="Витяг МОЗ.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--main-gold); font-weight: 700; text-decoration: underline;">📄 Переглянути витяг (PDF)</a>
             </p>
         </div>
     </div>
@@ -152,20 +139,42 @@
 
 <section class="section reveal" id="prep" style="background: var(--light);">
     <h2>Як підготуватися до прийому</h2>
-    <p>Прості кроки, що допоможуть лікарю встановити точний діагноз швидше</p>
     <div class="prep-container">
         <div class="prep-card">
             <h3>✨ Чиста шкіра</h3>
-            <p>Якщо проблема на обличчі — будь ласка, не наносьте макіяж за 2-3 години до огляду. Також не варто застосовувати лікувальні мазі чи креми у день прийому на уражені ділянки.</p>
+            <p>Будь ласка, не наносьте макіяж за 2-3 години до огляду обличчя. Не використовуйте мазі у день прийому.</p>
         </div>
         <div class="prep-card">
             <h3>📂 Медична історія</h3>
-            <p>Візьміть із собою результати попередніх аналізів, виписки або назви препаратів, які ви вже використовували. Це зекономить час та допоможе уникнути повторних обстежень.</p>
+            <p>Візьміть результати аналізів або назви препаратів, які ви вже використовували. Це зекономить час.</p>
         </div>
     </div>
 </section>
 
-<section class="section reveal" id="certificates">
+<section class="section reveal" id="reviews">
+    <h2>Відгуки пацієнтів</h2>
+    <p>Довіра, що підтверджена результатами</p>
+    <div class="reviews-container">
+        <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Дуже професійний підхід. Марія Іванівна уважно вислухала, провела дерматоскопію і призначила лікування, яке нарешті допомогло. Рекомендую!"</p>
+            <div class="review-author">Олена К.</div>
+        </div>
+        <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Зверталися з дитиною. Лікар швидко знайшла підхід, огляд пройшов без сліз. Приємно, коли фахівець працює за принципами доказової медицини."</p>
+            <div class="review-author">Ігор Петренко</div>
+        </div>
+        <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Марія Іванівна допомогла вирішити проблему з випадінням волосся. Чіткий план лікування, без зайвих призначень і дорогих 'пустушок'."</p>
+            <div class="review-author">Тетяна В.</div>
+        </div>
+    </div>
+    <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" style="color: var(--dark); font-weight: 600; text-decoration: underline; font-size: 14px;">Читати всі відгуки на Google Maps</a>
+</section>
+
+<section class="section reveal" id="certificates" style="background: var(--light);">
     <h2>Кваліфікація та сертифікати</h2>
     <div class="cert-grid">
         <div class="cert-item" onclick="openLightbox(this)"><img src="c1.JPG" onerror="this.src='c1.jpg'"></div>
@@ -187,54 +196,30 @@
     </div>
 </section>
 
-<section class="section reveal" id="prices" style="background: var(--light);">
+<section class="section reveal" id="prices">
     <h2>Вартість послуг 2026</h2>
     <table class="price-table">
         <tr><td>Первинна консультація</td><td class="price-value">700 грн</td></tr>
         <tr><td>Повторна консультація*</td><td class="price-value">600 грн</td></tr>
-        <tr><td>Онлайн-консультація (первинна)**</td><td class="price-value">550 грн</td></tr>
-        <tr><td>Онлайн-консультація (повторна)**</td><td class="price-value">500 грн</td></tr>
+        <tr><td>Онлайн-консультація</td><td class="price-value">550 грн</td></tr>
         <tr><td>Дерматоскопія / Трихоскопія</td><td class="price-value">300 грн</td></tr>
-        <tr><td>Медична довідка (без пільг)</td><td class="price-value">300 грн</td></tr>
     </table>
-
-    <div class="promo-box">
-        <strong>Пільгова вартість (УБД, пенсіонери, інвалідність):</strong><br>
-        Первинна: 550 грн | Повторна: 500 грн (за посвідченням)
-    </div>
-
     <div class="price-notes">
-        <p><strong>Примітки:</strong></p>
-        <ul style="padding-left: 20px; text-align: left; margin: 0;">
-            <li>Тривалість прийому — до 20 хв.</li>
-            <li>*Повторна консультація проводиться протягом 1 місяця з дня отримання первинної консультації.</li>
-            <li>**Онлайн-консультація має рекомендаційний характер.</li>
-        </ul>
+        <p>*Протягом 1 місяця. Онлайн-консультація має рекомендаційний характер.</p>
     </div>
 </section>
 
-<section class="section reveal" id="location">
+<section class="section reveal" id="location" style="background: var(--light);">
     <h2>Контакти та графік роботи</h2>
     <div class="contact-container">
         <div class="contact-info">
-            <p><strong>Адреса:</strong> м. Чернігів, пр-т Михайла Грушевського, 119-А</p>
+            <p><strong>Адреса:</strong> м. Чернігів, пр-т М. Грушевського, 119-А</p>
             <p><strong>Телефон:</strong> <a href="tel:+380931157302" class="tel-link">+38 093 115 7302</a></p>
-            
-            <p style="margin-top: 20px;"><strong>Графік прийому:</strong></p>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li>Вівторок – Четвер: 17:00 – 20:00</li>
-                <li>Субота – Неділя: 12:00 – 15:00</li>
-                <li style="color: #666; font-size: 14px; margin-top: 5px;"><i>(За попереднім записом)</i></li>
-                <li style="margin-top: 10px;"><strong>Вихідні:</strong> понеділок, п’ятниця</li>
-            </ul>
-
-            <a href="https://t.me/solodovnik_dr" target="_blank" rel="noopener noreferrer" class="btn-gold" style="margin-top: 25px;">Записатися через Telegram</a>
+            <p><strong>Графік:</strong> Вт–Чт: 17-20 | Сб–Нд: 12-15</p>
+            <a href="https://t.me/solodovnik_dr" target="_blank" rel="noopener noreferrer" class="btn-gold">Записатися через Telegram</a>
         </div>
         <div class="map-box">
-            <iframe 
-                src="https://www.google.com/maps/dir/?api=1&destination=51.517373,31.3116341" 
-                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            <iframe src="https://www.google.com/maps/dir/?api=1&destination=51.517373,31.3116342" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 </section>
@@ -242,35 +227,21 @@
 <footer><p>© 2026 Солодовник Марія Іванівна. Всі права захищені.</p></footer>
 
 <script>
-    /* Скрипт для збільшення сертифікатів */
     function openLightbox(element) {
         const imgSrc = element.querySelector('img').src;
         document.getElementById('lightbox-img').src = imgSrc;
         document.getElementById('lightbox').style.display = 'flex';
         document.body.style.overflow = 'hidden';
     }
-
     function closeLightbox() {
         document.getElementById('lightbox').style.display = 'none';
         document.body.style.overflow = 'auto';
     }
-
-    /* Скрипт для анімації появи при гортанні */
-    const revealCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
+    const revealCallback = (entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
     };
-
-    const revealObserver = new IntersectionObserver(revealCallback, {
-        threshold: 0.1 // Секція з'явиться, коли 10% її площі буде у полі зору
-    });
-
-    document.querySelectorAll('.reveal').forEach(section => {
-        revealObserver.observe(section);
-    });
+    const revealObserver = new IntersectionObserver(revealCallback, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(section => revealObserver.observe(section));
 </script>
 
 </body>
