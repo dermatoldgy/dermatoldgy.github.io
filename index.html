@@ -22,12 +22,11 @@
         .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; text-transform: uppercase; font-size: 14px; margin-top: 20px; }
         .btn-gold:hover { background: #b08d4a; }
         
-        /* ГАЛЕРЕЯ СЕРТИФІКАТІВ БЕЗ ТЕКСТУ */
+        /* ГАЛЕРЕЯ СЕРТИФІКАТІВ */
         .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1200px; margin: 40px auto 0; }
         .cert-item { background: #fff; padding: 5px; border: 1px solid #eee; border-radius: 4px; transition: 0.4s; overflow: hidden; }
         .cert-item:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 2; }
-        .cert-item img { width: 100%; height: auto; border-radius: 2px; display: block; filter: grayscale(20%); transition: 0.4s; }
-        .cert-item:hover img { filter: grayscale(0%); }
+        .cert-item img { width: 100%; height: auto; border-radius: 2px; display: block; background: #f9f9f9; }
 
         /* ЦІНИ */
         .price-table { width: 100%; max-width: 900px; margin: 20px auto 10px; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
@@ -93,22 +92,22 @@
 <section class="section" id="certificates" style="background: var(--light); border-top: 1px solid #eee;">
     <h2>Кваліфікація та сертифікати</h2>
     <div class="cert-grid">
-        <div class="cert-item"><img src="c1.JPG"></div>
-        <div class="cert-item"><img src="c2.JPG"></div>
-        <div class="cert-item"><img src="c3.JPG"></div>
-        <div class="cert-item"><img src="c4.JPG"></div>
-        <div class="cert-item"><img src="c5.JPG"></div>
-        <div class="cert-item"><img src="c6.JPG"></div>
-        <div class="cert-item"><img src="c7.JPG"></div>
-        <div class="cert-item"><img src="c8.JPG"></div>
-        <div class="cert-item"><img src="c9.JPG"></div>
-        <div class="cert-item"><img src="c10.JPG"></div>
-        <div class="cert-item"><img src="c11.JPG"></div>
-        <div class="cert-item"><img src="c12.JPG"></div>
-        <div class="cert-item"><img src="c13.JPG"></div>
-        <div class="cert-item"><img src="c14.JPG"></div>
-        <div class="cert-item"><img src="c15.JPG"></div>
-        <div class="cert-item"><img src="c16.JPG"></div>
+        <div class="cert-item"><img src="c1.JPG" onerror="this.src='c1.jpg'"></div>
+        <div class="cert-item"><img src="c2.JPG" onerror="this.src='c2.jpg'"></div>
+        <div class="cert-item"><img src="c3.JPG" onerror="this.src='c3.jpg'"></div>
+        <div class="cert-item"><img src="c4.JPG" onerror="this.src='c4.jpg'"></div>
+        <div class="cert-item"><img src="c5.JPG" onerror="this.src='c5.jpg'"></div>
+        <div class="cert-item"><img src="c6.JPG" onerror="this.src='c6.jpg'"></div>
+        <div class="cert-item"><img src="c7.JPG" onerror="this.src='c7.jpg'"></div>
+        <div class="cert-item"><img src="c8.JPG" onerror="this.src='c8.jpg'"></div>
+        <div class="cert-item"><img src="c9.JPG" onerror="this.src='c9.jpg'"></div>
+        <div class="cert-item"><img src="c10.JPG" onerror="this.src='c10.jpg'"></div>
+        <div class="cert-item"><img src="c11.JPG" onerror="this.src='c11.jpg'"></div>
+        <div class="cert-item"><img src="c12.JPG" onerror="this.src='c12.jpg'"></div>
+        <div class="cert-item"><img src="c13.JPG" onerror="this.src='c13.jpg'"></div>
+        <div class="cert-item"><img src="c14.JPG" onerror="this.src='c14.jpg'"></div>
+        <div class="cert-item"><img src="c15.JPG" onerror="this.src='c15.jpg'"></div>
+        <div class="cert-item"><img src="c16.JPG" onerror="this.src='c16.jpg'"></div>
     </div>
 </section>
 
@@ -118,8 +117,8 @@
     <table class="price-table">
         <tr><td>Первинна консультація</td><td class="price-value">700 грн</td></tr>
         <tr><td>Повторна консультація*</td><td class="price-value">600 грн</td></tr>
-        <tr><td>Онлайн-консультація (первинна)</td><td class="price-value">550 грн</td></tr>
-        <tr><td>Онлайн-консультація (повторна)</td><td class="price-value">500 грн</td></tr>
+        <tr><td>Онлайн-консультація (первинна)**</td><td class="price-value">550 грн</td></tr>
+        <tr><td>Онлайн-консультація (повторна)**</td><td class="price-value">500 грн</td></tr>
         <tr><td>Дерматоскопія / Трихоскопія</td><td class="price-value">300 грн</td></tr>
         <tr><td>Медична довідка (без пільг)</td><td class="price-value">300 грн</td></tr>
     </table>
@@ -135,8 +134,8 @@
         <ul style="padding-left: 20px; text-align: left;">
             <li>Тривалість прийому — до 20 хв.</li>
             <li>*Повторна — протягом 1 місяця з дня первинної.</li>
-            <li>**Онлайн-консультація має рекомендаційний характер.</li>
-            <li>Пільги надаються при пред’явленні посвідчення.</li>
+            <li>**Онлайн-консультація проводиться за умови передплати.</li>
+            <li>Пільги надаються виключно при пред’явленні посвідчення.</li>
         </ul>
     </div>
 </section>
@@ -148,10 +147,10 @@
             <p><strong>Адреса:</strong> м. Чернігів, пр-т Грушевського, 119-А</p>
             <p><strong>Телефон:</strong> +38 093 115 7302</p>
             <p><strong>Години:</strong> Пн-Пт 9:00-18:00, Сб 10:00-15:00</p>
-            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.743141154!2d31.2858123!3d51.4994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d548f072719a9b%3A0x77d853b0e2586a5!2z0L_RgNC-0YHQvy4g0JzQuNGF0LDQuNC70LAg0JPRgNGD0YjQtdCy0YHQutC-0LPQviwgMTE50JAsINCn0LXRgNC90ZbQs9GW0LIsINCn0LXRgNC90ZbQs9GW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMTQwMDA!5e0!3m2!1suk!2sua!4v1710000000000!5m2!1suk!2sua4" target="_blank" class="btn-gold">Прокласти маршрут</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=51.514588,31.314945" target="_blank" class="btn-gold">Прокласти маршрут</a>
         </div>
         <div class="map-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.743141154!2d31.2858123!3d51.4994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d548f072719a9b%3A0x77d853b0e2586a5!2z0L_RgNC-0YHQvy4g0JzQuNGF0LDQuNC70LAg0JPRgNGD0YjQtdCy0YHQutC-0LPQviwgMTE50JAsINCn0LXRgNC90ZbQs9GW0LIsINCn0LXRgNC90ZbQs9GW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMTQwMDA!5e0!3m2!1suk!2sua!4v1710000000000!5m2!1suk!2sua5" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.8115651543787!2d31.31237!3d51.514588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d53952d7903965%3A0xc62260e067f5c78!2z0L_RgNC-0YHQvy4g0JzQuNGF0LDQuNC70LAg0JPRgNGD0YjQtdCy0YHQutC-0LPQviwgMTE50JAsINCn0LXRgNC90LjQs9C-0LIsINCn0LXRgNC90LjQs9C-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgMTQwMDA!5e0!3m2!1sru!2sua!4v1709400000000!5m2!1sru!2sua" loading="lazy"></iframe>
         </div>
     </div>
 </section>
