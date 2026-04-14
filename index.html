@@ -35,13 +35,18 @@
             align-items: center;
         }
 
+        /* Підготовка до прийому */
+        .prep-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 30px auto; text-align: left; }
+        .prep-card { background: white; padding: 25px; border-radius: 8px; border: 1px dashed var(--main-gold); }
+        .prep-card h3 { color: var(--main-gold); margin-top: 0; font-size: 18px; display: flex; align-items: center; gap: 10px; }
+
         /* Галерея сертифікатів */
         .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1200px; margin: 40px auto 0; }
         .cert-item { background: #fff; padding: 5px; border: 1px solid #eee; border-radius: 4px; transition: 0.4s; overflow: hidden; cursor: zoom-in; }
         .cert-item:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 2; }
         .cert-item img { width: 100%; height: auto; border-radius: 2px; display: block; background: #f9f9f9; }
 
-        /* Lightbox (Модальне вікно) */
+        /* Lightbox */
         #lightbox {
             display: none;
             position: fixed;
@@ -52,12 +57,8 @@
             align-items: center;
             cursor: zoom-out;
         }
-        #lightbox img { max-width: 90%; max-height: 90%; border-radius: 4px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
-        #lightbox-close {
-            position: absolute;
-            top: 20px; right: 30px;
-            color: white; font-size: 40px; font-weight: bold; cursor: pointer;
-        }
+        #lightbox img { max-width: 90%; max-height: 90%; border-radius: 4px; }
+        #lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; }
 
         .price-table { width: 100%; max-width: 900px; margin: 20px auto 10px; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .price-table td { padding: 15px 20px; border-bottom: 1px solid #eee; }
@@ -94,6 +95,7 @@
     <div class="logo-box"><img src="logo.png" alt="Логотип"></div>
     <nav>
         <a href="#about">Ліцензія</a>
+        <a href="#prep">Підготовка</a>
         <a href="#certificates">Сертифікати</a>
         <a href="#prices">Ціни</a> 
         <a href="#location">Контакти</a>
@@ -106,7 +108,7 @@
 </div>
 
 <div id="lightbox" onclick="closeLightbox()">
-    <span id="lightbox-close">&times;</span>
+    <span id="lightbox-close">×</span>
     <img id="lightbox-img" src="">
 </div>
 
@@ -140,7 +142,22 @@
     </div>
 </section>
 
-<section class="section" id="certificates" style="background: var(--light); border-top: 1px solid #eee;">
+<section class="section" id="prep" style="background: var(--light);">
+    <h2>Як підготуватися до прийому</h2>
+    <p>Прості кроки, що допоможуть лікарю встановити точний діагноз швидше</p>
+    <div class="prep-container">
+        <div class="prep-card">
+            <h3>✨ Чиста шкіра</h3>
+            <p>Якщо проблема на обличчі — будь ласка, не наносьте макіяж за 2-3 години до огляду. Також не варто застосовувати лікувальні мазі чи креми у день прийому на уражені ділянки.</p>
+        </div>
+        <div class="prep-card">
+            <h3>📂 Медична історія</h3>
+            <p>Візьміть із собою результати попередніх аналізів, виписки або назви препаратів, які ви вже використовували. Це зекономить час та допоможе уникнути повторних обстежень.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="certificates">
     <h2>Кваліфікація та сертифікати</h2>
     <div class="cert-grid">
         <div class="cert-item" onclick="openLightbox(this)"><img src="c1.JPG" onerror="this.src='c1.jpg'"></div>
@@ -162,7 +179,7 @@
     </div>
 </section>
 
-<section class="section" id="prices">
+<section class="section" id="prices" style="background: var(--light);">
     <h2>Вартість послуг 2026</h2>
     <table class="price-table">
         <tr><td>Первинна консультація</td><td class="price-value">700 грн</td></tr>
@@ -188,7 +205,7 @@
     </div>
 </section>
 
-<section class="section" id="location" style="background: var(--light);">
+<section class="section" id="location">
     <h2>Контакти та графік роботи</h2>
     <div class="contact-container">
         <div class="contact-info">
@@ -207,7 +224,7 @@
         </div>
         <div class="map-box">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1139.7303107085183!2d31.285899999999995!3d51.5036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d5489066440263%3A0x6739b83e6027a4d4!2z0L_RgC3Rgi4g0JzQuNGF0LDQuNC70LAg0JPRgNGD0YjQtdCy0YHQutC-0LPQviwgMTE50JAsINCn0LXRgNC90ZbQs9GW0LIsINCn0LXRgNC90ZbQs9GW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMTQwMDA!5e0!3m2!1suk!2sua!4v1711200000000!5m2!1suk!2sua" 
+                src="https://www.google.com/maps/dir/?api=1&destination=51.517373,31.3116340" 
                 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
@@ -221,12 +238,12 @@
         const imgSrc = element.querySelector('img').src;
         document.getElementById('lightbox-img').src = imgSrc;
         document.getElementById('lightbox').style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Вимикаємо прокрутку сайту
+        document.body.style.overflow = 'hidden';
     }
 
     function closeLightbox() {
         document.getElementById('lightbox').style.display = 'none';
-        document.body.style.overflow = 'auto'; // Повертаємо прокрутку
+        document.body.style.overflow = 'auto';
     }
 </script>
 
