@@ -3,124 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Дерматолог Солодовник Марія | Чернігів | Дитячий та дорослий лікар</title>
-    <meta name="description" content="Приватний дерматолог Солодовник Марія Іванівна у Чернігові. Доросла та дитяча дерматовенерологія, доказова медицина.">
+    <title>Дерматолог Солодовник Марія | Чернігів</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    
     <style>
         :root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; --light: #fafafa; }
         body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); scroll-behavior: smooth; }
-        
         header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .logo-box img { height: 65px; width: auto; }
         nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--main-gold); }
-
         .hero { display: flex; align-items: center; padding: 60px 8%; background: var(--light); gap: 40px; flex-wrap: wrap; }
         .hero-content { flex: 1; min-width: 300px; }
         .hero-img img { width: 100%; max-width: 400px; border-radius: 5px; box-shadow: 15px 15px 0 var(--main-gold); }
-
         .section { padding: 70px 8%; text-align: center; }
-        .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; text-transform: uppercase; font-size: 14px; margin-top: 20px; }
+        .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; border-radius: 2px; text-transform: uppercase; font-size: 14px; margin-top: 20px; }
         
-        /* ГАЛЕРЕЯ СЕРТИФІКАТІВ */
-        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; max-width: 1200px; margin: 40px auto 0; }
+        /* ГАЛЕРЕЯ */
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; max-width: 1200px; margin: 40px auto; }
         .cert-item { background: #fff; padding: 12px; border: 1px solid #eee; border-radius: 4px; transition: 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
-        .cert-item:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        .cert-item img { width: 100%; height: auto; border-radius: 2px; display: block; }
-        .cert-item p { font-size: 11px; margin-top: 12px; font-weight: 700; text-transform: uppercase; color: var(--dark); letter-spacing: 0.5px; }
+        .cert-item img { width: 100%; height: auto; border-radius: 2px; display: block; background: #f9f9f9; min-height: 150px; }
+        .cert-item p { font-size: 11px; margin-top: 12px; font-weight: 700; text-transform: uppercase; color: var(--dark); }
 
-        /* ЦІНИ */
-        .price-table { width: 100%; max-width: 900px; margin: 30px auto 10px; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .price-table { width: 100%; max-width: 900px; margin: 30px auto; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .price-table td { padding: 15px 20px; border-bottom: 1px solid #eee; }
-        .price-value { font-weight: 700; color: var(--dark); white-space: nowrap; text-align: right; }
-        
+        .price-value { font-weight: 700; text-align: right; white-space: nowrap; }
         .license-box { margin-top: 40px; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 25px; text-align: left; border-left: 4px solid var(--main-gold); }
-        .license-title { color: var(--main-gold); font-weight: 700; text-transform: uppercase; font-size: 14px; margin-bottom: 10px; border-bottom: 2px solid var(--main-gold); display: inline-block; }
 
         footer { background: var(--dark); color: white; padding: 50px 8%; text-align: center; }
-        .social-links a { color: white; margin: 0 10px; text-decoration: none; border-bottom: 1px solid var(--main-gold); }
-
         @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } .hero-img { order: -1; } }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-box"><img src="logo.png" alt="Логотип"></div>
+    <div class="logo-box"><img src="logo.png" alt="Лого"></div>
     <nav>
         <a href="#about">Про нас</a>
         <a href="#certificates">Сертифікати</a>
         <a href="#prices">Ціни</a> 
         <a href="#location">Контакти</a>
-        <a href="tel:+380931157302" style="color: var(--main-gold);">093 115 7302</a>
     </nav>
 </header>
 
 <section class="hero">
     <div class="hero-content">
-        <div style="color: var(--main-gold); font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">ЧЕРНІГІВ</div>
+        <div style="color: var(--main-gold); font-weight: 700; letter-spacing: 2px;">ЧЕРНІГІВ</div>
         <h1>Солодовник Марія Іванівна</h1>
-        <p style="font-weight: 600; color: var(--main-gold); margin-bottom: 5px;">Лікар-дерматовенеролог (дорослий та дитячий), трихолог</p>
-        <p style="font-size: 14px; margin-top: 0; opacity: 0.8;">Друга кваліфікаційна категорія • 13 років професійного досвіду</p>
-        <p>Допомога всій сім’ї за принципами доказової медицини. Спеціалізоване лікування шкіри та волосся.</p>
-        <a href="https://t.me/solodovnik_dr" class="btn-gold">Записатися на прийом</a>
+        <p>Лікар-дерматовенеролог, трихолог. 13 років досвіду.</p>
+        <a href="https://t.me/solodovnik_dr" class="btn-gold">Записатися</a>
     </div>
-    <div class="hero-img"><img src="photo.jpg" alt="Лікар Солодовник"></div>
+    <div class="hero-img"><img src="photo.jpg" alt="Лікар"></div>
 </section>
 
 <section class="section" id="about">
-    <h2>Про нашу практику</h2>
+    <h2>Про практику</h2>
     <div style="max-width: 800px; margin: 0 auto;">
-        <p style="text-align: left;">Ми працюємо за сучасними міжнародними протоколами, забезпечуючи якісну діагностику та лікування захворювань шкіри для пацієнтів будь-якого віку.</p>
-        
         <div class="license-box">
-            <div class="license-title">Офіційна ліцензія</div>
-            <p style="font-size: 15px; margin: 5px 0;"><strong>ФОП Солодовник Марія Іванівна</strong></p>
-            <p style="font-size: 14px; color: #666;">Наказ МОЗ України № 258 від 26.02.2026 р. про ліцензування медичної практики за спеціальністю дерматовенерологія та дитяча дерматовенерологія.</p>
+            <strong>ФОП Солодовник Марія Іванівна</strong><br>
+            Наказ МОЗ України № 258 від 26.02.2026 р.
         </div>
     </div>
 </section>
 
-<section class="section" id="certificates" style="background: var(--light); border-top: 1px solid #eee;">
-    <h2>Кваліфікація та сертифікати</h2>
+<section class="section" id="certificates" style="background: var(--light);">
+    <h2>Сертифікати</h2>
     <div class="cert-grid">
-        <div class="cert-item"><img src="c1.JPG" alt="c1"><p>Київські Дерматологічні Дні</p></div>
-        <div class="cert-item"><img src="c2.JPG" alt="c2"><p>Дерматоскопія новоутворень</p></div>
-        <div class="cert-item"><img src="c3.JPG" alt="c3"><p>Лазерні технології</p></div>
-        <div class="cert-item"><img src="c4.JPG" alt="c4"><p>Лікування акне</p></div>
-        <div class="cert-item"><img src="c5.JPG" alt="c5"><p>Трихологія</p></div>
-        <div class="cert-item"><img src="c6.JPG" alt="c6"><p>Дитяча дерматологія</p></div>
+        <div class="cert-item"><img src="c1.JPG" onerror="this.onerror=null; this.src='c1.jpg';" alt="c1"><p>Київські Дерматологічні Дні</p></div>
+        <div class="cert-item"><img src="c2.JPG" onerror="this.onerror=null; this.src='c2.jpg';" alt="c2"><p>Дерматоскопія новоутворень</p></div>
+        <div class="cert-item"><img src="c3.JPG" onerror="this.onerror=null; this.src='c3.jpg';" alt="c3"><p>Лазерні технології</p></div>
+        <div class="cert-item"><img src="c4.JPG" onerror="this.onerror=null; this.src='c4.jpg';" alt="c4"><p>Лікування акне</p></div>
+        <div class="cert-item"><img src="c5.JPG" onerror="this.onerror=null; this.src='c5.jpg';" alt="c5"><p>Трихологія</p></div>
+        <div class="cert-item"><img src="c6.JPG" onerror="this.onerror=null; this.src='c6.jpg';" alt="c6"><p>Дитяча дерматологія</p></div>
     </div>
 </section>
 
-<section class="section" id="prices" style="background: #fff;">
+<section class="section" id="prices">
     <h2>Вартість послуг</h2>
     <table class="price-table">
-        <tbody>
-            <tr><td>Консультація лікаря-дерматовенеролога (первинна)</td><td class="price-value">700,00 грн</td></tr>
-            <tr><td>Консультація лікаря-дерматовенеролога (повторна)</td><td class="price-value">600,00 грн</td></tr>
-            <tr><td>Онлайн-консультація</td><td class="price-value">550,00 грн</td></tr>
-            <tr><td>Дерматоскопія / Трихоскопія</td><td class="price-value">300,00 грн</td></tr>
-            <tr><td>Огляд з видачею медичної довідки</td><td class="price-value">300,00 грн</td></tr>
-        </tbody>
+        <tr><td>Консультація (первинна)</td><td class="price-value">700,00 грн</td></tr>
+        <tr><td>Консультація (повторна)</td><td class="price-value">600,00 грн</td></tr>
+        <tr><td>Онлайн-консультація</td><td class="price-value">550,00 грн</td></tr>
+        <tr><td>Дерматоскопія / Трихоскопія</td><td class="price-value">300,00 грн</td></tr>
     </table>
 </section>
 
-<section class="section" id="location" style="background: var(--light);">
-    <h2>Контакти та графік</h2>
-    <p>📍 м. Чернігів, проспект Михайла Грушевського, 119-А</p>
-    <p>Вт-Чт: 17:00 – 20:00 | Сб-Нд: 12:00 – 15:00</p>
-    <p><strong>📞 093 115 7302</strong></p>
-    <a href="https://t.me/solodovnik_dr" class="btn-gold">Написати у Telegram</a>
-</section>
-
 <footer>
-    <div class="social-links">
-        <a href="https://www.instagram.com/solodovnykdermatology" target="_blank">Instagram</a>
-        <a href="https://t.me/solodovnik_dr" target="_blank">Telegram</a>
-    </div>
-    <p style="font-size: 11px; margin-top: 20px; opacity: 0.5;">© 2026 Солодовник Марія Іванівна</p>
+    <p>📍 м. Чернігів, проспект Михайла Грушевського, 119-А</p>
+    <p>© 2026 Солодовник Марія Іванівна</p>
 </footer>
 
 </body>
