@@ -14,15 +14,25 @@
         nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
         nav a:hover { color: var(--main-gold); }
 
+        /* Анімація появи */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         .hero { display: flex; align-items: center; padding: 60px 8%; background: var(--light); gap: 40px; flex-wrap: wrap; }
         .hero-content { flex: 1; min-width: 300px; }
         .hero-img img { width: 100%; max-width: 400px; border-radius: 5px; box-shadow: 15px 15px 0 var(--main-gold); }
 
         .section { padding: 70px 8%; text-align: center; }
         .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 4px; text-transform: uppercase; font-size: 14px; margin-top: 20px; }
-        .btn-gold:hover { background: #b08d4a; }
+        .btn-gold:hover { background: #b08d4a; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3); }
         
-        /* Липка панель для мобільних */
         .mobile-sticky-bar {
             display: none;
             position: fixed;
@@ -35,18 +45,16 @@
             align-items: center;
         }
 
-        /* Підготовка до прийому */
         .prep-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 30px auto; text-align: left; }
-        .prep-card { background: white; padding: 25px; border-radius: 8px; border: 1px dashed var(--main-gold); }
+        .prep-card { background: white; padding: 25px; border-radius: 8px; border: 1px dashed var(--main-gold); transition: 0.3s; }
+        .prep-card:hover { border-style: solid; background: #fffdf9; }
         .prep-card h3 { color: var(--main-gold); margin-top: 0; font-size: 18px; display: flex; align-items: center; gap: 10px; }
 
-        /* Галерея сертифікатів */
         .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1200px; margin: 40px auto 0; }
         .cert-item { background: #fff; padding: 5px; border: 1px solid #eee; border-radius: 4px; transition: 0.4s; overflow: hidden; cursor: zoom-in; }
         .cert-item:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 2; }
         .cert-item img { width: 100%; height: auto; border-radius: 2px; display: block; background: #f9f9f9; }
 
-        /* Lightbox */
         #lightbox {
             display: none;
             position: fixed;
@@ -112,7 +120,7 @@
     <img id="lightbox-img" src="">
 </div>
 
-<section class="hero">
+<section class="hero reveal">
     <div class="hero-content">
         <div style="color: var(--main-gold); font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">ЧЕРНІГІВ</div>
         <h1>Солодовник Марія Іванівна</h1>
@@ -123,7 +131,7 @@
     <div class="hero-img"><img src="photo.jpg" alt="Лікар"></div>
 </section>
 
-<section class="section" id="about">
+<section class="section reveal" id="about">
     <h2>Офіційна ліцензія</h2>
     <div style="max-width: 900px; margin: 0 auto;">
         <div class="license-box">
@@ -142,7 +150,7 @@
     </div>
 </section>
 
-<section class="section" id="prep" style="background: var(--light);">
+<section class="section reveal" id="prep" style="background: var(--light);">
     <h2>Як підготуватися до прийому</h2>
     <p>Прості кроки, що допоможуть лікарю встановити точний діагноз швидше</p>
     <div class="prep-container">
@@ -157,7 +165,7 @@
     </div>
 </section>
 
-<section class="section" id="certificates">
+<section class="section reveal" id="certificates">
     <h2>Кваліфікація та сертифікати</h2>
     <div class="cert-grid">
         <div class="cert-item" onclick="openLightbox(this)"><img src="c1.JPG" onerror="this.src='c1.jpg'"></div>
@@ -179,7 +187,7 @@
     </div>
 </section>
 
-<section class="section" id="prices" style="background: var(--light);">
+<section class="section reveal" id="prices" style="background: var(--light);">
     <h2>Вартість послуг 2026</h2>
     <table class="price-table">
         <tr><td>Первинна консультація</td><td class="price-value">700 грн</td></tr>
@@ -205,7 +213,7 @@
     </div>
 </section>
 
-<section class="section" id="location">
+<section class="section reveal" id="location">
     <h2>Контакти та графік роботи</h2>
     <div class="contact-container">
         <div class="contact-info">
@@ -224,7 +232,7 @@
         </div>
         <div class="map-box">
             <iframe 
-                src="https://www.google.com/maps/dir/?api=1&destination=51.517373,31.3116340" 
+                src="https://www.google.com/maps/dir/?api=1&destination=51.517373,31.3116341" 
                 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
@@ -234,6 +242,7 @@
 <footer><p>© 2026 Солодовник Марія Іванівна. Всі права захищені.</p></footer>
 
 <script>
+    /* Скрипт для збільшення сертифікатів */
     function openLightbox(element) {
         const imgSrc = element.querySelector('img').src;
         document.getElementById('lightbox-img').src = imgSrc;
@@ -245,6 +254,23 @@
         document.getElementById('lightbox').style.display = 'none';
         document.body.style.overflow = 'auto';
     }
+
+    /* Скрипт для анімації появи при гортанні */
+    const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    };
+
+    const revealObserver = new IntersectionObserver(revealCallback, {
+        threshold: 0.1 // Секція з'явиться, коли 10% її площі буде у полі зору
+    });
+
+    document.querySelectorAll('.reveal').forEach(section => {
+        revealObserver.observe(section);
+    });
 </script>
 
 </body>
