@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Дерматолог Чернігів — Солодовник Марія Іванівна | Дитячий та дорослий лікар</title>
+    <title>Дерматолог Солодовник Марія | Чернігів</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; --light: #fafafa; }
@@ -14,7 +14,6 @@
         nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
         nav a:hover { color: var(--main-gold); }
 
-        /* Reveal Animation */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
@@ -37,16 +36,15 @@
         .prep-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 30px auto; text-align: left; }
         .prep-card { background: white; padding: 25px; border-radius: 8px; border: 1px dashed var(--main-gold); }
 
-        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; max-width: 1200px; margin: 40px auto 0; }
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1200px; margin: 40px auto 0; }
         .cert-item { background: #fff; padding: 5px; border: 1px solid #eee; border-radius: 4px; transition: 0.4s; overflow: hidden; cursor: zoom-in; }
-        .cert-item:hover { transform: scale(1.03); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
         .cert-item img { width: 100%; height: auto; display: block; }
 
         #lightbox { display: none; position: fixed; z-index: 10000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; cursor: zoom-out; }
         #lightbox img { max-width: 90%; max-height: 90%; border-radius: 4px; }
         #lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; }
 
-        .price-table { width: 100%; max-width: 800px; margin: 20px auto; border-collapse: collapse; text-align: left; background: white; }
+        .price-table { width: 100%; max-width: 900px; margin: 20px auto 10px; border-collapse: collapse; text-align: left; background: white; }
         .price-table td { padding: 15px 20px; border-bottom: 1px solid #eee; }
         .price-value { font-weight: 700; text-align: right; }
         
@@ -64,7 +62,7 @@
 <body>
 
 <header>
-    <div class="logo-box"><img src="logo.png" alt="Приватний дерматолог Солодовник Марія, Чернігів"></div>
+    <div class="logo-box"><img src="logo.png" alt="Логотип"></div>
     <nav>
         <a href="#about">Ліцензія</a>
         <a href="#prep">Підготовка</a>
@@ -76,8 +74,8 @@
 </header>
 
 <div class="mobile-sticky-bar">
-    <a href="tel:+380931157302" style="text-decoration: none; color: var(--dark); font-weight: 700;">📞 Дзвонити</a>
-    <a href="https://t.me/solodovnik_dr" target="_blank" class="btn-gold" style="margin-top:0; padding: 10px 20px; font-size: 12px;">Записатися</a>
+    <a href="tel:+380931157302" style="text-decoration: none; color: var(--dark); font-weight: 700; font-size: 14px;">📞 Дзвонити</a>
+    <a href="https://t.me/solodovnik_dr" target="_blank" rel="noopener noreferrer" class="btn-gold" style="margin-top:0; padding: 10px 20px; font-size: 12px;">Записатися</a>
 </div>
 
 <div id="lightbox" onclick="closeLightbox()">
@@ -89,19 +87,25 @@
     <div class="hero-content">
         <div style="color: var(--main-gold); font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">ЧЕРНІГІВ</div>
         <h1>Солодовник Марія Іванівна</h1>
-        <p style="font-weight: 600; color: var(--main-gold); margin-bottom: 5px;">Лікар-дерматовенеролог, трихолог</p>
+        <p style="font-weight: 600; color: var(--main-gold); margin-bottom: 5px;">Лікар-дерматовенеролог (дитячий та дорослий), трихолог</p>
         <p>Допомога всій сім’ї за принципами доказової медицини. 13 років досвіду.</p>
-        <a href="https://t.me/solodovnik_dr" target="_blank" class="btn-gold">Записатися на прийом</a>
+        <a href="https://t.me/solodovnik_dr" target="_blank" rel="noopener noreferrer" class="btn-gold">Записатися на прийом</a>
     </div>
-    <div class="hero-img"><img src="photo.jpg" alt="Дерматолог Чернігів Солодовник Марія Іванівна — прийом дорослих та дітей"></div>
+    <div class="hero-img"><img src="photo.jpg" alt="Лікар"></div>
 </section>
 
 <section class="section reveal" id="about">
     <h2>Офіційна ліцензія</h2>
-    <div class="license-box">
-        <p><strong>ФОП Солодовник Марія Іванівна</strong><br>
-        Наказ МОЗ України від 26.02.2026 р. № 258<br>
-        <a href="Витяг МОЗ.pdf" target="_blank" style="color: var(--main-gold); font-weight: 700;">📄 Переглянути офіційний витяг (PDF)</a></p>
+    <div style="max-width: 900px; margin: 0 auto;">
+        <div class="license-box">
+            <p style="margin: 0; font-size: 15px; line-height: 1.8;">
+                <strong>ФОП Солодовник Марія Іванівна</strong><br>
+                <strong>Ідентифікаційний номер:</strong> 3229815845<br>
+                <strong>Вид діяльності:</strong> Медична практика (дерматовенерологія)<br>
+                <strong>Підстава:</strong> Наказ МОЗ України від 26.02.2026 р. № 258<br><br>
+                <a href="Витяг МОЗ.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--main-gold); font-weight: 700; text-decoration: underline;">📄 Переглянути офіційний витяг (PDF)</a>
+            </p>
+        </div>
     </div>
 </section>
 
@@ -114,7 +118,7 @@
         </div>
         <div class="prep-card">
             <h3>📂 Медична історія</h3>
-            <p>Візьміть результати попередніх аналізів. Це допоможе встановити діагноз швидше.</p>
+            <p>Візьміть результати попередніх аналізів або виписки. Це значно допоможе у діагностиці.</p>
         </div>
     </div>
 </section>
@@ -124,7 +128,7 @@
     <div class="reviews-container">
         <div class="review-card">
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">"Дуже професійний підхід. Марія Іванівна уважно вислухала та допомогла."</p>
+            <p class="review-text">"Дуже професійний підхід. Марія Іванівна уважно вислухала та допомогла. Рекомендую!"</p>
             <div class="review-author">Олена К.</div>
         </div>
         <div class="review-card">
@@ -133,36 +137,29 @@
             <div class="review-author">Ігор П.</div>
         </div>
     </div>
+    <p style="margin-top: 20px;"><a href="https://www.google.com/maps" target="_blank" style="color: var(--main-gold); font-weight: 600;">Всі відгуки в Google Maps →</a></p>
 </section>
 
 <section class="section reveal" id="certificates" style="background: var(--light);">
     <h2>Кваліфікація та сертифікати</h2>
     <div class="cert-grid">
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c1.JPG" loading="lazy" alt="Сертифікат дерматолога 1" onerror="this.onerror=null; this.src='c1.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c2.JPG" loading="lazy" alt="Сертифікат дерматолога 2" onerror="this.onerror=null; this.src='c2.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c3.JPG" loading="lazy" alt="Сертифікат дерматолога 3" onerror="this.onerror=null; this.src='c3.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c4.JPG" loading="lazy" alt="Сертифікат дерматолога 4" onerror="this.onerror=null; this.src='c4.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c5.JPG" loading="lazy" alt="Сертифікат дерматолога 5" onerror="this.onerror=null; this.src='c5.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c6.JPG" loading="lazy" alt="Сертифікат дерматолога 6" onerror="this.onerror=null; this.src='c6.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c7.JPG" loading="lazy" alt="Сертифікат дерматолога 7" onerror="this.onerror=null; this.src='c7.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c8.JPG" loading="lazy" alt="Сертифікат дерматолога 8" onerror="this.onerror=null; this.src='c8.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c9.JPG" loading="lazy" alt="Сертифікат дерматолога 9" onerror="this.onerror=null; this.src='c9.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c10.JPG" loading="lazy" alt="Сертифікат дерматолога 10" onerror="this.onerror=null; this.src='c10.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c11.JPG" loading="lazy" alt="Сертифікат дерматолога 11" onerror="this.onerror=null; this.src='c11.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c12.JPG" loading="lazy" alt="Сертифікат дерматолога 12" onerror="this.onerror=null; this.src='c12.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c13.JPG" loading="lazy" alt="Сертифікат дерматолога 13" onerror="this.onerror=null; this.src='c13.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c14.JPG" loading="lazy" alt="Сертифікат дерматолога 14" onerror="this.onerror=null; this.src='c14.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c15.JPG" loading="lazy" alt="Сертифікат дерматолога 15" onerror="this.onerror=null; this.src='c15.jpg';"></div>
-        <div class="cert-item" onclick="openLightbox(this)"><img src="c16.JPG" loading="lazy" alt="Сертифікат дерматолога 16" onerror="this.onerror=null; this.src='c16.jpg';"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c1.JPG" onerror="this.src='c1.jpg'"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c2.JPG" onerror="this.src='c2.jpg'"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c3.JPG" onerror="this.src='c3.jpg'"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c4.JPG" onerror="this.src='c4.jpg'"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c5.JPG" onerror="this.src='c5.jpg'"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c6.JPG" onerror="this.src='c6.jpg'"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c7.JPG" onerror="this.src='c7.jpg'"></div>
+        <div class="cert-item" onclick="openLightbox(this)"><img src="c8.JPG" onerror="this.src='c8.jpg'"></div>
     </div>
 </section>
 
 <section class="section reveal" id="prices">
     <h2>Вартість послуг 2026</h2>
-    <table class="price-table">
+    <table class="price-table" style="max-width: 800px; margin: auto;">
         <tr><td>Первинна консультація</td><td class="price-value">700 грн</td></tr>
         <tr><td>Повторна консультація (до 1 міс.)</td><td class="price-value">600 грн</td></tr>
-        <tr><td>Дерматоскопія / Трихоскопія</td><td class="price-value">300 грн</td></tr>
+        <tr><td>Дерматоскопія</td><td class="price-value">300 грн</td></tr>
     </table>
 </section>
 
@@ -176,8 +173,10 @@
             <a href="https://t.me/solodovnik_dr" target="_blank" class="btn-gold">Записатися в Telegram</a>
         </div>
         <div class="map-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5!2d31.3!3d51.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTEuNTAwMCIsIDMxLjMwMDA!5e0!3m2!1suk!2sua!4v1710000000000" 
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.893150531584!2d31.28258537684616!3d51.51515531013444!2m3!1f0!2f0!3f0!3m2!1i1204!2i768!4f13.1!3m3!1m2!1s0x46d5483015570075%3A0xc3226a27e7d6365a!2z0L_RgNC-0YHQvy4g0JzQuNGF0LDQuNC70LAg0JPRgNGD0YjQtdCy0YHQutC-0LPQviwgMTE50LAsINCn0LXRgNC90LjQs9C-0LIsINCn0LXRgNC90LjQs9C-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgMTQwMzg!5e0!3m2!1suk!2sua!4v1711100000000!5m2!1suk!2sua" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </div>
 </section>
