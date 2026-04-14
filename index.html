@@ -18,7 +18,7 @@
         * { box-sizing: border-box; }
 
         body { 
-            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif; 
             margin: 0; 
             color: var(--dark); 
             line-height: 1.6; 
@@ -93,7 +93,7 @@
             transform: translateY(-2px); 
         }
         
-        /* ГАЛЕРЕЯ СЕРТИФІКАТІВ */
+        /* СЕРТИФІКАТИ */
         .cert-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
@@ -135,17 +135,15 @@
             background: rgba(0,0,0,0.9); 
             justify-content: center; 
             align-items: center; 
-            cursor: zoom-out;
         }
 
         #lightbox img { 
             max-width: 90%; 
             max-height: 90%; 
             border-radius: 4px; 
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
         }
 
-        /* ЦІНИ ТА ТАБЛИЦЯ */
+        /* ЦІНИ */
         .table-wrapper { 
             overflow-x: auto; 
             max-width: 900px; 
@@ -169,7 +167,6 @@
             font-weight: 700; 
             text-align: right; 
             white-space: nowrap; 
-            color: var(--main-gold);
         }
         
         .promo-box { 
@@ -204,7 +201,6 @@
             border-left: 5px solid var(--main-gold); 
         }
 
-        /* КОНТАКТИ */
         .contact-container { 
             display: flex; 
             flex-wrap: wrap; 
@@ -214,8 +210,6 @@
             text-align: left; 
         }
 
-        .contact-info { flex: 1; min-width: 280px; }
-
         .map-box { 
             flex: 1.5; 
             min-width: 300px; 
@@ -224,8 +218,6 @@
             overflow: hidden; 
             border: 1px solid #eee; 
         }
-
-        .map-box iframe { width: 100%; height: 100%; border: none; }
 
         footer { 
             background: var(--dark); 
@@ -238,17 +230,14 @@
             nav { display: none; } 
             .hero { text-align: center; } 
             .hero-img { order: -1; margin: 0 auto; } 
-            .contact-container { flex-direction: column; }
-            .section { padding: 50px 5%; }
+            .contact-container { flex-direction: column; } 
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-box">
-        <img src="logo.png" alt="Приватний дерматолог Солодовник Марія Іванівна">
-    </div>
+    <div class="logo-box"><img src="logo.png" alt="Приватний дерматолог Солодовник Марія Іванівна"></div>
     <nav>
         <a href="#about">Ліцензія</a>
         <a href="#certificates">Сертифікати</a>
@@ -258,7 +247,7 @@
 </header>
 
 <div id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" alt="Перегляд сертифіката">
+    <img id="lightbox-img" src="">
 </div>
 
 <section class="hero">
@@ -337,10 +326,13 @@
 
     <div class="price-notes">
         <p><strong>Примітки:</strong></p>
-        <ul style="padding-left: 20px;">
-            <li>Тривалість прийому — до 20 хв.</li>
-            <li>*Повторна — протягом 1 місяця з дня первинної.</li>
-            <li>Пільги надаються при пред’явленні посвідчення.</li>
+        <ul style="padding-left: 20px; list-style-type: none;">
+            <li style="margin-bottom: 8px;">• Тривалість консультації – до 20 хвилин.</li>
+            <li style="margin-bottom: 8px;">• *Повторна консультація проводиться протягом 1 місяця з дня отримання первинної консультації, якщо інший строк не вказаний лікарем у Консультативному висновку.</li>
+            <li style="margin-bottom: 8px;">• Пільги надаються при пред’явленні посвідчення.</li>
+            <li style="margin-top: 15px; font-style: italic; border-top: 1px solid #eee; padding-top: 10px;">
+                **Онлайн-консультація має рекомендаційний характер. Остаточний діагноз та призначення лікування потребують очного огляду лікаря та, за необхідності, проведення додаткових інструментальних, лабораторних чи інших обстежень.
+            </li>
         </ul>
     </div>
 </section>
@@ -350,39 +342,31 @@
     <div class="contact-container">
         <div class="contact-info">
             <p><strong>Адреса:</strong> м. Чернігів, пр-т Михайла Грушевського, 119-А</p>
-            <p><strong>Телефон:</strong> <a href="tel:+380931157302" style="color: inherit; text-decoration: none;">+38 093 115 7302</a></p>
-            <p><strong>Години прийому:</strong><br>Вт-Чт: 17:00-20:00<br>Сб-Нд: 12:00-15:00</p>
+            <p><strong>Телефон:</strong> <a href="tel:+380931157302" style="text-decoration: none; color: inherit;">+38 093 115 7302</a></p>
+            <p><strong>Години:</strong> Вт-Чт: 17:00-20:00 | Сб-Нд: 12:00-15:00</p>
             <a href="https://t.me/solodovnik_dr" target="_blank" class="btn-gold">Записатися в Telegram</a>
         </div>
         <div class="map-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5!2d31.2!3d51.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTEuNSIwIk4gMzEuMiIwIkU!5e0!3m2!1suk!2sua!4v123456789" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE_HERE" loading="lazy"></iframe>
         </div>
     </div>
 </section>
 
-<footer>
-    <p>© 2026 Солодовник Марія Іванівна. Всі права застережено.</p>
-</footer>
+<footer><p>© 2026 Солодовник Марія Іванівна. Всі права застережено.</p></footer>
 
 <script>
     function openLightbox(element) {
-        const lb = document.getElementById('lightbox');
-        const img = document.getElementById('lightbox-img');
-        img.src = element.querySelector('img').src;
-        lb.style.display = 'flex';
+        document.getElementById('lightbox-img').src = element.querySelector('img').src;
+        document.getElementById('lightbox').style.display = 'flex';
         document.body.style.overflow = 'hidden';
     }
-
     function closeLightbox() {
         document.getElementById('lightbox').style.display = 'none';
         document.body.style.overflow = 'auto';
     }
-
-    // Закриття галереї клавішею Esc
-    window.addEventListener('keydown', function(event) {
-        if (event.key === "Escape") {
-            closeLightbox();
-        }
+    // Закриття на Esc
+    window.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") closeLightbox();
     });
 </script>
 
