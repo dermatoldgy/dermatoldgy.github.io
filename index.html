@@ -21,23 +21,30 @@
         .section { padding: 70px 8%; text-align: center; }
         .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; text-transform: uppercase; font-size: 14px; margin-top: 20px; }
         
+        /* ГАЛЕРЕЯ СЕРТИФІКАТІВ */
         .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; max-width: 1200px; margin: 40px auto 0; }
         .cert-item { background: #fff; padding: 12px; border: 1px solid #eee; border-radius: 4px; transition: 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+        .cert-item:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
         .cert-item img { width: 100%; height: auto; border-radius: 2px; display: block; background: #f9f9f9; min-height: 150px; }
         .cert-item p { font-size: 11px; margin-top: 12px; font-weight: 700; text-transform: uppercase; color: var(--dark); letter-spacing: 0.5px; }
 
-        .price-table { width: 100%; max-width: 900px; margin: 30px auto 10px; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        /* ЦІНИ */
+        .price-table { width: 100%; max-width: 900px; margin: 20px auto 10px; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .price-table td { padding: 15px 20px; border-bottom: 1px solid #eee; }
         .price-value { font-weight: 700; color: var(--dark); white-space: nowrap; text-align: right; }
         
+        .price-notes { max-width: 900px; margin: 0 auto; text-align: left; font-size: 13px; color: #666; background: #fcfcfc; padding: 20px; border: 1px solid #eee; border-radius: 4px; }
+
         .license-box { margin-top: 40px; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 25px; text-align: left; border-left: 4px solid var(--main-gold); }
 
+        /* КАРТА ТА КОНТАКТИ */
         .contact-container { display: flex; flex-wrap: wrap; gap: 30px; max-width: 1100px; margin: 40px auto; text-align: left; }
         .contact-info { flex: 1; min-width: 300px; padding: 20px; }
         .map-box { flex: 1.5; min-width: 300px; height: 400px; border-radius: 8px; overflow: hidden; border: 1px solid #eee; }
         .map-box iframe { width: 100%; height: 100%; border: 0; }
 
         footer { background: var(--dark); color: white; padding: 50px 8%; text-align: center; }
+
         @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } .hero-img { order: -1; } .contact-container { flex-direction: column; } }
     </style>
 </head>
@@ -100,6 +107,7 @@
 
 <section class="section" id="prices">
     <h2>Вартість послуг</h2>
+    <p style="font-size: 14px; color: #888;">Ціни діють з 01.03.2026 р. по 31.12.2026 р.</p>
     <table class="price-table">
         <tr><td>Первинна консультація лікаря</td><td class="price-value">700,00 грн</td></tr>
         <tr><td>Повторна консультація</td><td class="price-value">600,00 грн</td></tr>
@@ -107,6 +115,15 @@
         <tr><td>Дерматоскопія / Трихоскопія</td><td class="price-value">300,00 грн</td></tr>
         <tr><td>Медична довідка</td><td class="price-value">300,00 грн</td></tr>
     </table>
+
+    <div class="price-notes">
+        <p><strong>Інформація для пацієнтів:</strong></p>
+        <ul style="padding-left: 20px; margin-bottom: 0;">
+            <li>Повторна консультація проводиться протягом 1 місяця з дня отримання первинної консультації, якщо інший строк не вказаний лікарем у консультативному висновку.</li>
+            <li>Онлайн-консультація має рекомендаційний характер.</li>
+            <li>Остаточний діагноз та призначення лікування потребують очного огляду лікаря та, за необхідності, проведення додаткових інструментальних, лабораторних чи інших обстежень.</li>
+        </ul>
+    </div>
 </section>
 
 <section class="section" id="location">
@@ -115,10 +132,10 @@
         <div class="contact-info">
             <p><strong>Адреса:</strong><br>м. Чернігів, проспект Михайла Грушевського, 119-А</p>
             <p><strong>Телефон:</strong><br>+38 093 115 7302</p>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=51.5147,31.2783" target="_blank" class="btn-gold">Прокласти маршрут</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=51.4939,31.2943" target="_blank" class="btn-gold">Прокласти маршрут</a>
         </div>
         <div class="map-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.5323!2d31.2757!3d51.5147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTEuNTE0NywzMS4yNzgz!5e0!3m2!1suk!2sua!4v1715000000000" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2489.288277258416!2d31.2921113157662!3d51.49392197963309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d548967f70b77b%3A0x6a0c5c3e031a017e!2z0L_RgNC-0YHQvy4g0JzQuNGF0LDQuNC70LAg0JPQu9GD0YjQtdCy0YHQutC-0LPQviwgMTE50JAsINCn0LXRgNC90LjQs9C-0LIsINCn0LXRgNC90LjQs9C-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgMTQwMDA!5e0!3m2!1suk!2sua!4v1708500000000!5m2!1suk!2sua" loading="lazy"></iframe>
         </div>
     </div>
 </section>
