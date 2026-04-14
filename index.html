@@ -32,13 +32,6 @@
         .license-title { color: var(--main-gold); font-weight: 700; text-transform: uppercase; font-size: 14px; margin-bottom: 15px; border-bottom: 2px solid var(--main-gold); display: inline-block; }
         .license-link { color: var(--main-gold); text-decoration: none; font-weight: 600; font-size: 13px; border-bottom: 1px dashed; margin-right: 15px; }
 
-        /* Стилі для галереї сертифікатів */
-        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; max-width: 1100px; margin: 40px auto 0; }
-        .cert-item { background: #fff; padding: 10px; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
-        .cert-item:hover { transform: translateY(-5px); }
-        .cert-item img { width: 100%; height: auto; border-radius: 2px; border: 1px solid #eee; }
-        .cert-item p { font-size: 11px; margin-top: 10px; font-weight: 600; text-transform: uppercase; color: var(--dark); line-height: 1.2; }
-
         .price-table { width: 100%; max-width: 900px; margin: 30px auto 10px; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .price-table th, .price-table td { padding: 15px 20px; border-bottom: 1px solid #eee; }
         .price-table th { background: var(--light); color: var(--main-gold); text-transform: uppercase; font-size: 13px; letter-spacing: 1px; }
@@ -46,6 +39,7 @@
         
         .discount-info { background: #fff5e6; padding: 15px; border-radius: 5px; margin-top: 20px; font-size: 14px; border-left: 4px solid var(--main-gold); text-align: left; max-width: 900px; margin-left: auto; margin-right: auto; }
         
+        /* Нові стилі для юридичних приміток */
         .price-notes { max-width: 900px; margin: 20px auto 0; text-align: left; font-size: 13px; color: #666; line-height: 1.6; border-top: 1px solid #eee; padding-top: 20px; }
         .price-notes p { margin: 10px 0; }
 
@@ -66,7 +60,6 @@
     <div class="logo-box"><img src="logo.png" alt="Логотип"></div>
     <nav>
         <a href="#about">Про нас</a>
-        <a href="#certificates">Сертифікати</a>
         <a href="#prices">Ціни</a> 
         <a href="#location">Контакти</a>
         <a href="tel:+380931157302" style="color: var(--main-gold);">093 115 7302</a>
@@ -107,28 +100,6 @@
     </div>
 </section>
 
-<section class="section" id="certificates" style="background: var(--light); border-top: 1px solid #eee;">
-    <h2>Кваліфікація та сертифікати</h2>
-    <div class="cert-grid">
-        <div class="cert-item"><a href="c1.jpg" target="_blank"><img src="c1.jpg"><p>19-ті Київські Дерматологічні Дні</p></a></div>
-        <div class="cert-item"><a href="c2.jpg" target="_blank"><img src="c2.jpg"><p>Дерматоскопія новоутворень шкіри</p></a></div>
-        <div class="cert-item"><a href="c3.jpg" target="_blank"><img src="c3.jpg"><p>Лазерні технології в медицині</p></a></div>
-        <div class="cert-item"><a href="c4.jpg" target="_blank"><img src="c4.jpg"><p>Сучасні методи лікування акне</p></a></div>
-        <div class="cert-item"><a href="c5.jpg" target="_blank"><img src="c5.jpg"><p>Трихологія: хвороби волосся</p></a></div>
-        <div class="cert-item"><a href="c6.jpg" target="_blank"><img src="c6.jpg"><p>Дитяча дерматологія</p></a></div>
-        <div class="cert-item"><a href="c7.jpg" target="_blank"><img src="c7.jpg"><p>Атопічний дерматит: протоколи</p></a></div>
-        <div class="cert-item"><a href="c8.jpg" target="_blank"><img src="c8.jpg"><p>Псоріаз та хронічні дерматози</p></a></div>
-        <div class="cert-item"><a href="c9.jpg" target="_blank"><img src="c9.jpg"><p>Клінічна онкологія шкіри</p></a></div>
-        <div class="cert-item"><a href="c10.jpg" target="_blank"><img src="c10.jpg"><p>Міжнародний конгрес дерматологів</p></a></div>
-        <div class="cert-item"><a href="c11.jpg" target="_blank"><img src="c11.jpg"><p>Дерматоскопія: базовий курс</p></a></div>
-        <div class="cert-item"><a href="c12.jpg" target="_blank"><img src="c12.jpg"><p>Хвороби волосся та шкіри голови</p></a></div>
-        <div class="cert-item"><a href="c13.jpg" target="_blank"><img src="c13.jpg"><p>Школа діагностики пухлин шкіри</p></a></div>
-        <div class="cert-item"><a href="c14.jpg" target="_blank"><img src="c14.jpg"><p>Актуальні питання дерматовенерології</p></a></div>
-        <div class="cert-item"><a href="c15.jpg" target="_blank"><img src="c15.jpg"><p>Сучасні методи в трихології</p></a></div>
-        <div class="cert-item"><a href="c17.jpg" target="_blank"><img src="c17.jpg"><p>Кваліфікаційний сертифікат</p></a></div>
-    </div>
-</section>
-
 <section class="section" id="prices" style="background: #fff;">
     <h2>Вартість послуг</h2>
     <p style="font-weight: 600; color: var(--main-gold);">Ціни діють з 01.03.2026 р. по 31.12.2026 р.</p>
@@ -153,8 +124,8 @@
     </div>
 
     <div class="price-notes">
-        <p>• <strong>Повторна консультація</strong> проводиться протягом 1 місяця з дня отримання первинної консультації.</p>
-        <p>• <strong>Онлайн-консультація</strong> має рекомендаційний характер.</p>
+        <p>• <strong>Повторна консультація</strong> проводиться протягом 1 місяця з дня отримання первинної консультації, якщо інший строк не вказаний лікарем у консультативному висновку.</p>
+        <p>• <strong>Онлайн-консультація</strong> має рекомендаційний характер. Остаточний діагноз та призначення лікування потребують очного огляду лікаря та, за необхідності, проведення додаткових інструментальних, лабораторних чи інших обстежень.</p>
     </div>
 </section>
 
@@ -162,12 +133,13 @@
     <h2>Контакти та графік</h2>
     <p>📍 м. Чернігів, проспект Михайла Грушевського, 119-А</p>
     <div class="contact-grid">
-        <div class="info-block" style="margin: 0 auto;">
+        <div class="info-block">
             <ul class="schedule">
                 <li><span class="day">Вт-Чт:</span> 17:00 – 20:00</li>
                 <li><span class="day">Сб-Нд:</span> 12:00 – 15:00</li>
             </ul>
             <p><strong>📞 093 115 7302</strong></p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Чернігів+Михайла+Грушевського+119-А" class="btn-gold" target="_blank">Маршрут у Maps</a>
         </div>
     </div>
 </section>
@@ -176,8 +148,10 @@
     <img src="logo.png" style="height: 60px; width: auto; display: block; margin: 0 auto 20px;" alt="Logo">
     <div class="license-footer">
         <strong>Солодовник Марія Іванівна</strong><br>
+        Лікар-дерматовенеролог, трихолог (13 років досвіду)<br>
         Ліцензія: Наказ МОЗ № 258 від 26.02.2026 р.<br>
-        ФОП Солодовник М. І.
+        Спеціальність: дерматовенерологія, дитяча дерматовенерологія<br>
+        ФОП Солодовник М. І., ІПН 3229815845
     </div>
     <div class="social-links">
         <a href="https://www.instagram.com/solodovnykdermatology" target="_blank">Instagram</a>
