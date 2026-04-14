@@ -32,7 +32,6 @@
         .license-title { color: var(--main-gold); font-weight: 700; text-transform: uppercase; font-size: 14px; margin-bottom: 15px; border-bottom: 2px solid var(--main-gold); display: inline-block; }
         .license-link { color: var(--main-gold); text-decoration: none; font-weight: 600; font-size: 13px; border-bottom: 1px dashed; margin-right: 15px; }
 
-        /* Стилі для сертифікатів */
         .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; max-width: 1100px; margin: 40px auto 0; }
         .cert-item { background: #fff; padding: 10px; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: 0.3s; text-align: center; }
         .cert-item:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(197, 160, 89, 0.2); }
@@ -112,15 +111,40 @@
     </p>
     
     <div class="cert-grid">
-        <div class="cert-item">
-            <a href="c1.jpg" target="_blank"><img src="c1.jpg" alt="19-ті Київські Дерматологічні Дні"></a>
-            <p>19-ті Київські Дерматологічні Дні</p>
-        </div>
-        <div class="cert-item">
-            <a href="c2.jpg" target="_blank"><img src="c2.jpg" alt="Сертифікат"></a>
-            <p>Назва сертифіката 2</p>
-        </div>
-        </div>
+        <script>
+            const titles = {
+                1: "19-ті Київські Дерматологічні Дні",
+                2: "Дерматоскопія новоутворень шкіри",
+                3: "Лазерні технології в медицині",
+                4: "Сучасні методи лікування акне",
+                5: "Трихологія: хвороби волосся",
+                6: "Дитяча дерматологія",
+                7: "Атопічний дерматит: протоколи",
+                8: "Псоріаз та хронічні дерматози",
+                9: "Клінічна онкологія шкіри",
+                10: "Міжнародний конгрес дерматологів",
+                11: "Дерматоскопія: базовий курс",
+                12: "Хвороби волосся та шкіри голови",
+                13: "Школа діагностики пухлин шкіри",
+                14: "Актуальні питання дерматовенерології",
+                15: "Сучасні методи в трихології",
+                16: "Кваліфікаційний сертифікат спеціаліста",
+                17: "Дерматоскопія: поглиблений курс"
+            };
+
+            for (let i = 1; i <= 17; i++) {
+                const title = titles[i] || `Сертифікат №${i}`;
+                document.write(`
+                    <div class="cert-item">
+                        <a href="c${i}.jpg" target="_blank">
+                            <img src="c${i}.jpg" alt="${title}" onerror="this.src='https://via.placeholder.com/200x280?text=c${i}.jpg'">
+                        </a>
+                        <p>${title}</p>
+                    </div>
+                `);
+            }
+        </script>
+    </div>
 </section>
 
 <section class="section" id="prices" style="background: #fff;">
