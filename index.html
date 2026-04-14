@@ -20,30 +20,24 @@
 
         .section { padding: 70px 8%; text-align: center; }
         .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; text-transform: uppercase; font-size: 14px; margin-top: 20px; }
-        .btn-gold:hover { background: #b08d4a; }
         
-        /* ГАЛЕРЕЯ СЕРТИФІКАТІВ */
         .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; max-width: 1200px; margin: 40px auto 0; }
         .cert-item { background: #fff; padding: 12px; border: 1px solid #eee; border-radius: 4px; transition: 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
-        .cert-item:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
         .cert-item img { width: 100%; height: auto; border-radius: 2px; display: block; background: #f9f9f9; min-height: 150px; }
-        .cert-item p { font-size: 11px; margin-top: 12px; font-weight: 700; text-transform: uppercase; color: var(--dark); letter-spacing: 0.5px; min-height: 30px; }
+        .cert-item p { font-size: 11px; margin-top: 12px; font-weight: 700; text-transform: uppercase; color: var(--dark); letter-spacing: 0.5px; }
 
-        /* ЦІНИ */
         .price-table { width: 100%; max-width: 900px; margin: 30px auto 10px; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .price-table td { padding: 15px 20px; border-bottom: 1px solid #eee; }
         .price-value { font-weight: 700; color: var(--dark); white-space: nowrap; text-align: right; }
         
         .license-box { margin-top: 40px; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 25px; text-align: left; border-left: 4px solid var(--main-gold); }
 
-        /* КАРТА ТА КОНТАКТИ */
         .contact-container { display: flex; flex-wrap: wrap; gap: 30px; max-width: 1100px; margin: 40px auto; text-align: left; }
         .contact-info { flex: 1; min-width: 300px; padding: 20px; }
         .map-box { flex: 1.5; min-width: 300px; height: 400px; border-radius: 8px; overflow: hidden; border: 1px solid #eee; }
         .map-box iframe { width: 100%; height: 100%; border: 0; }
 
         footer { background: var(--dark); color: white; padding: 50px 8%; text-align: center; }
-
         @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } .hero-img { order: -1; } .contact-container { flex-direction: column; } }
     </style>
 </head>
@@ -85,69 +79,52 @@
 <section class="section" id="certificates" style="background: var(--light); border-top: 1px solid #eee;">
     <h2>Кваліфікація та сертифікати</h2>
     <div class="cert-grid">
-        <div class="cert-item"><img src="c1.JPG" onerror="this.onerror=null; this.src='c1.jpg';" alt="c1"><p>Київські Дерматологічні Дні</p></div>
-        <div class="cert-item"><img src="c2.JPG" onerror="this.onerror=null; this.src='c2.jpg';" alt="c2"><p>Дерматоскопія новоутворень</p></div>
-        <div class="cert-item"><img src="c3.JPG" onerror="this.onerror=null; this.src='c3.jpg';" alt="c3"><p>Лазерні технології</p></div>
-        <div class="cert-item"><img src="c4.JPG" onerror="this.onerror=null; this.src='c4.jpg';" alt="c4"><p>Лікування акне</p></div>
-        <div class="cert-item"><img src="c5.JPG" onerror="this.onerror=null; this.src='c5.jpg';" alt="c5"><p>Трихологія</p></div>
-        <div class="cert-item"><img src="c6.JPG" onerror="this.onerror=null; this.src='c6.jpg';" alt="c6"><p>Дитяча дерматологія</p></div>
-        <div class="cert-item"><img src="c7.JPG" onerror="this.onerror=null; this.src='c7.jpg';" alt="c7"><p>Атопічний дерматит</p></div>
-        <div class="cert-item"><img src="c8.JPG" onerror="this.onerror=null; this.src='c8.jpg';" alt="c8"><p>Псоріаз та дерматози</p></div>
-        <div class="cert-item"><img src="c9.JPG" onerror="this.onerror=null; this.src='c9.jpg';" alt="c9"><p>Онкологія шкіри</p></div>
-        <div class="cert-item"><img src="c10.JPG" onerror="this.onerror=null; this.src='c10.jpg';" alt="c10"><p>Сучасна діагностика</p></div>
-        <div class="cert-item"><img src="c11.JPG" onerror="this.onerror=null; this.src='c11.jpg';" alt="c11"><p>Дерматоскопія (базовий)</p></div>
-        <div class="cert-item"><img src="c12.JPG" onerror="this.onerror=null; this.src='c12.jpg';" alt="c12"><p>Курс трихології</p></div>
-        <div class="cert-item"><img src="c13.JPG" onerror="this.onerror=null; this.src='c13.jpg';" alt="c13"><p>Медичний конгрес</p></div>
-        <div class="cert-item"><img src="c14.JPG" onerror="this.onerror=null; this.src='c14.jpg';" alt="c14"><p>Дерматологічна школа</p></div>
-        <div class="cert-item"><img src="c15.JPG" onerror="this.onerror=null; this.src='c15.jpg';" alt="c15"><p>Хвороби волосся</p></div>
-        <div class="cert-item"><img src="c16.JPG" onerror="this.onerror=null; this.src='c16.jpg';" alt="c16"><p>Підвищення кваліфікації</p></div>
+        <div class="cert-item"><img src="c1.JPG" onerror="this.onerror=null; this.src='c1.jpg';"><p>Київські Дерматологічні Дні</p></div>
+        <div class="cert-item"><img src="c2.JPG" onerror="this.onerror=null; this.src='c2.jpg';"><p>Дерматоскопія новоутворень</p></div>
+        <div class="cert-item"><img src="c3.JPG" onerror="this.onerror=null; this.src='c3.jpg';"><p>Лазерні технології</p></div>
+        <div class="cert-item"><img src="c4.JPG" onerror="this.onerror=null; this.src='c4.jpg';"><p>Лікування акне</p></div>
+        <div class="cert-item"><img src="c5.JPG" onerror="this.onerror=null; this.src='c5.jpg';"><p>Трихологія</p></div>
+        <div class="cert-item"><img src="c6.JPG" onerror="this.onerror=null; this.src='c6.jpg';"><p>Дитяча дерматологія</p></div>
+        <div class="cert-item"><img src="c7.JPG" onerror="this.onerror=null; this.src='c7.jpg';"><p>Атопічний дерматит</p></div>
+        <div class="cert-item"><img src="c8.JPG" onerror="this.onerror=null; this.src='c8.jpg';"><p>Псоріаз та дерматози</p></div>
+        <div class="cert-item"><img src="c9.JPG" onerror="this.onerror=null; this.src='c9.jpg';"><p>Онкологія шкіри</p></div>
+        <div class="cert-item"><img src="c10.JPG" onerror="this.onerror=null; this.src='c10.jpg';"><p>Сучасна діагностика</p></div>
+        <div class="cert-item"><img src="c11.JPG" onerror="this.onerror=null; this.src='c11.jpg';"><p>Дерматоскопія (базовий)</p></div>
+        <div class="cert-item"><img src="c12.JPG" onerror="this.onerror=null; this.src='c12.jpg';"><p>Курс трихології</p></div>
+        <div class="cert-item"><img src="c13.JPG" onerror="this.onerror=null; this.src='c13.jpg';"><p>Медичний конгрес</p></div>
+        <div class="cert-item"><img src="c14.JPG" onerror="this.onerror=null; this.src='c14.jpg';"><p>Дерматологічна школа</p></div>
+        <div class="cert-item"><img src="c15.JPG" onerror="this.onerror=null; this.src='c15.jpg';"><p>Хвороби волосся</p></div>
+        <div class="cert-item"><img src="c16.JPG" onerror="this.onerror=null; this.src='c16.jpg';"><p>Підвищення кваліфікації</p></div>
     </div>
 </section>
 
 <section class="section" id="prices">
     <h2>Вартість послуг</h2>
     <table class="price-table">
-        <tbody>
-            <tr><td>Первинна консультація лікаря (доросла/дитяча)</td><td class="price-value">700,00 грн</td></tr>
-            <tr><td>Повторна консультація (протягом 1 місяця)</td><td class="price-value">600,00 грн</td></tr>
-            <tr><td>Онлайн-консультація</td><td class="price-value">550,00 грн</td></tr>
-            <tr><td>Дерматоскопія / Трихоскопія</td><td class="price-value">300,00 грн</td></tr>
-            <tr><td>Огляд з видачею медичної довідки</td><td class="price-value">300,00 грн</td></tr>
-        </tbody>
+        <tr><td>Первинна консультація лікаря</td><td class="price-value">700,00 грн</td></tr>
+        <tr><td>Повторна консультація</td><td class="price-value">600,00 грн</td></tr>
+        <tr><td>Онлайн-консультація</td><td class="price-value">550,00 грн</td></tr>
+        <tr><td>Дерматоскопія / Трихоскопія</td><td class="price-value">300,00 грн</td></tr>
+        <tr><td>Медична довідка</td><td class="price-value">300,00 грн</td></tr>
     </table>
-
-    <div style="max-width: 900px; margin: 20px auto; text-align: left; font-size: 13px; color: #666; background: #fdfdfd; padding: 20px; border-radius: 5px; border: 1px dashed #ddd;">
-        <p style="margin-top: 0;"><strong>Важлива інформація для пацієнтів:</strong></p>
-        <ul style="padding-left: 20px; margin-bottom: 0;">
-            <li>Тривалість консультативного прийому становить <strong>до 20 хвилин</strong>.</li>
-            <li><strong>Повторною</strong> вважається консультація з приводу того самого захворювання протягом 1 календарного місяця.</li>
-            <li><strong>Онлайн-консультація</strong> проводиться за умови 100% попередньої оплати та має суто рекомендаційний характер.</li>
-            <li>На пільгові умови прийому мають право: ВПО, ветерани війни (УБД), особи з інвалідністю та багатодітні родини — <strong>за умови пред’явлення відповідного посвідчення</strong>.</li>
-        </ul>
-    </div>
 </section>
 
 <section class="section" id="location">
-    <h2>Як нас знайти</h2>
+    <h2>Контакти</h2>
     <div class="contact-container">
         <div class="contact-info">
             <p><strong>Адреса:</strong><br>м. Чернігів, проспект Михайла Грушевського, 119-А</p>
             <p><strong>Телефон:</strong><br>+38 093 115 7302</p>
-            <p><strong>Графік роботи:</strong><br>Пн-Пт: 09:00 - 18:00<br>Сб: 10:00 - 15:00</p>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=проспект+Михайла+Грушевського,+119-А,+Чернігів" target="_blank" class="btn-gold" style="margin-top: 10px;">Прокласти маршрут</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=51.5147,31.2783" target="_blank" class="btn-gold">Прокласти маршрут</a>
         </div>
         <div class="map-box">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.743141154!2d31.2858123!3d51.4994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d548f072719a9b%3A0x77d853b0e2586a5!2z0L_RgNC-0YHQvy4g0JzQuNGF0LDQuNC70LAg0JPRgNGD0YjQtdCy0YHQutC-0LPQviwgMTE50JAsINCn0LXRgNC90ZbQs9GW0LIsINCn0LXRgNC90ZbQs9GW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMTQwMDA!5e0!3m2!1suk!2sua!4v1710000000000!5m2!1suk!2sua" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.5323!2d31.2757!3d51.5147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTEuNTE0NywzMS4yNzgz!5e0!3m2!1suk!2sua!4v1715000000000" loading="lazy"></iframe>
         </div>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Солодовник Марія Іванівна. Всі права захищені.</p>
+    <p>© 2026 Солодовник Марія Іванівна</p>
 </footer>
 
 </body>
