@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; --light: #fafafa; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); scroll-behavior: smooth; padding-bottom: 70px; /* Відступ для липкої кнопки на мобайлі */ }
         
         header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .logo-box img { height: 65px; width: auto; }
@@ -19,9 +19,24 @@
         .hero-img img { width: 100%; max-width: 400px; border-radius: 5px; box-shadow: 15px 15px 0 var(--main-gold); }
 
         .section { padding: 70px 8%; text-align: center; }
-        .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; text-transform: uppercase; font-size: 14px; margin-top: 20px; }
+        .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; text-transform: uppercase; font-size: 14px; margin-top: 20px; border-radius: 4px; }
         .btn-gold:hover { background: #b08d4a; }
         
+        /* Липка панель для мобільних */
+        .mobile-sticky-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 -2px 15px rgba(0,0,0,0.1);
+            padding: 12px 20px;
+            z-index: 9999;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1200px; margin: 40px auto 0; }
         .cert-item { background: #fff; padding: 5px; border: 1px solid #eee; border-radius: 4px; transition: 0.4s; overflow: hidden; }
         .cert-item:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 2; }
@@ -42,10 +57,17 @@
         .map-box iframe { width: 100%; height: 100%; border: 0; }
 
         footer { background: var(--dark); color: white; padding: 50px 8%; text-align: center; }
-        @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; } .hero-img { order: -1; } .contact-container { flex-direction: column; } }
+
+        @media (max-width: 768px) { 
+            nav { display: none; } 
+            .hero { text-align: center; } 
+            .hero-img { order: -1; } 
+            .contact-container { flex-direction: column; }
+            .mobile-sticky-bar { display: flex; } /* Показуємо на мобільних */
+            body { padding-bottom: 80px; }
+        }
         
-        .tel-link { text-decoration: none; color: inherit; font-weight: 600; transition: 0.3s; }
-        .tel-link:hover { color: var(--main-gold); }
+        .tel-link { text-decoration: none; color: inherit; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -59,6 +81,11 @@
         <a href="#location">Контакти</a>
     </nav>
 </header>
+
+<div class="mobile-sticky-bar">
+    <a href="tel:+380931157302" style="text-decoration: none; color: var(--dark); font-weight: 700; font-size: 14px;">📞 Дзвонити</a>
+    <a href="https://t.me/solodovnik_dr" target="_blank" rel="noopener noreferrer" class="btn-gold" style="margin-top:0; padding: 10px 20px; font-size: 12px;">Записатися</a>
+</div>
 
 <section class="hero">
     <div class="hero-content">
@@ -157,7 +184,7 @@
         </div>
         <div class="map-box">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2398.6651!2d31.3117!3d51.4983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d548f070966f35%3A0x67347a6141a3962!2z0L_RgNC-0YHQvy4g0JzQuNGF0LDQudC70LAg0JPQu9GD0YjQtdCy0YHQutC-0LPQviwgMTE50JAsINCn0LXRgNC90ZbQs9GW0LIsINCn0LXRgNC90ZbQs9GW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMTQwMzQ!5e0!3m2!1suk!2sua!4v1710000000000!5m2!1suk!2sua" 
+                src="https://www.google.com/maps/search/?api=1&query=51.5246,31.28272" 
                 loading="lazy">
             </iframe>
         </div>
