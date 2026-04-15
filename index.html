@@ -200,7 +200,25 @@
             text-align: left; 
             border-left: 5px solid var(--main-gold); 
         }
-
+.doctor-info-box {
+    display: flex;
+    gap: 40px;
+    text-align: left;
+    max-width: 1000px;
+    margin: 30px auto;
+    flex-wrap: wrap;
+}
+.doctor-text { flex: 2; min-width: 300px; }
+.doctor-stats { 
+    flex: 1; 
+    min-width: 250px; 
+    background: var(--light); 
+    padding: 25px; 
+    border-radius: 8px;
+    border-left: 4px solid var(--main-gold);
+}
+.stat-item { margin-bottom: 15px; font-size: 14px; }
+.stat-item strong { color: var(--main-gold); display: block; margin-bottom: 3px; }
         /* КОНТАКТИ ТА КАРТА */
         .contact-container { 
             display: flex; 
