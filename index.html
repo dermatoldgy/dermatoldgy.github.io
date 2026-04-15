@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Дерматовенеролог Чернігів — Солодовник Марія</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-   <style>
-/* 1. Стиль самої кнопки (три лінії) */
+  <style>
+/* 1. Стиль кнопки (три лінії) */
 .menu-toggle {
     display: none; 
     flex-direction: column;
@@ -26,10 +26,7 @@
 
 /* 2. Логіка для мобільних пристроїв */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: flex; 
-    }
-
+    .menu-toggle { display: flex; }
     nav {
         display: none; 
         flex-direction: column;
@@ -42,13 +39,9 @@
         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
         z-index: 1000;
     }
-
-    nav.active {
-        display: flex;
-    }
-
+    nav.active { display: flex; }
     nav a {
-        margin: 0 !important; /* Прибираємо відступи, щоб було рівно */
+        margin: 0 !important;
         padding: 15px;
         text-align: center;
         border-bottom: 1px solid #eee;
@@ -57,7 +50,7 @@
     }
 }
 
-/* 3. Загальні стилі сайту */
+/* 3. Загальні стилі та основні секції */
 :root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; --light: #fafafa; }
 * { box-sizing: border-box; }
 body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); scroll-behavior: smooth; }
@@ -67,9 +60,49 @@ header { background: white; padding: 10px 5%; display: flex; justify-content: sp
 nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
 nav a:hover { color: var(--main-gold); }
 
-/* ... далі всі ваші інші стилі (hero, section, cert-grid тощо) залишаються без змін ... */
+/* --- ОСЬ ЦІ СТИЛІ, ЯКІ БУЛИ ЗАХОВАНІ --- */
+.hero { display: flex; align-items: center; padding: 60px 8%; background: var(--light); gap: 40px; flex-wrap: wrap; }
+.hero-content { flex: 1.2; min-width: 300px; }
+.hero-img img { width: 100%; max-width: 450px; border-radius: 5px; box-shadow: 15px 15px 0 var(--main-gold); object-fit: cover; }
 
-/* У самому кінці просто закрийте тег </style> БЕЗ додаткових @media */
+.section { padding: 60px 8%; text-align: center; }
+.btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; text-transform: uppercase; font-size: 14px; margin-top: 20px; }
+
+.doctor-info-box { display: flex; gap: 40px; text-align: left; max-width: 1000px; margin: 30px auto; flex-wrap: wrap; }
+.doctor-text { flex: 2; min-width: 300px; }
+.doctor-stats { flex: 1; min-width: 250px; background: var(--light); padding: 25px; border-radius: 8px; border-left: 4px solid var(--main-gold); }
+
+.table-wrapper { overflow-x: auto; max-width: 900px; margin: 20px auto; }
+.price-table { width: 100%; border-collapse: collapse; text-align: left; background: white; }
+.price-table td { padding: 15px 20px; border-bottom: 1px solid #eee; }
+.price-value { font-weight: 700; text-align: right; white-space: nowrap; }
+
+.license-box { margin: 30px auto; max-width: 900px; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 30px; text-align: left; border-left: 5px solid var(--main-gold); }
+
+.contact-container { display: flex; flex-direction: column; gap: 30px; max-width: 900px; margin: 40px auto; text-align: left; }
+.map-box { width: 100%; height: 450px; border-radius: 8px; overflow: hidden; border: 1px solid #eee; }
+
+footer { background: var(--dark); color: white; padding: 40px 8%; text-align: center; font-size: 14px; }
+
+/* 4. Сертифікати та фінальні правки масштабу */
+.cert-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); 
+    gap: 15px; 
+    max-width: 1200px; 
+    margin: 30px auto; 
+    padding: 0 15px; 
+}
+.cert-item { background: #fff; padding: 5px; border: 1px solid #eee; border-radius: 4px; transition: 0.4s; cursor: zoom-in; }
+.cert-item img { width: 100%; height: auto; border-radius: 2px; display: block; object-fit: cover; }
+
+@media (max-width: 768px) {
+    .hero-img img {
+        max-width: 90%;
+        box-shadow: 10px 10px 0 var(--main-gold);
+    }
+    .cert-grid { gap: 10px; }
+}
 </style>
 </head>
 <body>
