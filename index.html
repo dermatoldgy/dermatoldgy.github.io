@@ -5,74 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Дерматовенеролог Чернігів — Солодовник Марія</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>/* Стиль кнопки гамбургера */
+   <style>
+/* 1. Стиль самої кнопки (три лінії) */
 .menu-toggle {
-    display: none; /* Сховано на комп'ютері */
+    display: none; 
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
     padding: 10px;
+    z-index: 1001;
 }
 
 .menu-toggle span {
     width: 30px;
     height: 3px;
-    background-color: var(--main-gold); /* Використовує ваш золотий колір */
+    background-color: var(--main-gold);
     border-radius: 2px;
+    transition: 0.3s;
 }
 
-/* Налаштування для мобільних пристроїв */
+/* 2. Логіка для мобільних пристроїв */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; 
+    }
 
-        :root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; --light: #fafafa; }
-        * { box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); scroll-behavior: smooth; }
-        
-        header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .logo-box img { height: 65px; width: auto; }
-        nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--main-gold); }
+    nav {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 10px 0;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
 
-        .hero { display: flex; align-items: center; padding: 60px 8%; background: var(--light); gap: 40px; flex-wrap: wrap; }
-        .hero-content { flex: 1; min-width: 300px; }
-        .hero-img img { width: 100%; max-width: 400px; border-radius: 5px; box-shadow: 15px 15px 0 var(--main-gold); }
+    nav.active {
+        display: flex;
+    }
 
-        .section { padding: 60px 8%; text-align: center; }
-        .btn-gold { background: var(--main-gold); color: white; padding: 15px 35px; border: none; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; cursor: pointer; border-radius: 2px; text-transform: uppercase; font-size: 14px; margin-top: 20px; }
-        .btn-gold:hover { background: #b08d4a; transform: translateY(-2px); }
+    nav a {
+        margin: 0 !important; /* Прибираємо відступи, щоб було рівно */
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+        display: block;
+        width: 100%;
+    }
+}
 
-        /* ПРО ЛІКАРЯ */
-        .doctor-info-box { display: flex; gap: 40px; text-align: left; max-width: 1000px; margin: 30px auto; flex-wrap: wrap; }
-        .doctor-text { flex: 2; min-width: 300px; }
-        .doctor-stats { flex: 1; min-width: 250px; background: var(--light); padding: 25px; border-radius: 8px; border-left: 4px solid var(--main-gold); }
-        .stat-item { margin-bottom: 15px; font-size: 14px; }
-        .stat-item strong { color: var(--main-gold); display: block; margin-bottom: 3px; }
+/* 3. Загальні стилі сайту */
+:root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; --light: #fafafa; }
+* { box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); scroll-behavior: smooth; }
 
-        /* СЕРТИФІКАТИ */
-        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; max-width: 1200px; margin: 30px auto; }
-        .cert-item { background: #fff; padding: 5px; border: 1px solid #eee; border-radius: 4px; transition: 0.4s; cursor: zoom-in; }
-        .cert-item:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .cert-item img { width: 100%; height: auto; border-radius: 2px; display: block; }
-        
-        #lightbox { display: none; position: fixed; z-index: 10000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
-        #lightbox img { max-width: 90%; max-height: 90%; border-radius: 4px; }
+header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+.logo-box img { height: 65px; width: auto; }
+nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
+nav a:hover { color: var(--main-gold); }
 
-        /* ЦІНИ */
-        .table-wrapper { overflow-x: auto; max-width: 900px; margin: 20px auto; }
-        .price-table { width: 100%; border-collapse: collapse; text-align: left; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .price-table td { padding: 15px 20px; border-bottom: 1px solid #eee; }
-        .price-value { font-weight: 700; text-align: right; white-space: nowrap; }
+/* ... далі всі ваші інші стилі (hero, section, cert-grid тощо) залишаються без змін ... */
 
-        .license-box { margin: 30px auto; max-width: 900px; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 30px; text-align: left; border-left: 5px solid var(--main-gold); }
-
-        /* КОНТАКТИ */
-        .contact-container { display: flex; flex-direction: column; gap: 30px; max-width: 900px; margin: 40px auto; text-align: left; }
-        .contact-info { width: 100%; text-align: center; }
-        .map-box { width: 100%; height: 450px; border-radius: 8px; overflow: hidden; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        
-        footer { background: var(--dark); color: white; padding: 40px 8%; text-align: center; font-size: 14px; }
-
-        @media (max-width: 768px) { nav { display: none; } .hero { text-align: center; padding: 40px 5%; } .hero-img { order: -1; margin: 0 auto; } .map-box { height: 300px; } }
-    </style>
+/* У самому кінці просто закрийте тег </style> БЕЗ додаткових @media */
+</style>
 </head>
 <body>
 
@@ -88,11 +86,11 @@
     </div>
 
     <nav id="main-nav">
-        <a href="#about-doctor">Про лікаря</a>
-        <a href="#about">Ліцензія</a>
-        <a href="#certificates">Сертифікати</a>
-        <a href="#prices">Ціни</a> 
-        <a href="#location">Контакти</a>
+        <a href="#about-doctor" onclick="toggleMenu()">Про лікаря</a>
+        <a href="#about" onclick="toggleMenu()">Ліцензія</a>
+        <a href="#certificates" onclick="toggleMenu()">Сертифікати</a>
+        <a href="#prices" onclick="toggleMenu()">Ціни</a> 
+        <a href="#location" onclick="toggleMenu()">Контакти</a>
     </nav>
 </header>
 
@@ -255,25 +253,27 @@
 </footer>
 
 <script>
+    // Функція для відкриття фото (сертифікатів)
     function openLightbox(el) {
         document.getElementById('lightbox-img').src = el.querySelector('img').src;
         document.getElementById('lightbox').style.display = 'flex';
         document.body.style.overflow = 'hidden';
     }
+
+    // Функція для закриття фото
     function closeLightbox() {
         document.getElementById('lightbox').style.display = 'none';
         document.body.style.overflow = 'auto';
     }
-    // Функція для гамбургер-меню
+
+    // Функція для гамбургер-меню (відкриття/закриття)
     function toggleMenu() {
-        const nav = document.getElementById('main-nav');
-        nav.classList.toggle('active');
+        // Працює тільки на мобільних екранах
+        if (window.innerWidth <= 768) {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
     }
-</script>
-function toggleMenu() {
-    const nav = document.getElementById('main-nav');
-    nav.classList.toggle('active');
-}
 </script>
 
 </body>
