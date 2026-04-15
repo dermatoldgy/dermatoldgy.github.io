@@ -5,7 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Дерматовенеролог Чернігів — Солодовник Марія</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
+    <style>/* Стиль кнопки гамбургера */
+.menu-toggle {
+    display: none; /* Сховано на комп'ютері */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--main-gold); /* Використовує ваш золотий колір */
+    border-radius: 2px;
+}
+
+/* Налаштування для мобільних пристроїв */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Показуємо кнопку на мобілці */
+    }
+
+    nav {
+        display: none; /* Ховаємо список посилань */
+        width: 100%;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 80px; /* Висота вашого хедера */
+        left: 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    /* Клас, який "вмикає" меню при натисканні */
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+    }
+}
         :root { --main-gold: #c5a059; --dark: #1a1a1a; --bg: #ffffff; --light: #fafafa; }
         * { box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); scroll-behavior: smooth; }
