@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Дерматовенеролог Чернігів — Солодовник Марія</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
+<style>
 /* 1. Стиль кнопки (три лінії) */
 .menu-toggle {
     display: none; 
@@ -60,7 +60,6 @@ header { background: white; padding: 10px 5%; display: flex; justify-content: sp
 nav a { text-decoration: none; color: var(--dark); font-weight: 600; margin-left: 20px; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
 nav a:hover { color: var(--main-gold); }
 
-/* --- ОСЬ ЦІ СТИЛІ, ЯКІ БУЛИ ЗАХОВАНІ --- */
 .hero { display: flex; align-items: center; padding: 60px 8%; background: var(--light); gap: 40px; flex-wrap: wrap; }
 .hero-content { flex: 1.2; min-width: 300px; }
 .hero-img img { width: 100%; max-width: 450px; border-radius: 5px; box-shadow: 15px 15px 0 var(--main-gold); object-fit: cover; }
@@ -150,7 +149,7 @@ footer { background: var(--dark); color: white; padding: 40px 8%; text-align: ce
     <div class="doctor-info-box">
         <div class="doctor-text">
             <p style="font-size: 18px; font-weight: 600; color: var(--main-gold);">Солодовник Марія Іванівна</p>
-            <p>Лікар-дерматовенеролог з багаторічним стажем, яка поєднує глибоку клінічну практику з сучасними методами естетичної медицини. Клініка спеціалізується на доказовому лікуванні захворювань шкіри, волосся та нігтів.</p>
+            <p>Лікар-дерматовенеролог з багаторічним стажем, яка поєднує глибоку клінічную практику з сучасними методами естетичної медицини. Клініка спеціалізується на доказовому лікуванні захворювань шкіри, волосся та нігтів.</p>
             
             <p><strong>Професійне навчання та курси:</strong></p>
             <ul style="font-size: 13px; line-height: 1.6; text-align: left; padding-left: 20px;">
@@ -222,8 +221,8 @@ footer { background: var(--dark); color: white; padding: 40px 8%; text-align: ce
         <table class="price-table">
             <tr><td>Первинна консультація</td><td class="price-value">700 грн</td></tr>
             <tr><td>Повторна консультація*</td><td class="price-value">600 грн</td></tr>
-            <tr><td>Онлайн-консультація (первинна)</td><td class="price-value">550 грн</td></tr>
-            <tr><td>Онлайн-консультація (повторна)</td><td class="price-value">500 грн</td></tr>
+            <tr><td>Онлайн-консультація (первинна)</td><td class="price-value">700 грн</td></tr>
+            <tr><td>Онлайн-консультація (повторна)</td><td class="price-value">600 грн</td></tr>
             <tr><td>Дерматоскопія / Трихоскопія</td><td class="price-value">300 грн</td></tr>
             <tr><td>Огляд, з видачею медичної довідки</td><td class="price-value">300 грн</td></tr>
         </table>
@@ -250,7 +249,7 @@ footer { background: var(--dark); color: white; padding: 40px 8%; text-align: ce
         </li>
         <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
             <span style="margin-right: 10px;">•</span>
-            <span><strong>*Повторна консультація</strong> проводиться протягом 1 місяця з дня отримання первинної консультації, якщо інший строк не вказаний лікарем у Консультативному висновку.</span>
+            <span><strong>*Повторна консультація</strong> проводиться протягом 1 місяця з дня отримання первинної開консультації, якщо інший строк не вказаний лікарем у Консультативному висновку.</span>
         </li>
         <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
             <span style="margin-right: 10px;">•</span>
@@ -286,22 +285,18 @@ footer { background: var(--dark); color: white; padding: 40px 8%; text-align: ce
 </footer>
 
 <script>
-    // Функція для відкриття фото (сертифікатів)
     function openLightbox(el) {
         document.getElementById('lightbox-img').src = el.querySelector('img').src;
         document.getElementById('lightbox').style.display = 'flex';
         document.body.style.overflow = 'hidden';
     }
 
-    // Функція для закриття фото
     function closeLightbox() {
         document.getElementById('lightbox').style.display = 'none';
         document.body.style.overflow = 'auto';
     }
 
-    // Функція для гамбургер-меню (відкриття/закриття)
     function toggleMenu() {
-        // Працює тільки на мобільних екранах
         if (window.innerWidth <= 768) {
             const nav = document.getElementById('main-nav');
             nav.classList.toggle('active');
