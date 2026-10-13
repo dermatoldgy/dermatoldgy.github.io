@@ -229,49 +229,19 @@ footer { background: var(--dark); color: white; padding: 40px 8%; text-align: ce
  
  
 <section class="section" id="prices">
-    <h2>Вартість послуг до 31.12.2026</h2>
-    <div class="table-wrapper">
-        <table class="price-table">
-            <tr><td>Первинна консультація</td><td class="price-value">700 грн</td></tr>
-            <tr><td>Повторна консультація*</td><td class="price-value">600 грн</td></tr>
-            <tr><td>Онлайн-консультація (первинна)</td><td class="price-value">700 грн</td></tr>
-            <tr><td>Онлайн-консультація (повторна)</td><td class="price-value">600 грн</td></tr>
-            <tr><td>Дерматоскопія / Трихоскопія</td><td class="price-value">300 грн</td></tr>
-            <tr><td>Огляд, з видачею медичної довідки</td><td class="price-value">300 грн</td></tr>
-        </table>
+    <h2>Вартість послуг з 13.10.2026 до 31.12.2026</h2>
+    
+    <!-- Картинки прайсів з модальним вікном Lightbox -->
+    <div class="cert-grid" style="max-width: 800px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 20px;">
+        <div class="cert-item" onclick="openLightbox(this)" style="border: 2px solid var(--main-gold); border-radius: 8px; padding: 8px; cursor: pointer;">
+            <img src="price2.jpg" alt="Основний прайс послуг" loading="lazy" style="border-radius: 4px; width: 100%; display: block;">
+            <p style="font-size: 13px; font-weight: 600; margin: 8px 0 0 0; color: var(--dark); text-align: center;">Основний прайс послуг (натисніть для збільшення)</p>
+        </div>
+        <div class="cert-item" onclick="openLightbox(this)" style="border: 2px solid var(--main-gold); border-radius: 8px; padding: 8px; cursor: pointer;">
+            <img src="price1.jpg" alt="Прайс Кріодеструкції та Кріотерапії CryoPro" loading="lazy" style="border-radius: 4px; width: 100%; display: block;">
+            <p style="font-size: 13px; font-weight: 600; margin: 8px 0 0 0; color: var(--dark); text-align: center;">Прайс Кріодеструкції / Кріотерапії (натисніть для збільшення)</p>
+        </div>
     </div>
- 
-    <div class="promo-box" style="background: var(--light); padding: 25px; border-radius: 8px; border: 1px solid #eee; max-width: 900px; margin: 20px auto;">
-        <h4 style="margin-top: 0; color: var(--main-gold); text-transform: uppercase; letter-spacing: 1px;">Вартість із урахуванням пільг</h4>
-        <p>Для УБД, пенсіонерів, осіб та дітей з інвалідністю (1-2 груп):</p>
-        <p style="font-size: 18px; font-weight: 700; color: var(--dark);">
-            Пільгова консультація лікаря-дерматовенеролога: <span style="color: var(--main-gold);">550,00 грн</span>
-        </p>
-    </div>
- 
-   <div class="price-notes" style="max-width: 900px; margin: 30px auto; text-align: left; font-size: 14px; color: #333; line-height: 1.5;">
-    <p style="font-weight: 700; display: flex; align-items: center; margin-bottom: 15px;">
-        <span style="display: inline-block; width: 24px; height: 24px; background: #eef2f5; border-radius: 50%; text-align: center; line-height: 24px; margin-right: 10px; font-style: normal;">i</span>
-        Примітки:
-    </p>
-    <ul style="padding-left: 0; list-style-type: none;">
-        <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
-            <span style="margin-right: 10px;">•</span>
-            <span><strong>Тривалість консультації</strong> — до 20 хвилин.</span>
-        </li>
-        <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
-            <span style="margin-right: 10px;">•</span>
-            <span><strong>*Повторна консультація</strong> проводиться протягом 1 місяця з дня отримання первинної консультації, якщо інший строк не вказаний лікарем у Консультативному висновку.</span>
-        </li>
-        <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
-            <span style="margin-right: 10px;">•</span>
-            <span><strong>Пільги</strong> надаються при пред’явленні посвідчення.</span>
-        </li>
-        <li style="margin-top: 20px; padding: 15px; background: #fdfaf3; border-left: 4px solid var(--main-gold); font-size: 13px; color: #555;">
-            (**Онлайн-консультація має рекомендаційний характер. Остаточний діагноз та призначення лікування потребують очного огляду лікаря та, за необхідності, проведення додаткових інструментальних, лабораторних чи інших обстежень)
-        </li>
-    </ul>
-</div>
 </section>
  
 <section class="section" id="location">
@@ -298,20 +268,26 @@ footer { background: var(--dark); color: white; padding: 40px 8%; text-align: ce
  
 <script>
     function openLightbox(el) {
-       document.getElementById('lightbox-img').src = el.querySelector('img').src;
-       document.getElementById('lightbox').style.display = 'flex';
-       document.body.style.overflow = 'hidden';
+        document.getElementById('lightbox-img').src = el.querySelector('img').src;
+        document.getElementById('lightbox').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
     }
- 
+
     function closeLightbox() {
-       document.getElementById('lightbox').style.display = 'none';
-       document.body.style.overflow = 'auto';
+        document.getElementById('lightbox').style.display = 'none';
+        document.body.style.overflow = 'auto';
     }
- 
+
     function toggleMenu() {
         if (window.innerWidth <= 768) {
             const nav = document.getElementById('main-nav');
-           nav.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+    }
+
+    function closeMenuOnly() {
+        if (window.innerWidth <= 768) {
+            document.getElementById('main-nav').classList.remove('active');
         }
     }
 </script>
